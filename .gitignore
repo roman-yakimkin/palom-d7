@@ -25,6 +25,8 @@ sites/all/README.txt
 sites/all/modules/README.txt
 sites/all/themes/README.txt
 
+/.gitpush
+
 # Ignore all the core files and dirs
 
 web.config
@@ -48,3 +50,4 @@ xmlrpc.php
 Thumbs.db
 *~*
 *.swp
+
