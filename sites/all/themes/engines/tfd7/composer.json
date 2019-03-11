@@ -1,0 +1,29 @@
+{
+    "name": "drupal/tfd7",
+    "description": "Twig for Drupal 7, use the same convenient template language as in Drupal 8 core",
+    "keywords": ["templating","drupal","twig"],     
+    "homepage":  "https://tfd7.rocks",    
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Rene Bakx",
+            "email": "rene@71media.net",
+            "role": "Author"
+        },
+        {
+            "name": "Pol Dellaiera",
+            "email": "pol.dellaiera@protonmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "twig/twig":"^1"
+    },
+    "autoload": {
+        "psr-0" : {
+            "TFD_" : "lib"
+        }
+    },
+    "minimum-stability": "stable"
+}
