@@ -1,0 +1,10 @@
+name = Palom Utils
+description = Set of util functions for palomniki.su
+package = Palom
+core = 7.x
+; files[] = tests/forum_access.test
+
+; Information added by Drupal.org packaging script on 2016-08-16
+version = "7.x-1.0"
+core = "7.x"
+
