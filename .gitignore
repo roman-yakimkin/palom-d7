@@ -10,6 +10,7 @@ cache/
 files/
 sites/*/files
 sites/*/private
+sites/all/themes/palom/css/.sass-cache
 
 # Ignore all the text files.
 .htaccess
