@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * Implements hook_field_schema().
+ */
+function palom_field_cr_field_schema($field) {
+  switch($field['type']){
+    case 'field_geo_cr':
+      $columns = [
+        'country_id' => [
+          'type' => 'int',
+          'default' => 0,
+        ],
+        'region_id' => [
+          'type' => 'int',
+          'default' => 0,
+        ]
+      ];
+      $indexes = [
+        'country_id' => ['country_id'],
+        'region_id' => ['region_id'],
+      ];
+      break;
+  }
+  return [
+    'columns' => $columns,
+    'indexes' => $indexes,
+  ];
+}
+
+/**
+ * Implements hook_field_info().
+ */
+function palom_field_cr_field_info() {
+  return [
+    'field_geo_cr' => [
+      'label' => t('Country and region'),
+      'description' => t('Country and region of the entity'),
+      'default_widget' => 'field_geo_cr_default_widget',
+      'default_formatter' => 'field_geo_cr_default_formatter',
+    ]
+  ];
+}
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function palom_field_cr_field_widget_info() {
+  return [
+    'field_geo_cr_combo_widget' => [
+      'label' => t('Country and region combo widget'),
+      'field_types' => ['field_geo_cr'],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function palom_field_cr_field_formatter_info() {
+  return [
+    'field_geo_cr_default_formatter' => [
+      'label' => t('Default formatter for the ountry and region field'),
+      'field types' => ['field_geo_cr'],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function palom_field_cr_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $base = $element;
+
+  switch ($instance['widget']['type']) {
+    case 'field_geo_cr_combo_widget':
+
+      break;
+  };
+
+  return $element;
+}

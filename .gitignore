@@ -11,6 +11,7 @@ files/
 sites/*/files
 sites/*/private
 sites/all/themes/palom/css/.sass-cache
+sites/all/vendor/
 
 # Ignore all the text files.
 .htaccess
