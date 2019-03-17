@@ -138,7 +138,7 @@
         <div class="highlighted jumbotron">{!! render($page['highlighted']) !!}</div>
       @endif
       @if (!empty($breadcrumb))
-          {{ $breadcrumb }}
+          {!! $breadcrumb !!}
       @endif
       <a id="main-content"></a>
       {!! render($title_prefix) !!}
@@ -154,7 +154,7 @@
         {!! render($page['help']) !!}
       @endif
       @if (!empty($action_links))
-        <ul class="action-links">{!! $action_links !!}</ul>
+        <ul class="action-links">{!! render($action_links) !!}</ul>
       @endif
       {!! render($page['content']) !!}
     </section>

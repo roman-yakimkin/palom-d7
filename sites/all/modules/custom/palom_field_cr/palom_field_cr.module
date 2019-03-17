@@ -36,7 +36,7 @@ function palom_field_cr_field_info() {
     'field_geo_cr' => [
       'label' => t('Country and region'),
       'description' => t('Country and region of the entity'),
-      'default_widget' => 'field_geo_cr_default_widget',
+      'default_widget' => 'field_geo_cr_combo_widget',
       'default_formatter' => 'field_geo_cr_default_formatter',
     ]
   ];
@@ -49,7 +49,7 @@ function palom_field_cr_field_widget_info() {
   return [
     'field_geo_cr_combo_widget' => [
       'label' => t('Country and region combo widget'),
-      'field_types' => ['field_geo_cr'],
+      'field types' => ['field_geo_cr'],
     ],
   ];
 }
@@ -60,7 +60,7 @@ function palom_field_cr_field_widget_info() {
 function palom_field_cr_field_formatter_info() {
   return [
     'field_geo_cr_default_formatter' => [
-      'label' => t('Default formatter for the ountry and region field'),
+      'label' => t('Default formatter for the country and region field'),
       'field types' => ['field_geo_cr'],
     ],
   ];
@@ -74,9 +74,38 @@ function palom_field_cr_field_widget_form(&$form, &$form_state, $field, $instanc
 
   switch ($instance['widget']['type']) {
     case 'field_geo_cr_combo_widget':
+      $clist = palom_utils_get_countries();
+      $countries = [];
+      foreach ($clist as $elem){
+        $countries[$elem->tid] = $elem->name;
+      };
 
+      $element['field_geo_cr_combo_widget_wrapper']['country'] = [
+        '#type' => 'select',
+        '#title' => t('Select a country'),
+        '#options' => $countries,
+      ] + $base;
       break;
+
+      $rlist = palom_utils_get_regions(2);
+      $regions[0] = t('All the regions');
+      foreach ($rlist as $elem){
+        $regions[$elem->tid] = $elem->name;
+      };
+
+      $element['field_geo_cr_combo_widget_wrapper']['region'] = [
+        '#type' => 'select',
+        '#title' => t('Select a region'),
+        '#options' => $regions,
+      ] + $base;
   };
 
   return $element;
+}
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function palom_field_cr_field_is_empty($item, $field) {
+  return empty($item['country_id']);
 }

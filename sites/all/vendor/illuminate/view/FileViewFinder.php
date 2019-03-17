@@ -146,7 +146,8 @@ class FileViewFinder implements ViewFinderInterface
     protected function getPossibleViewFiles($name)
     {
         return array_map(function ($extension) use ($name) {
-            return str_replace('.', '/', $name).'.'.$extension;
+//            return str_replace('.', '/', $name).'.'.$extension;
+          return $name.'.'.$extension;
         }, $this->extensions);
     }
 

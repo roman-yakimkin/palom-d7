@@ -1,0 +1,29 @@
+<?php
+
+require_once 'palom_utils.func.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function palom_utils_menu() {
+  $items = [];
+
+  $items['test'] = [
+    'title' => t('A test page to output data'),
+    'page callback' => 'palom_utils_test_callback',
+    'access arguments' => ['administer content'],
+    'type' => MENU_CALLBACK,
+  ];
+
+  return $items;
+}
+
+function palom_utils_test_callback(){
+  $countries = palom_utils_get_countries();
+  $regions = palom_utils_get_regions(10);
+
+  kpr($countries);
+  kpr($regions);
+
+  return '';
+}
