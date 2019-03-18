@@ -12,3 +12,7 @@ function palom_utils_get_regions($country_id){
   $regions = taxonomy_get_tree(3, $country_id, 1);
   return $regions;
 }
+
+function palom_utils_get_country_default(){
+  return 2;
+}

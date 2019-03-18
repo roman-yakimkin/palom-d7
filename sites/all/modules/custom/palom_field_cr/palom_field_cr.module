@@ -74,33 +74,90 @@ function palom_field_cr_field_widget_form(&$form, &$form_state, $field, $instanc
 
   switch ($instance['widget']['type']) {
     case 'field_geo_cr_combo_widget':
+      $element['#attached']['css'][] = drupal_get_path('module', 'palom_field_cr').'/palom_field_cr.css';
+
+      if (isset($form_state['triggering_element']))
+        $te = $form_state['triggering_element'];
+      else
+        $te = null;
+
+      if (isset($te) && $te['#name'] == $field['field_name']."[und][0][country_id]"){
+        $country_id = $form_state['values'][$field['field_name']]['und'][0]['country_id'];
+        $region_id = 0;
+      }
+      else if (isset($items[$delta]['country_id'])){
+        $country_id = $items[$delta]['country_id'];
+        $region_id = $items[$delta]['region_id'];
+      }
+      else {
+        $country_id = palom_utils_get_country_default();
+        $region_id = 0;
+      }
+
       $clist = palom_utils_get_countries();
       $countries = [];
       foreach ($clist as $elem){
         $countries[$elem->tid] = $elem->name;
       };
 
-      $element['field_geo_cr_combo_widget_wrapper']['country'] = [
+      $wrapper_name = 'field_geo_cr_combo_widget_'.$field['field_name'].'_'.$delta;
+
+      $element['#prefix'] = '<div id="'.$wrapper_name.'">';
+      $element['#suffix'] = '</div>';
+
+      $element['country_id'] = [
         '#type' => 'select',
         '#title' => t('Select a country'),
+        '#description' => '',
         '#options' => $countries,
+        '#default_value' => $country_id,
+        '#ajax' => [
+          'callback' => 'palom_field_cr_update_region_list',
+          'wrapper' => $wrapper_name,
+          'progress' => [
+            'type' => 'none',
+          ]
+        ],
       ] + $base;
+
+      $rlist = palom_utils_get_regions($country_id);
+
+      if ($rlist != []){
+//        $regions[0] = t('All the regions');
+        foreach ($rlist as $elem){
+          $regions[$elem->tid] = $elem->name;
+        };
+
+        $element['region_id'] = [
+            '#type' => 'select',
+            '#title' => t('Select a region'),
+            '#description' => '',
+            '#default_value' => $region_id,
+            '#empty_option' => t('-select'),
+            '#empty_value' => 0,
+            '#options' => $regions,
+          ] + $base;
+      }
+      else {
+        $element['region_id'] = [
+            '#type' => 'hidden',
+            '#value' => 0,
+          ] + $base;
+      }
+
       break;
-
-      $rlist = palom_utils_get_regions(2);
-      $regions[0] = t('All the regions');
-      foreach ($rlist as $elem){
-        $regions[$elem->tid] = $elem->name;
-      };
-
-      $element['field_geo_cr_combo_widget_wrapper']['region'] = [
-        '#type' => 'select',
-        '#title' => t('Select a region'),
-        '#options' => $regions,
-      ] + $base;
   };
 
+//  kpr($field);
+
   return $element;
+}
+
+function palom_field_cr_update_region_list($form, $form_state){
+  if (isset($form_state['triggering_element']['#field_name'])){
+    $field_name = $form_state['triggering_element']['#field_name'];
+    return $form[$field_name]['und']['0'];
+  }
 }
 
 /**
