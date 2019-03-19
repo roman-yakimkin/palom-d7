@@ -19,11 +19,9 @@ function palom_utils_menu() {
 }
 
 function palom_utils_test_callback(){
-  $countries = palom_utils_get_countries();
-  $regions = palom_utils_get_regions(10);
+  $cities = palom_utils_get_cities(100);
 
-  kpr($countries);
-  kpr($regions);
+  kpr($cities);
 
   return '';
 }

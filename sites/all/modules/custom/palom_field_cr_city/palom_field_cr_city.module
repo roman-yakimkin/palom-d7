@@ -1,0 +1,284 @@
+<?php
+
+/**
+ * Implements hook_field_schema().
+ */
+function palom_field_cr_city_field_schema($field) {
+  switch($field['type']){
+    case 'field_geo_cr_city':
+      $columns = [
+        'country_id' => [
+          'type' => 'int',
+          'default' => 0,
+        ],
+        'region_id' => [
+          'type' => 'int',
+          'default' => 0,
+        ],
+        'city_id' => [
+          'type' => 'int',
+          'default' => 0,
+        ],
+      ];
+      $indexes = [
+        'country_id' => ['country_id'],
+        'region_id' => ['region_id'],
+        'city_id' => ['region_id'],
+      ];
+      break;
+  }
+  return [
+    'columns' => $columns,
+    'indexes' => $indexes,
+  ];
+}
+
+/**
+ * Implements hook_field_info().
+ */
+function palom_field_cr_city_field_info() {
+  return [
+    'field_geo_cr_city' => [
+      'label' => t('Country, region and city'),
+      'description' => t('Country, region and city of the entity'),
+      'default_widget' => 'field_geo_cr_city_combo_widget',
+      'default_formatter' => 'field_geo_cr_city_default_formatter',
+    ]
+  ];
+}
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function palom_field_cr_city_field_widget_info() {
+  return [
+    'field_geo_cr_city_combo_widget' => [
+      'label' => t('Country, region and city combo widget'),
+      'field types' => ['field_geo_cr_city'],
+    ],
+  ];
+
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function palom_field_cr_city_field_formatter_info() {
+  return [
+    'field_geo_cr_city_default_formatter' => [
+      'label' => t('Default formatter for the country, region and city field'),
+      'field types' => ['field_geo_cr_city'],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $base = $element;
+
+  switch ($instance['widget']['type']) {
+    case 'field_geo_cr_city_combo_widget':
+      $element['#attached']['css'][] = drupal_get_path('module', 'palom_field_cr_city').'/palom_field_cr_city.css';
+
+      if (isset($form_state['triggering_element']))
+        $te = $form_state['triggering_element'];
+      else
+        $te = null;
+
+      // A country was changed
+      if (isset($te) && $te['#name'] == $field['field_name']."[und][0][country_id]"){
+        $country_id = $form_state['values'][$field['field_name']]['und'][0]['country_id'];
+        $region_id = 0;
+        $city_id = 0;
+      }
+
+      // A region was changed
+      if (isset($te) && $te['#name'] == $field['field_name']."[und][0][region_id]"){
+        $country_id = $form_state['values'][$field['field_name']]['und'][0]['country_id'];
+        $region_id = $form_state['values'][$field['field_name']]['und'][0]['region_id'];;
+        $city_id = 0;
+      }
+
+      // Edit record
+      else if (isset($items[$delta]['country_id'])){
+        $country_id = $items[$delta]['country_id'];
+        $region_id = $items[$delta]['region_id'];
+        $city_id = $items[$delta]['city_id'];
+      }
+
+      // New record
+      else {
+        $country_id = palom_utils_get_country_default();
+        $region_id = 0;
+        $city_id = 0;
+      }
+
+      $clist = palom_utils_get_countries();
+      $countries = [];
+      foreach ($clist as $elem){
+        $countries[$elem->tid] = $elem->name;
+      };
+
+      $wrapper_name = 'field_geo_cr_city_combo_widget_'.$field['field_name'].'_'.$delta;
+
+      $element['#prefix'] = '<div id="'.$wrapper_name.'">';
+      $element['#suffix'] = '</div>';
+
+      $element['country_id'] = [
+          '#type' => 'select',
+          '#title' => t('Select a country'),
+          '#description' => '',
+          '#options' => $countries,
+          '#default_value' => $country_id,
+          '#ajax' => [
+            'callback' => 'palom_field_cr_update_region_list',
+            'wrapper' => $wrapper_name,
+            'progress' => [
+              'type' => 'none',
+            ]
+          ],
+        ] + $base;
+
+      $rlist = palom_utils_get_regions($country_id);
+
+      if ($rlist != []){
+        //        $regions[0] = t('All the regions');
+        foreach ($rlist as $elem){
+          $regions[$elem->tid] = $elem->name;
+        };
+
+        $element['region_id'] = [
+            '#type' => 'select',
+            '#title' => t('Select a region'),
+            '#description' => '',
+            '#default_value' => $region_id,
+            '#empty_option' => t('-select'),
+            '#empty_value' => 0,
+            '#options' => $regions,
+            '#ajax' => [
+              'callback' => 'palom_field_cr_city_update_field',
+              'wrapper' => $wrapper_name,
+              'progress' => [
+                'type' => 'none',
+              ]
+            ],
+
+          ] + $base;
+      }
+      else {
+        $element['region_id'] = [
+            '#type' => 'hidden',
+            '#value' => 0,
+          ] + $base;
+      }
+
+      $clist = palom_utils_get_cities($country_id, $region_id);
+
+      if ($clist != []){
+        //        $regions[0] = t('All the regions');
+        foreach ($clist as $elem){
+          $cities[$elem->nid] = $elem->title;
+        };
+
+        $element['city_id'] = [
+            '#type' => 'select',
+            '#title' => t('Select a city'),
+            '#description' => '',
+            '#default_value' => $city_id,
+            '#empty_option' => t('-select'),
+            '#empty_value' => 0,
+            '#options' => $cities,
+          ] + $base;
+      }
+      else {
+        $element['city_id'] = [
+            '#type' => 'hidden',
+            '#value' => 0,
+          ] + $base;
+      }
+
+      break;
+  };
+
+  //  kpr($field);
+
+  return $element;
+
+}
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function palom_field_cr_city_field_is_empty($item, $field) {
+  return empty($item['country_id']);
+}
+
+function palom_field_cr_city_update_field($form, $form_state){
+  if (isset($form_state['triggering_element']['#field_name'])){
+    $field_name = $form_state['triggering_element']['#field_name'];
+    return $form[$field_name]['und']['0'];
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function palom_field_cr_city_theme($existing, $type, $theme, $path) {
+  return [
+    'field_geo_cr_city_default_formatter' => [
+      'render element' => 'element',
+      'template' => 'field-geo-cr-city-default-formatter',
+    ]
+  ];
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function palom_field_cr_city_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = [];
+  $settings = $display['settings'];
+  switch ($display['type']){
+    case 'field_geo_cr_city_default_formatter':
+      foreach($items as $delta => $item){
+        $el = [];
+        if ($item['country_id'] != 0){
+          $country = taxonomy_term_load($item['country_id']);
+          $el['country_name'] = $country->name;
+          $el['country_url'] = url('taxonomy/term/'.$country->tid);
+//          kpr($country);
+        }
+        if ($item['region_id'] != 0){
+          $region = taxonomy_term_load($item['region_id']);
+          $el['region_name'] = $region->name;
+          $el['region_url'] = url('taxonomy/term/'.$region->tid);
+//          kpr($region);
+        }
+        if ($item['city_id'] != 0){
+          $city = node_load($item['city_id']);
+          $el['city_name'] = $city->title;
+          $el['city_url'] = url('node/'.$city->nid);
+          kpr($city);
+
+          if ($city->field_city_type != []){
+            $city_type = taxonomy_term_load($city->field_city_type['und'][0]['target_id']);
+            $el['city_type_name'] = $city_type->name;
+          }
+        }
+        $element[$delta] = [
+          '#theme' => 'field_geo_cr_city_default_formatter',
+          'country_name' => $el['country_name'],
+          'country_url' => $el['country_url'],
+          'region_name' => $el['region_name'],
+          'region_url' => $el['region_url'],
+          'city_name' => trim($el['city_type_name'].' '.$el['city_name']),
+          'city_url' => $el['city_url'],
+        ];
+      }
+      break;
+  }
+  return $element;
+}
+
