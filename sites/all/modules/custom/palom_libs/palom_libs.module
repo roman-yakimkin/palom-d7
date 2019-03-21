@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_libraries_info_alter().
+ */
+function palom_libs_libraries_info_alter(&$libraries) {
+  $libraries['flip']['download file url'] = 'https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js';
+  $libraries['flip']['path'] = 'dist';
+  $libraries['flip']['files']['js'] = ['dist/jquery.flip.min.js'];
+  $libraries['flip']['version arguments']['file'] = 'dist/jquery.flip.min.js';
+}

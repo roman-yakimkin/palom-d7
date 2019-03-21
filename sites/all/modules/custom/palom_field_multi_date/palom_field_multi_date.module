@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function palom_field_multi_date_field_widget_info() {
+  return [
+    'palom_multi_date_widget' => [
+      'label' => t('A multidate widget for palomniki.su'),
+      'field types' => ['date'],
+    ]
+  ];
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function palom_field_multi_date_field_formatter_info() {
+  return [
+    'palom_multi_date_formatter' => [
+      'label' => t('A multidate formatter for palomniki.su'),
+      'field types' => ['date'],
+    ]
+  ];
+}
