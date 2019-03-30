@@ -1,0 +1,29 @@
+.palom-multi-date-widget .row:nth-of-type(1) {
+  padding: 0px 15px 5px 15px;
+}
+
+.palom-multi-date-widget .row:nth-of-type(1) .form-control {
+}
+
+.palom-multi-date-widget .row:nth-of-type(2) {
+  padding: 5px 5px 0px 5px;
+}
+
+.palom-multi-date-buttons > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-around;
+  min-height: 150px;
+}
+
+.palom-multi-date-buttons btn {
+}
+
+.ui-datepicker {
+  width: 100%;
+}
+
+.palom-multi-date-listbox .form-select {
+  font-size: 120%;
+}

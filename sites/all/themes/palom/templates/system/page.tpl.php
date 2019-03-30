@@ -143,7 +143,7 @@
       <a id="main-content"></a>
       {!! render($title_prefix) !!}
       @if (!empty($title))
-        <h1 class="page-header">{{ $title }}</h1>
+        <h1 class="page-header">{!! $title !!}</h1>
       @endif
       {!! render($title_suffix) !!}
       {!! $messages !!}

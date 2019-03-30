@@ -1,6 +1,37 @@
 <?php
 
 /**
+ * Implements hook_libraries_info().
+ */
+function palom_libs_libraries_info() {
+  $libraries['bootstrap_datepicker'] = [
+    'name' => 'Bootstrap datepicker',
+    'vendor url' => 'https://www.eyecon.ro/bootstrap-datepicker',
+    'version' => '1.0.0',
+    'files' => [
+      'js' => [
+        'bootstrap-datepicker.js',
+      ],
+      'css' => [
+        'datepicker.css',
+      ],
+    ],
+  ];
+
+  $libraries['sprintf'] = [
+    'name' => 'Sprintf',
+    'version' => '1.0.0',
+    'files' => [
+      'js' => [
+        'sprintf.js',
+      ],
+    ],
+  ];
+
+  return $libraries;
+}
+
+/**
  * Implements hook_libraries_info_alter().
  */
 function palom_libs_libraries_info_alter(&$libraries) {

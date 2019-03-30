@@ -202,8 +202,6 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
       break;
   };
 
-  //  kpr($field);
-
   return $element;
 
 }
@@ -248,23 +246,23 @@ function palom_field_cr_city_field_formatter_view($entity_type, $entity, $field,
           $country = taxonomy_term_load($item['country_id']);
           $el['country_name'] = $country->name;
           $el['country_url'] = url('taxonomy/term/'.$country->tid);
-//          kpr($country);
         }
         if ($item['region_id'] != 0){
           $region = taxonomy_term_load($item['region_id']);
           $el['region_name'] = $region->name;
           $el['region_url'] = url('taxonomy/term/'.$region->tid);
-//          kpr($region);
         }
         if ($item['city_id'] != 0){
           $city = node_load($item['city_id']);
           $el['city_name'] = $city->title;
           $el['city_url'] = url('node/'.$city->nid);
-          kpr($city);
 
           if ($city->field_city_type != []){
             $city_type = taxonomy_term_load($city->field_city_type['und'][0]['target_id']);
             $el['city_type_name'] = $city_type->name;
+          }
+          else {
+            $el['city_type_name'] = '';
           }
         }
         $element[$delta] = [

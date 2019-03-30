@@ -7,7 +7,10 @@ function palom_field_multi_date_field_widget_info() {
   return [
     'palom_multi_date_widget' => [
       'label' => t('A multidate widget for palomniki.su'),
-      'field types' => ['date'],
+      'field types' => ['date', 'datestamp', 'datetime'],
+      'behaviors' => [
+        'multiple values' => FIELD_BEHAVIOR_CUSTOM,
+      ],
     ]
   ];
 }
@@ -19,7 +22,115 @@ function palom_field_multi_date_field_formatter_info() {
   return [
     'palom_multi_date_formatter' => [
       'label' => t('A multidate formatter for palomniki.su'),
-      'field types' => ['date'],
+      'field types' => ['date', 'datestamp', 'datetime'],
+    ]
+  ];
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function palom_field_multi_date_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $base = $element;
+  switch($instance['widget']['type']){
+    case 'palom_multi_date_widget':
+      $palom_dates = [];
+      foreach($items as $item){
+        $palom_dates[] = $item['value'];
+      }
+      $field_name = $field['field_name'];
+
+      $palom_multi_date_widget_settings = [
+        $field_name => [
+          'dates' => $palom_dates,
+          'cardinality' => $field['cardinality'],
+        ]
+      ];
+
+      $element['dates'] = [
+        '#type' => 'fieldset',
+        '#tree' => TRUE,
+        '#title' => $instance['label'],
+        '#description' => $instance['description'],
+      ];
+
+      $element['dates']['dates_array'] = [
+        '#type' => 'hidden',
+      ];
+
+      $element['dates']['dates_widget'] = [
+        '#theme' => 'palom_multi_date_widget',
+        '#field_name' => $field_name,
+      ];
+
+      $element['#element_validate'] = ['_palom_field_multi_date_element_validate'];
+
+      drupal_add_library('system', 'ui.datepicker');
+      libraries_load('sprintf');
+      $element['#attached']['css'][] = drupal_get_path('module', 'palom_field_multi_date').'/palom_multi_date_widget.css';
+      $element['#attached']['js'][] = drupal_get_path('module', 'palom_field_multi_date').'/palom_multi_date_widget.js';
+
+      // Pass params to the widget
+      drupal_add_js(['palom_multi_date_widget' => $palom_multi_date_widget_settings], 'setting');
+      break;
+  };
+  return $element;
+}
+
+/*
+ * The convert result into the values array
+ */
+function _palom_field_multi_date_element_validate($element, &$form_state){
+  $values = $form_state['values'];
+  $language = $element['#language'];
+  $field_name = $element['#field_name'];
+
+  $ret_values = [];
+
+  $stDates = trim($values[$field_name][$language][0]['dates']['dates_array']);
+  $dates = explode(" ", $stDates);
+  if ($stDates != '') {
+    foreach ($dates as $one_date) {
+      $ret_values[] = [
+        'value' => $one_date,
+      ];
+    };
+  }
+
+  form_set_value($element, $ret_values, $form_state);
+}
+
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function palom_field_multi_date_field_is_empty($item, $field) {
+  return empty($item['value']);
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function palom_field_multi_date_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = [];
+  $settings = $display['settings'];
+  switch ($display['type']){
+    case 'palom_multi_date_formatter':
+      break;
+  }
+  return $element;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function palom_field_multi_date_theme($existing, $type, $theme, $path) {
+  return [
+    'palom_multi_date_widget' => [
+      'variables' => [
+        'field_name' => null,
+      ],
+      'template' => 'palom-multi-date-widget',
     ]
   ];
 }

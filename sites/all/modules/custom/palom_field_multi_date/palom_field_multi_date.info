@@ -4,6 +4,7 @@ package = Palom
 core = 7.x
 
 dependencies[] = palom_utils
+dependencies[] = palom_libs
 
 ; files[] = tests/forum_access.test
 
