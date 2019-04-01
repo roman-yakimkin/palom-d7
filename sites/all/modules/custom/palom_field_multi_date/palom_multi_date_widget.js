@@ -3,8 +3,11 @@
   Drupal.behaviors.palom_multi_date_widget = {
     attach: function(context, settings) {
       var aData = settings.palom_multi_date_widget;
-
       console.log(settings);
+      var field_name = Object.keys(aData)[0];
+      var date_type;
+
+      var dates_saved = '';
 
       // Add a date to the list
       function addDateToList($wrapper){
@@ -63,6 +66,61 @@
         $hiddenField.val(aDatesTmp);
       }
 
+      // Change select dates list value
+      function changeSelectDates($wrapper, date_type){
+        var $hiddenField = $wrapper.parent('div').find('input[type=hidden]');
+
+        switch (date_type){
+          case 'select_dates':
+            $("#palom-multi-date-widget-"+field_name+" .select-dates").slideDown();
+            $hiddenField.val(dates_saved);
+            if (dates_saved == ''){
+              $wrapper.find(".palom-multi-date-listbox select").empty();
+            }
+            dates_saved = '';
+            break;
+          case 'by_demand':
+            $("#palom-multi-date-widget-"+field_name+" .select-dates").slideUp();
+            if (dates_saved != '')
+              dates_saved = $hiddenField.val();
+            $hiddenField.val('2500-01-01');
+            break;
+          case 'by_picking':
+            $("#palom-multi-date-widget-"+field_name+" .select-dates").slideUp();
+            if (dates_saved != '')
+              dates_saved = $hiddenField.val();
+            $hiddenField.val('2600-01-01');
+            break;
+        }
+      }
+
+      // Set select dates
+      function setSelectDates(aDates){
+         var str = aDates[0];
+         var $select = $("#palom-multi-date-widget-"+field_name+" select[name=date_type]");
+         var $dates_area = $("#palom-multi-date-widget-"+field_name+" .select-dates");
+
+         // By demand
+         if (str.search('2500-01-01') != -1){
+            $select.val('by_demand');
+            $dates_area.hide();
+         }
+
+         // By picking
+         else if (str.search('2600-01-01') != -1){
+           $select.val('by_picking');
+           $dates_area.hide();
+         }
+
+         // Some real dates
+         else {
+           $select.val('select_dates');
+           $dates_area.show();
+         }
+      }
+
+      setSelectDates(aData[field_name]['dates']);
+
       $('body').once('init-data').each(function(){
 
         var timePrev=0, timePrev2 = 0;
@@ -98,6 +156,12 @@
           $("#palom-multi-date-widget-"+aFieldName+" .palom-multi-date-listbox select").attr("data-cardinality", aData[aFieldName]['cardinality']);
         }
 
+        $('select[name=date_type]', context).on('change', function(evt){
+          var $wrapper = $('#palom-multi-date-widget-'+field_name);
+          date_type = evt.target.value;
+          changeSelectDates($wrapper, date_type);
+        });
+
         // Double click to delete a date
         $(".palom-multi-date-listbox select", context).on("dblclick", function(){
           var $wrapper = $(this).closest('.palom-multi-date-widget');
@@ -105,15 +169,15 @@
         });
 
         // Adding a date via press a button
-        $(".palom-multi-date-widget add-date", context).on("click", function(){
+        $(".palom-multi-date-widget .add-date", context).on("click", function(){
           var $wrapper = $(this).closest('.palom-multi-date-widget');
           addDateToList($wrapper);
           return false;
         });
 
         // Removing a date via press a button
-        $(".palom-multi-date-widget remove-date", context).on("click", function(){
-          var $wrapper = $(this).closest('.yrv-multi-date-widget');
+        $(".palom-multi-date-widget .remove-date", context).on("click", function(){
+          var $wrapper = $(this).closest('.palom-multi-date-widget');
           removeDateFromList($wrapper);
           return false;
         });

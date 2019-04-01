@@ -81,19 +81,26 @@ function palom_field_multi_date_field_widget_form(&$form, &$form_state, $field, 
  * The convert result into the values array
  */
 function _palom_field_multi_date_element_validate($element, &$form_state){
-  $values = $form_state['values'];
+  $values = $element['dates']['dates_array']['#value'];
   $language = $element['#language'];
   $field_name = $element['#field_name'];
 
   $ret_values = [];
 
-  $stDates = trim($values[$field_name][$language][0]['dates']['dates_array']);
+//  $stDates = trim($values[$field_name][$language]['dates']['dates_array']);
+  $stDates = trim($values);
   $dates = explode(" ", $stDates);
   if ($stDates != '') {
     foreach ($dates as $one_date) {
-      $ret_values[] = [
-        'value' => $one_date,
+      $date = [
+        'value' => $one_date.' 00:00:00',
+        'show_todate' => false,
+        'timezone' => 'UTC',
+        'offset' => 0,
+        'offset2' => 0,
+        'value2' => $one_date.' 00:00:00',
       ];
+      $ret_values[] = $date;
     };
   }
 
@@ -116,7 +123,26 @@ function palom_field_multi_date_field_formatter_view($entity_type, $entity, $fie
   $settings = $display['settings'];
   switch ($display['type']){
     case 'palom_multi_date_formatter':
-      break;
+      foreach ($items as $delta => $item){
+        $date = DateTime::createFromFormat('Y-m-d h:i:s', $item['value']);
+        $date_str = $date->format('d.m.Y');
+        $el = '';
+        switch ($date_str){
+          case '01.01.2500':
+            $el = t('Travel by demand');
+            break;
+          case '01.01.2600':
+            $el = t('Travel by picking of the group');
+            break;
+          default:
+            $el = $date_str;
+            break;
+        }
+        $element[$delta] = [
+          '#type' => 'markup',
+          '#markup' => '<span>'.$el.'</span>',
+        ];
+      }
   }
   return $element;
 }
@@ -131,6 +157,10 @@ function palom_field_multi_date_theme($existing, $type, $theme, $path) {
         'field_name' => null,
       ],
       'template' => 'palom-multi-date-widget',
+    ],
+    'palom_multi_date_formatter' => [
+      'render element' => 'element',
+      'template' => 'palom-multi-date-formatter',
     ]
   ];
 }
