@@ -66,6 +66,8 @@ function palom_field_multi_date_field_widget_form(&$form, &$form_state, $field, 
       $element['#element_validate'] = ['_palom_field_multi_date_element_validate'];
 
       drupal_add_library('system', 'ui.datepicker');
+      drupal_add_library('system', 'ui.dialog');
+
       libraries_load('sprintf');
       $element['#attached']['css'][] = drupal_get_path('module', 'palom_field_multi_date').'/palom_multi_date_widget.css';
       $element['#attached']['js'][] = drupal_get_path('module', 'palom_field_multi_date').'/palom_multi_date_widget.js';
@@ -78,7 +80,7 @@ function palom_field_multi_date_field_widget_form(&$form, &$form_state, $field, 
 }
 
 /*
- * The convert result into the values array
+ * The converting result into the values array
  */
 function _palom_field_multi_date_element_validate($element, &$form_state){
   $values = $element['dates']['dates_array']['#value'];

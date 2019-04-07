@@ -3,7 +3,7 @@
   Drupal.behaviors.palom_multi_date_widget = {
     attach: function(context, settings) {
       var aData = settings.palom_multi_date_widget;
-      console.log(settings);
+//      console.log(settings);
       var field_name = Object.keys(aData)[0];
       var date_type;
 
@@ -66,14 +66,26 @@
         $hiddenField.val(aDatesTmp);
       }
 
+      // Populate the dates list with values from the hidden field
+      function fillDatesListByHiddenField($wrapper){
+        var strDates = $wrapper.parent('div').find('input[type=hidden]').val();
+        var dates = strDates.trim().split(' ');
+        for (var i=0; i<dates.length; i++){
+          var aDate = new Date(dates[i]);
+          var formattedDate = sprintf("%02d.%02d.%04d", aDate.getDate(), aDate.getMonth()+1, aDate.getFullYear());
+          var formattedDateValue = sprintf("%04d-%02d-%02d", aDate.getFullYear(), aDate.getMonth()+1, aDate.getDate() );
+          $("#palom-multi-date-widget-"+field_name+" .palom-multi-date-listbox select").append($("<option value='"+formattedDateValue+"'>"+formattedDate+"</option>"));
+        };
+      }
+
       // Change select dates list value
       function changeSelectDates($wrapper, date_type){
         var $hiddenField = $wrapper.parent('div').find('input[type=hidden]');
-
         switch (date_type){
           case 'select_dates':
             $("#palom-multi-date-widget-"+field_name+" .select-dates").slideDown();
             $hiddenField.val(dates_saved);
+//            fillDatesListByHiddenField($wrapper);
             if (dates_saved == ''){
               $wrapper.find(".palom-multi-date-listbox select").empty();
             }
@@ -81,13 +93,13 @@
             break;
           case 'by_demand':
             $("#palom-multi-date-widget-"+field_name+" .select-dates").slideUp();
-            if (dates_saved != '')
+            if (dates_saved == '')
               dates_saved = $hiddenField.val();
             $hiddenField.val('2500-01-01');
             break;
           case 'by_picking':
             $("#palom-multi-date-widget-"+field_name+" .select-dates").slideUp();
-            if (dates_saved != '')
+            if (dates_saved == '')
               dates_saved = $hiddenField.val();
             $hiddenField.val('2600-01-01');
             break;

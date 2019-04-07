@@ -8,6 +8,12 @@ require_once 'palom_utils.func.inc';
 function palom_utils_menu() {
   $items = [];
 
+  $items['palom-get-info/get-region-and-city-by-geo'] = [
+    'page callback' => '_palom_utils_get_region_city_by_geo',
+    'access arguments' => ['access content'],
+    'type' => MENU_CALLBACK,
+  ];
+
   $items['test'] = [
     'title' => t('A test page to output data'),
     'page callback' => 'palom_utils_test_callback',
@@ -24,4 +30,11 @@ function palom_utils_test_callback(){
   kpr($cities);
 
   return '';
+}
+
+/*
+ * Get region and city by geo menu callback
+ */
+function _palom_utils_get_region_city_by_geo($geo_id){
+  drupal_json_output(palom_utils_get_region_city_by_geo($geo_id));
 }

@@ -18,6 +18,60 @@ function palom_libs_libraries_info() {
     ],
   ];
 
+  $libraries['bootstrap_treeview'] = [
+    'name' => 'Bootstrap TreeView',
+    'vendor url' => 'https://github.com/jonmiles/bootstrap-treeview',
+    'version' => '1.2.0',
+    'files' => [
+      'js' => [
+        'bootstrap-treeview.js',
+      ],
+      'css' => [
+        'bootstrap-treeview.css',
+      ],
+    ],
+    'variants' => [
+      'minified' => [
+        'files' => [
+          'js' => [
+            'bootstrap-treeview.min.js',
+          ],
+          'css' => [
+            'bootstrap-treeview.min.css',
+          ],
+        ],
+      ]
+    ]
+  ];
+
+  $libraries['fancytree'] = [
+    'name' => 'JQuery fancyTree',
+    'vendor url' => 'https://github.com/mar10/fancytree',
+    'version' => '2.3.0',
+    'files' => [
+      'js' => [
+        'jquery.fancytree.js',
+      ],
+      'css' => [
+//        'skin-lion/ui.fancytree.css',
+        'ui.fancytree.css',
+      ],
+    ],
+    'variants' => [
+      'minified' => [
+        'files' => [
+          'js' => [
+            'jquery.fancytree.min.js',
+          ],
+          'css' => [
+//            'skin-lion/ui.fancytree.min.css',
+            'ui.fancytree.min.css',
+          ],
+        ],
+      ]
+    ]
+  ];
+
   $libraries['sprintf'] = [
     'name' => 'Sprintf',
     'version' => '1.0.0',

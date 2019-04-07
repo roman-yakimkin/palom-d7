@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function palom_tree_city_field_widget_info() {
+  return [
+    'palom_tree_city_widget' => [
+      'label' => t('A tree widget for selecting cities'),
+      'field types' => ['entityreference'],
+      'behaviors' => [
+        'multiple values' => FIELD_BEHAVIOR_CUSTOM,
+      ],
+    ]
+  ];
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function palom_tree_city_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $base = $element;
+  switch($instance['widget']['type']){
+    case 'palom_tree_city_widget':
+      $field_name = $field['field_name'];
+
+      $countries = palom_utils_get_countries();
+
+      $objects = [];
+
+      foreach($items as $item){
+        $object = node_load($item['target_id']);
+        $cr = palom_utils_get_geo_by_city($item['target_id']);
+        $objects[] = [
+          'elem_id' => $item['target_id'],
+          'name' => $object->title.' '.$cr[0]->geo_str,
+        ];
+      };
+
+      $palom_tree_city_widget_settings = [
+        'countries' => $countries,
+        'field_name' => $field_name,
+        $field_name => [
+          'objects' => $objects,
+          'cardinality' => $field['cardinality'],
+        ]
+      ];
+
+      $element['cities'] = [
+        '#type' => 'fieldset',
+        '#tree' => TRUE,
+        '#title' => $instance['label'],
+        '#description' => $instance['description'],
+      ];
+
+      $element['cities']['values'] = [
+        '#type' => 'hidden',
+      ];
+
+      $element['cities']['widget'] = [
+        '#theme' => 'palom_tree_city_widget',
+        '#field_name' => $field_name,
+      ];
+
+      $element['#element_validate'] = ['_palom_tree_city_element_validate'];
+
+      drupal_add_library('system', 'ui.dialog');
+
+      libraries_load('fancytree');
+      $element['#attached']['css'][] = drupal_get_path('module', 'palom_tree_city').'/palom-tree-city-widget.css';
+      $element['#attached']['js'][] = drupal_get_path('module', 'palom_tree_city').'/palom-tree-city-widget.js';
+
+      // Pass params to the widget
+      drupal_add_js(['palom_tree_city_widget' => $palom_tree_city_widget_settings], 'setting');
+      break;
+  };
+  return $element;
+
+}
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function palom_tree_city_field_is_empty($item, $field) {
+  return empty($item['target_id']);
+}
+
+/*
+ *  Converting data from the tree into the form structure
+ */
+function _palom_tree_city_element_validate($element, &$form_state){
+  $values = $element['cities']['values']['#value'];
+  $language = $element['#language'];
+  $field_name = $element['#field_name'];
+
+  $ret_values = [];
+
+  $stElems = trim($values);
+  $elems = explode(" ", $stElems);
+  if ($stElems != '') {
+    foreach ($elems as $one_elem) {
+      $ret_values[] = [
+        'target_id' => $one_elem,
+      ];
+    };
+  }
+
+  form_set_value($element, $ret_values, $form_state);
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function palom_tree_city_theme($existing, $type, $theme, $path) {
+  return [
+    'palom_tree_city_widget' => [
+      'variables' => [
+        'field_name' => null,
+      ],
+      'template' => 'palom-tree-city-widget',
+    ],
+  ];
+}
