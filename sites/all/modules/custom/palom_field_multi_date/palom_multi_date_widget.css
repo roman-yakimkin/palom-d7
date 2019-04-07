@@ -7,14 +7,21 @@
 
 .palom-multi-date-widget .row:nth-of-type(2) {
   padding: 5px 5px 0px 5px;
+  height: 100%;
+}
+
+.palom-multi-date-buttons {
+  display: flex;
+  height: 230px;
 }
 
 .palom-multi-date-buttons > div {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-content: space-around;
-  min-height: 150px;
+  align-content: space-between;
+  min-height: 100px;
+  margin: auto;
 }
 
 .palom-multi-date-buttons btn {

@@ -1,0 +1,11 @@
+name = Palom Tree place
+description = A widget to select sacred places using a tree
+package = Palom
+core = 7.x
+
+dependencies[] = palom_utils
+dependencies[] = palom_libs
+
+version = "7.x-1.0"
+core = "7.x"
+
