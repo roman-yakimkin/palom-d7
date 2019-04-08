@@ -95,14 +95,14 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
       }
 
       // A region was changed
-      if (isset($te) && $te['#name'] == $field['field_name']."[und][0][region_id]"){
+      elseif (isset($te) && $te['#name'] == $field['field_name']."[und][0][region_id]"){
         $country_id = $form_state['values'][$field['field_name']]['und'][0]['country_id'];
         $region_id = $form_state['values'][$field['field_name']]['und'][0]['region_id'];;
         $city_id = 0;
       }
 
       // Edit record
-      else if (isset($items[$delta]['country_id'])){
+      elseif (isset($items[$delta]['country_id'])){
         $country_id = $items[$delta]['country_id'];
         $region_id = $items[$delta]['region_id'];
         $city_id = $items[$delta]['city_id'];
@@ -133,7 +133,7 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
           '#options' => $countries,
           '#default_value' => $country_id,
           '#ajax' => [
-            'callback' => 'palom_field_cr_update_region_list',
+            'callback' => 'palom_field_cr_city_update_field',
             'wrapper' => $wrapper_name,
             'progress' => [
               'type' => 'none',
@@ -154,7 +154,7 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
             '#title' => t('Select a region'),
             '#description' => '',
             '#default_value' => $region_id,
-            '#empty_option' => t('-select'),
+            '#empty_option' => t('-select-'),
             '#empty_value' => 0,
             '#options' => $regions,
             '#ajax' => [
@@ -216,7 +216,7 @@ function palom_field_cr_city_field_is_empty($item, $field) {
 function palom_field_cr_city_update_field($form, $form_state){
   if (isset($form_state['triggering_element']['#field_name'])){
     $field_name = $form_state['triggering_element']['#field_name'];
-    return $form[$field_name]['und']['0'];
+    return $form[$field_name]['und'][0];
   }
 }
 

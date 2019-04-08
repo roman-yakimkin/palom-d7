@@ -14,6 +14,12 @@ function palom_utils_menu() {
     'type' => MENU_CALLBACK,
   ];
 
+  $items['palom-get-info/get-region-city-place-by-geo'] = [
+    'page callback' => '_palom_utils_get_region_city_place_by_geo',
+    'access arguments' => ['access content'],
+    'type' => MENU_CALLBACK,
+  ];
+
   $items['test'] = [
     'title' => t('A test page to output data'),
     'page callback' => 'palom_utils_test_callback',
@@ -37,4 +43,11 @@ function palom_utils_test_callback(){
  */
 function _palom_utils_get_region_city_by_geo($geo_id){
   drupal_json_output(palom_utils_get_region_city_by_geo($geo_id));
+}
+
+/*
+ * Get region, city and place structure by geo menu callback
+ */
+function _palom_utils_get_region_city_place_by_geo($geo_id){
+  drupal_json_output(palom_utils_get_region_city_place_by_geo($geo_id));
 }

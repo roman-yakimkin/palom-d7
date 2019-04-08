@@ -19,7 +19,62 @@ function palom_tree_place_field_widget_info() {
  * Implements hook_field_widget_form().
  */
 function palom_tree_place_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $base = $element;
+  switch($instance['widget']['type']){
+    case 'palom_tree_place_widget':
+      $field_name = $field['field_name'];
 
+      $countries = palom_utils_get_countries();
+
+      $objects = [];
+
+      foreach($items as $item){
+        $object = node_load($item['target_id']);
+        $cr = palom_utils_get_geo_by_place($item['target_id']);
+        $objects[] = [
+          'elem_id' => $item['target_id'],
+          'name' => $object->title.' '.$cr[0]->geo_str,
+        ];
+      };
+
+      $palom_tree_place_widget_settings = [
+        'countries' => $countries,
+        'field_name' => $field_name,
+        $field_name => [
+          'objects' => $objects,
+          'cardinality' => $field['cardinality'],
+        ]
+      ];
+
+      $element['places'] = [
+        '#type' => 'fieldset',
+        '#tree' => TRUE,
+        '#title' => $instance['label'],
+        '#description' => $instance['description'],
+      ];
+
+      $element['places']['values'] = [
+        '#type' => 'hidden',
+      ];
+
+      $element['places']['widget'] = [
+        '#theme' => 'palom_tree_place_widget',
+        '#field_name' => $field_name,
+      ];
+
+      $element['#element_validate'] = ['_palom_tree_place_element_validate'];
+
+      drupal_add_library('system', 'ui.dialog');
+
+      libraries_load('fancytree');
+      $element['#attached']['css'][] = drupal_get_path('module', 'palom_tree_place').'/palom-tree-place-widget.css';
+      $element['#attached']['js'][] = drupal_get_path('module', 'palom_tree_place').'/palom-tree-place-widget.js';
+
+      // Pass params to the widget
+      drupal_add_js(['palom_tree_place_widget' => $palom_tree_place_widget_settings], 'setting');
+      break;
+  };
+  return $element;
 }
 
 /**

@@ -47,6 +47,25 @@ function palom_utils_region_count($country_id) {
   return count($regions);
 }
 
+function palom_utils_places_by_city($city_id){
+  $query = db_select('node');
+  $query->addField('node', 'nid', 'elem_id');
+  $query->addField('node', 'title', 'title');
+  $query->addJoin('inner', 'field_data_field_city', 'fc', 'node.nid = fc.entity_id');
+  $query->condition('fc.field_city_city_id', $city_id);
+  $query->condition('node.type', 'place');
+  $query->condition('node.status', 1);
+  $query->orderBy('node.title');
+
+  $results = $query->execute()->fetchAll();
+  foreach($results as &$row){
+    $row->type = 'place';
+    $row->geo_str = palom_utils_get_geo_by_place($row->elem_id)[0]->geo_str;
+  }
+
+  return $results;
+}
+
 /*
  * Get region and city array by the country
  */
@@ -100,15 +119,85 @@ function palom_utils_get_region_city_by_geo($geo_id){
 }
 
 /*
+ * Get the region, city and place structure for JS Tree by geo_id
+ */
+function palom_utils_get_region_city_place_by_geo($country_id){
+  $geo = palom_utils_get_region_city_by_geo($country_id);
+
+  // Сycling througn countries and regions
+  if (palom_utils_region_count($country_id)>0){
+    $geo_tmp = [];
+
+    foreach ($geo as $key_1 => &$one_geo){
+
+      foreach ($one_geo->children as $key_2 => &$one_city){
+        $places = palom_utils_places_by_city($one_city->elem_id);
+
+        if ($places == []){
+
+          // Exclude a city without sacred placres
+          unset($one_geo->children[$key_2]);
+        }
+        else
+        {
+          $one_city->children = $places;
+          $one_city->folder = true;
+        }
+      }
+      $one_geo->children = array_values($one_geo->children);
+
+      // Add sacred places without cities
+      $places_without_city = palom_utils_places_without_city($one_geo->elem_id);
+      foreach($places_without_city as $one_place){
+        $one_geo->children[] = $one_place;
+      };
+
+      // Repack an array
+      if (sizeof($one_geo->children)>0){
+        $one_geo->folder = true;
+        $geo_tmp[] = $one_geo;
+      }
+    }
+    $geo = $geo_tmp;
+  }
+  else
+
+    // Cycling through separated cities
+  {
+    foreach ($geo as $key => &$one_city){
+      $places = palom_utils_places_by_city($one_city->elem_id);
+      if ($places == []){
+        unset($geo[$key]);
+      }
+      else
+      {
+        $one_city->children = $places;
+        $one_city->folder = true;
+      }
+    };
+
+    $places_without_city = palom_utils_places_without_city($country_id);
+    foreach($places_without_city as $one_place){
+      $geo[] = $one_place;
+    };
+
+
+    $geo = array_values($geo);
+  }
+
+  return $geo;
+}
+
+/*
  * Get country and region data by city
  */
-function palom_utils_get_geo_by_city($city_id){
-  $query = db_select('field_data_field_geo', 'geo');
+function palom_utils_get_geo_by_city($city_id, $field_name){
+  $query = db_select('field_data_'.$field_name, 'geo');
   $query->condition('geo.entity_type', 'node');
   $query->condition('geo.bundle', 'city');
   $query->condition('geo.entity_id', $city_id);
-  $query->addJoin('left', 'taxonomy_term_data', 'ttd_c', 'geo.field_geo_country_id = ttd_c.tid');
-  $query->addJoin('left', 'taxonomy_term_data', 'ttd_r', 'geo.field_geo_region_id = ttd_r.tid');
+  $query->addJoin('left', 'taxonomy_term_data', 'ttd_c', 'geo.'.$field_name.'_country_id = ttd_c.tid');
+  $query->addJoin('left', 'taxonomy_term_data', 'ttd_r', 'geo.'.$field_name.'_region_id = ttd_r.tid');
   $query->addField('ttd_c', 'name', 'country_name');
   $query->addField('ttd_r', 'name', 'region_name');
 
@@ -123,3 +212,56 @@ function palom_utils_get_geo_by_city($city_id){
 
   return $results;
 }
+
+function palom_utils_get_geo_by_place($place_id, $field_name = 'field_city'){
+  $query = db_select('field_data_'.$field_name, 'geo');
+  $query->condition('geo.entity_type', 'node');
+  $query->condition('geo.bundle', 'place');
+  $query->condition('geo.entity_id', $place_id);
+  $query->addJoin('left', 'taxonomy_term_data', 'ttd_c', 'geo.'.$field_name.'_country_id = ttd_c.tid');
+  $query->addJoin('left', 'taxonomy_term_data', 'ttd_r', 'geo.'.$field_name.'_region_id = ttd_r.tid');
+  $query->addField('ttd_c', 'name', 'country_name');
+  $query->addField('ttd_r', 'name', 'region_name');
+
+  $results = $query->execute()->fetchAll();
+
+  foreach ($results as &$value){
+    if ($value->region_name != '')
+      $value->geo_str = '('.$value->country_name.', '.$value->region_name.')';
+    else
+      $value->geo_str = '('.$value->country_name.')';
+  }
+
+  return $results;
+}
+
+/*
+ * Get places list without a city
+ */
+function palom_utils_places_without_city($geo_id){
+
+  $query = db_select('node');
+  $query->addField('node', 'nid', 'elem_id');
+  $query->addField('node', 'title', 'title');
+  $query->addJoin('inner', 'field_data_field_city', 'fc', 'node.nid = fc.entity_id');
+  $query->condition(
+    db_or()
+      ->condition('fc.field_city_country_id', $geo_id)
+      ->condition('fc.field_city_region_id', $geo_id)
+  );
+
+//  $query->condition('fc.field_city_country_id', $geo_id);
+  $query->condition('fc.field_city_city_id', 0);
+  $query->condition('node.type', 'place');
+  $query->condition('node.status', 1);
+  $query->orderBy('node.title');
+
+  $results = $query->execute()->fetchAll();
+  foreach($results as &$row){
+    $row->type = 'place';
+    $row->geo_str = palom_utils_get_geo_by_place($row->elem_id)[0]->geo_str;
+  }
+
+  return $results;
+}
+

@@ -156,7 +156,7 @@ function palom_field_cr_field_widget_form(&$form, &$form_state, $field, $instanc
 function palom_field_cr_update_region_list($form, $form_state){
   if (isset($form_state['triggering_element']['#field_name'])){
     $field_name = $form_state['triggering_element']['#field_name'];
-    return $form[$field_name]['und']['0'];
+    return $form[$field_name]['und'][0];
   }
 }
 

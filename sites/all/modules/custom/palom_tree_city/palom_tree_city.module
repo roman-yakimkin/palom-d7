@@ -30,7 +30,7 @@ function palom_tree_city_field_widget_form(&$form, &$form_state, $field, $instan
 
       foreach($items as $item){
         $object = node_load($item['target_id']);
-        $cr = palom_utils_get_geo_by_city($item['target_id']);
+        $cr = palom_utils_get_geo_by_city($item['target_id'], 'field_geo');
         $objects[] = [
           'elem_id' => $item['target_id'],
           'name' => $object->title.' '.$cr[0]->geo_str,
