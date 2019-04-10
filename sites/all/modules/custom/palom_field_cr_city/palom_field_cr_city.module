@@ -81,6 +81,7 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
   switch ($instance['widget']['type']) {
     case 'field_geo_cr_city_combo_widget':
       $element['#attached']['css'][] = drupal_get_path('module', 'palom_field_cr_city').'/palom_field_cr_city.css';
+      $element['#attached']['js'][] = drupal_get_path('module', 'palom_field_cr_city').'/palom_field_cr_city.js';
 
       if (isset($form_state['triggering_element']))
         $te = $form_state['triggering_element'];
@@ -101,7 +102,45 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
         $city_id = 0;
       }
 
-      // Edit record
+      // A city was changed
+      elseif (isset($te) && $te['#name'] == $field['field_name']."[und][0][city_id]"){
+        $country_id = $form_state['values'][$field['field_name']]['und'][0]['country_id'];
+        $region_id = $form_state['values'][$field['field_name']]['und'][0]['region_id'];
+        $city_id = $form_state['values'][$field['field_name']]['und'][0]['city_id'];
+      }
+
+      // A new city was added
+      elseif (isset($te) && $te['#name'] == "new_city_add"){
+        $input = $form_state['input'];
+
+        $country_id = $input[$field['field_name']]['und'][0]['country_id'];
+        $region_id = $input[$field['field_name']]['und'][0]['region_id'];
+        global $user;
+
+        // Add a new city programmatically
+        $new_city = new stdClass();
+        $new_city->type = 'city';
+        node_object_prepare($new_city);
+        $new_city->title = $input['new_city_name'];
+        $new_city->language = 'ru';
+        $new_city->field_geo[LANGUAGE_NONE][0]['country_id'] = $country_id;
+        $new_city->field_geo[LANGUAGE_NONE][0]['region_id'] = $region_id;
+        $new_city->uid = $user->uid;
+        $new_city->status = 1;
+        $new_city->promote = 1;
+        node_save($new_city);
+
+        $city_id = $new_city->nid;
+      }
+
+      // An addition of the new city was cancelled
+      elseif (isset($te) && $te['#name'] == "new_city_cancel"){
+        $country_id = $form_state['input'][$field['field_name']]['und'][0]['country_id'];
+        $region_id = $form_state['input'][$field['field_name']]['und'][0]['region_id'];
+        $city_id = 0;
+      }
+
+        // Edit record
       elseif (isset($items[$delta]['country_id'])){
         $country_id = $items[$delta]['country_id'];
         $region_id = $items[$delta]['region_id'];
@@ -128,7 +167,7 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
 
       $element['country_id'] = [
           '#type' => 'select',
-          '#title' => t('Select a country'),
+          '#title' => t('Select country'),
           '#description' => '',
           '#options' => $countries,
           '#default_value' => $country_id,
@@ -144,14 +183,13 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
       $rlist = palom_utils_get_regions($country_id);
 
       if ($rlist != []){
-        //        $regions[0] = t('All the regions');
         foreach ($rlist as $elem){
           $regions[$elem->tid] = $elem->name;
         };
 
         $element['region_id'] = [
             '#type' => 'select',
-            '#title' => t('Select a region'),
+            '#title' => t('Select region'),
             '#description' => '',
             '#default_value' => $region_id,
             '#empty_option' => t('-select-'),
@@ -174,29 +212,80 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
           ] + $base;
       }
 
-      $clist = palom_utils_get_cities($country_id, $region_id);
+      // If we need to add a new city
+      if (isset($te) && $te['#name'] == $field['field_name']."[und][0][city_id]" &&
+            $form_state['values'][$field['field_name']]['und'][0]['city_id'] == 'add_new'){
+        $element['new_city'] = [
+          '#type' => 'container',
+        ];
 
-      if ($clist != []){
-        //        $regions[0] = t('All the regions');
-        foreach ($clist as $elem){
-          $cities[$elem->nid] = $elem->title;
-        };
+        $element['new_city']['new_city_name'] = [
+          '#type' => 'textfield',
+          '#name' => 'new_city_name',
+          '#title' => t('New city name'),
+          '#description' => '',
+        ] + $base;
 
-        $element['city_id'] = [
-            '#type' => 'select',
-            '#title' => t('Select a city'),
-            '#description' => '',
-            '#default_value' => $city_id,
-            '#empty_option' => t('-select'),
-            '#empty_value' => 0,
-            '#options' => $cities,
-          ] + $base;
+        $element['new_city']['new_city_add'] = [
+          '#type' => 'button',
+          '#name' => 'new_city_add',
+          '#value' => t('Add'),
+          '#limit_validation_errors' => [],
+          '#ajax' => [
+            'callback' => 'palom_field_cr_city_update_field',
+            'wrapper' => $wrapper_name,
+            'progress' => [
+              'type' => 'none',
+            ]
+          ],
+        ] + $base;
+
+        $element['new_city']['new_city_cancel'] = [
+          '#type' => 'button',
+          '#name' => 'new_city_cancel',
+          '#value' => t('Cancel'),
+          '#limit_validation_errors' => [],
+          '#ajax' => [
+            'callback' => 'palom_field_cr_city_update_field',
+            'wrapper' => $wrapper_name,
+            'progress' => [
+              'type' => 'none',
+            ]
+          ],
+        ] + $base;
       }
       else {
-        $element['city_id'] = [
-            '#type' => 'hidden',
-            '#value' => 0,
-          ] + $base;
+        $clist = palom_utils_get_cities($country_id, $region_id);
+
+        if ($clist != []){
+          $cities['add_new'] = t('-add new-');
+          foreach ($clist as $elem){
+            $cities[$elem->nid] = $elem->title;
+          };
+
+          $element['city_id'] = [
+              '#type' => 'select',
+              '#title' => t('Select city'),
+              '#description' => '',
+              '#default_value' => $city_id,
+              '#empty_option' => t('-select-'),
+              '#empty_value' => 0,
+              '#options' => $cities,
+              '#ajax' => [
+                'callback' => 'palom_field_cr_city_update_field',
+                'wrapper' => $wrapper_name,
+                'progress' => [
+                  'type' => 'none',
+                ]
+              ],
+            ] + $base;
+        }
+        else {
+          $element['city_id'] = [
+              '#type' => 'hidden',
+              '#value' => 0,
+            ] + $base;
+        }
       }
 
       break;
