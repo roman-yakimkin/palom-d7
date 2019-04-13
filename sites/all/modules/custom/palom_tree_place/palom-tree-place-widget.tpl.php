@@ -4,6 +4,14 @@
             <select class="form-control form-select" name="sel_countries_place">
             </select>
         </div>
+        <div class="col-xs-2">
+            <a class="autodialog btn btn-default"
+               data-dialog-ajax="true"
+               data-dialog-ajax-disable-redirect="true"
+               data-dialog-width="750"
+               data-dialog-title="{{ t('New sacred place') }}"
+               href="/node/add/place">{{ t('New sacred place') }}</a>
+        </div>
     </div>
     <div class="row">
         <div class="palom-tree-place-left col-xs-5">

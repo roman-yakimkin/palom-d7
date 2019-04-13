@@ -59,6 +59,7 @@ function palom_utils_places_by_city($city_id){
 
   $results = $query->execute()->fetchAll();
   foreach($results as &$row){
+    $row->key = 'node_'.$row->elem_id;
     $row->type = 'place';
     $row->geo_str = palom_utils_get_geo_by_place($row->elem_id)[0]->geo_str;
   }
@@ -85,6 +86,7 @@ function palom_utils_get_region_city_by_geo($geo_id){
     foreach ($results as $key => &$value){
 
       // Recursion of a list
+      $value->key = 'term_'.$value->elem_id;
       $value->children = palom_utils_get_region_city_by_geo($value->elem_id);
       $value->folder = true;
       $value->type = 'region';
@@ -114,6 +116,10 @@ function palom_utils_get_region_city_by_geo($geo_id){
 
     $results = $q_cities->execute()->fetchAll();
 
+    foreach ($results as $key => &$value){
+      $value->key = 'node_'.$value->elem_id;
+    }
+
     return $results;
   }
 }
@@ -124,7 +130,7 @@ function palom_utils_get_region_city_by_geo($geo_id){
 function palom_utils_get_region_city_place_by_geo($country_id){
   $geo = palom_utils_get_region_city_by_geo($country_id);
 
-  // Сycling througn countries and regions
+  // Сycling through countries and regions
   if (palom_utils_region_count($country_id)>0){
     $geo_tmp = [];
 
@@ -180,7 +186,6 @@ function palom_utils_get_region_city_place_by_geo($country_id){
     foreach($places_without_city as $one_place){
       $geo[] = $one_place;
     };
-
 
     $geo = array_values($geo);
   }
@@ -258,10 +263,23 @@ function palom_utils_places_without_city($geo_id){
 
   $results = $query->execute()->fetchAll();
   foreach($results as &$row){
+    $row->key = 'node_'.$row->elem_id;
     $row->type = 'place';
     $row->geo_str = palom_utils_get_geo_by_place($row->elem_id)[0]->geo_str;
   }
 
   return $results;
+}
+
+/*
+ * Get max nid of defined node type
+ */
+function palom_utils_get_last_nid($node_type){
+  $query = db_select('node');
+  $query->addExpression('MAX(nid)');
+  $query->condition('type', $node_type);
+  $max_nid = $query->execute()->fetchField();
+
+  return $max_nid;
 }
 

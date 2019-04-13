@@ -6,13 +6,7 @@
       var thisWidgetId = '';
       var fieldName = settings.palom_tree_city_widget.field_name;
 
-      // Update the tree according to the country id
-      function UpdateTree(country_id){
-        $.get('/palom-get-info/get-region-and-city-by-geo/'+country_id, function(treeData){
-          var tree = $('#palom-tree-city-'+fieldName).fancytree('getTree');
-          tree.reload(treeData);
-        })
-      }
+      console.log(fieldName);
 
       // Get active node
       function getActiveNode(){
@@ -95,10 +89,10 @@
 
         // Россия по умолчанию
         $('select[name="sel_countries"] option[value="2"]', context).attr('selected', 'selected');
-        UpdateTree(2);
+        UpdateTreeCity(2, fieldName);
 
         $('select[name="sel_countries"]', context).on('change', function(evt){
-          UpdateTree($(this).val());
+          UpdateTreeCity($(this).val(), fieldName);
         });
 
         // Initialization of a city list already added
@@ -114,6 +108,7 @@
           setHiddenField($wrapper);
           $(thisWidgetId + " .palom-tree-city-listbox select").attr("data-cardinality", aData[aFieldName]['cardinality']);
         }
+
       });
 
       // Remove an element by double mouse clicking
@@ -140,5 +135,28 @@
       });
     }
   };
+
+  // Update the tree according to the country id
+  function UpdateTreeCity(country_id, field_name, after_dialog_closed = false ){
+    $.get('/palom-get-info/get-region-and-city-by-geo/'+country_id, function(treeData){
+      var tree = $('#palom-tree-city-'+field_name).fancytree('getTree');
+      tree
+          .reload(treeData)
+          .done(function(){
+            if (after_dialog_closed){
+              $.get('/palom-get-info/get-last-nid/city', function(response){
+                var node = tree.getNodeByKey("node_" + response);
+                node.setActive();
+              })
+            }
+          });
+    })
+  }
+
+  Drupal.ajax.prototype.commands.updateCityWidget = function(ajax, response, status){
+    $('select[name="sel_countries"]').val(response.country_id);
+    UpdateTreeCity(response.country_id, response.field_name, true);
+  }
+
 
 }(jQuery));

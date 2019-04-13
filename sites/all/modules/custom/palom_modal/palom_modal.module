@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function palom_modal_menu() {
+  $items = [];
+
+  $items['palom_modal/%ctools_js/%'] = array(
+    'page callback' => 'palom_modal_callback',
+    'page arguments' => array(1,2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
+ * Helper function to make a link.
+ */
+function _palom_modal_make_link($link_text = '') {
+  if (empty($link_text)) {
+    $link_text = t('Modal window');
+  }
+
+  return '<div id="magical-modal-link">' . l($link_text, 'palom_modal/nojs', array('attributes' => array('class' => 'ctools-use-modal'))) . '</div>';
+}
+
+function palom_modal_callback($js = NULL, $form_id){
+  if ($js) {
+    ctools_include('ajax');
+    ctools_include('modal');
+
+    $form_state = array(
+      'ajax' => TRUE,
+      'title' => t('MyModule Modal Form'),
+    );
+
+    $output = ctools_modal_form_wrapper('mymodule_form', $form_state);
+  }
+}

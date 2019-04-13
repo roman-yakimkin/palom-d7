@@ -143,8 +143,20 @@
       <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/testing/testing.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/testing.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/libraries/fancytree/jquery.fancytree-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/libraries/fancytree/jquery.fancytree-all.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bartik/bartik.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bartik/bartik.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/garland/garland.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/garland/garland.info" afterDir="false" />
@@ -163,82 +175,85 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="715">
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
+            <state relative-caret-position="775">
+              <caret line="288" column="7" selection-start-line="288" selection-start-column="7" selection-end-line="288" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.js">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="1515">
+              <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_field_multi_date.module">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="73" selection-start-line="72" selection-end-line="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.js">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_geo_synch/palom_geo_synch.info">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="685">
+              <caret line="134" selection-start-line="133" selection-end-line="134" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_geo_synch/palom_geo_synch.module">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.info">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/autodialog/autodialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="-1910">
+              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.css">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="55" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+            <state relative-caret-position="270">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.module">
+        <entry file="file://$PROJECT_DIR$/sites/all/libraries/fancytree/jquery.fancytree-all.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
-              <caret line="161" selection-start-line="155" selection-end-line="161" />
+            <state relative-caret-position="304">
+              <caret line="1594" selection-start-line="1594" selection-end-line="1594" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -252,11 +267,16 @@
       <find>advanced_forum_page</find>
       <find>flip.min.js</find>
       <find>date_select</find>
+      <find>asaf_form_ajax_commands_alter</find>
+      <find>visit: fu</find>
+      <find>getNodeByKey</find>
+      <find>children</find>
+      <find>visit:</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/sites/all/themes</dir>
-      <dir>$PROJECT_DIR$/sites/all/modules/contrib</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/sites/all/modules/contrib</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -266,13 +286,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/palom.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/style.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/html.twig" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_twig/palom_twig.info" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/template.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/html.tpl.twig" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/system/page.tpl.twig" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_twig/palom_twig.module" />
         <option value="$PROJECT_DIR$/sites/default/settings.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/engines/tfd7/twig.engine" />
@@ -281,7 +294,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_elements/palom_elements.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palo_field_cr.info" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.info" />
         <option value="$PROJECT_DIR$/sites/all/vendor/illuminate/view/FileViewFinder.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.css" />
@@ -297,26 +309,34 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/contrib/libraries/libraries.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.js" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_field_multi_date.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.js" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.css" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.js" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_geo_synch/palom_geo_synch.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_geo_synch/palom_geo_synch.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.js" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_modal_input/palom_modal_input.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_modal_input/palom_modal_input.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_modal_input/palom_modal.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_modal/palom_modal.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.js" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module" />
+        <option value="$PROJECT_DIR$/sites/all/libraries/fancytree/jquery.fancytree.js" />
+        <option value="$PROJECT_DIR$/sites/all/libraries/fancytree/jquery.fancytree-all.js" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.js" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.js" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.module" />
       </list>
     </option>
   </component>
@@ -356,7 +376,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -380,6 +399,21 @@
               <item name="docroot" type="462c0819:PsiDirectoryNode" />
               <item name="sites" type="462c0819:PsiDirectoryNode" />
               <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docroot" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="fancytree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docroot" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -396,7 +430,8 @@
               <item name="sites" type="462c0819:PsiDirectoryNode" />
               <item name="all" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="contrib" type="462c0819:PsiDirectoryNode" />
+              <item name="autodialog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
@@ -405,25 +440,6 @@
               <item name="all" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="custom" type="462c0819:PsiDirectoryNode" />
-              <item name="palom_field_cr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-              <item name="palom_field_cr_city" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-              <item name="palom_field_multi_date" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
@@ -451,15 +467,6 @@
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="custom" type="462c0819:PsiDirectoryNode" />
               <item name="palom_tree_place" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-              <item name="palom_utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
@@ -513,6 +520,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -600,23 +608,26 @@
       <workItem from="1554709584551" duration="423000" />
       <workItem from="1554710015284" duration="14437000" />
       <workItem from="1554788769246" duration="18860000" />
-      <workItem from="1554886783861" duration="2743000" />
+      <workItem from="1554886783861" duration="26717000" />
+      <workItem from="1554966215540" duration="10892000" />
+      <workItem from="1555077036225" duration="5486000" />
+      <workItem from="1555152885059" duration="15692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220735000" />
+    <option name="totallyTimeSpent" value="276779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1002" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21991481" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22630458" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943925" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32943925" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3995327" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995327" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -668,322 +679,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/date/date.install">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/date/date_elements.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/system/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/date/date_popup/date_popup.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="545" column="9" selection-start-line="545" selection-start-column="9" selection-end-line="545" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/form.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="2659" selection-start-line="2659" selection-end-line="2659" />
-          <folding>
-            <element signature="e#5#11#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/common.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="8283" selection-start-line="8283" selection-end-line="8283" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/taxonomy/taxonomy.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="1791" selection-start-line="1791" selection-end-line="1791" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/field-geo-cr-city-default-formatter.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="110" selection-start-line="7" selection-start-column="110" selection-end-line="7" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/field/field.attach.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="1250" selection-start-line="1250" selection-end-line="1250" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/field/field.default.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="137" column="9" selection-start-line="137" selection-start-column="9" selection-end-line="137" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/field/field.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1376">
-          <caret line="1175" column="9" selection-start-line="1175" selection-start-column="9" selection-end-line="1175" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gitpush">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/date/date.field.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
-          <caret line="211" selection-start-line="211" selection-end-line="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/field/field.api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="1215" column="35" selection-start-line="1215" selection-start-column="2" selection-end-line="1215" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/field/theme/field.tpl.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/date/date.theme">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_field_multi_date.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" lean-forward="true" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/date/date.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom-multi-date-formatter.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/libraries/libraries.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="1042" column="3" selection-start-line="1042" selection-start-column="3" selection-end-line="1042" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/libraries/libraries.api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/node/node.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="966" selection-start-line="966" selection-end-line="966" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom-multi-date-widget.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="84" selection-start-column="84" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="10" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="23" selection-end-line="43" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-          <caret line="187" selection-start-line="187" selection-end-line="187" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="78" selection-start-line="3" selection-start-column="78" selection-end-line="3" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/bootstrap.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="3797" selection-start-line="3797" selection-end-line="3797" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/menu.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="546" selection-start-line="546" selection-end-line="546" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/ajax.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="409" selection-start-line="409" selection-end-line="409" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_field_multi_date.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" selection-start-line="72" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_geo_synch/palom_geo_synch.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_geo_synch/palom_geo_synch.module">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1009,6 +704,260 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2415">
           <caret line="161" selection-start-line="155" selection-end-line="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/modal_forms/modal_forms.pages.inc" />
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/modal_forms/modal_forms.module" />
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/modal_forms/modal_forms.install" />
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/modal_forms/js/modal_forms_login.js" />
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/js/asaf.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_modal/palom_modal.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_modal/palom_modal.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/tests/asaf.test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1459" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/LICENSE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/modules/asaf_example/asaf_example.stepper.inc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/modules/asaf_example/asaf_example.api.simplest.inc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/modules/asaf_example/asaf_example.api.needed_files.handlers.inc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/modules/asaf_example/asaf_example.api.depended_elements.inc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/modules/asaf_example/asaf_example.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/modules/asaf_example/asaf_example.info">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/modules/asaf_example/asaf_example.gui.simplest.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/modules/asaf_example/asaf_example.gui.buttons.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/asaf.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="92" column="34" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/asaf/asaf.pages.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-169" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/autodialog/templates/html--autodialog.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/autodialog/templates/page--autodialog.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/autodialog/templates/region--autodialog.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/autodialog/templates/block--autodialog.tpl.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/drupal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4704">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/collapse.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="62" column="59" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/libraries/fancytree/jquery.fancytree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="1984" column="2" selection-start-line="1984" selection-start-column="2" selection-end-line="1984" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="282" column="18" lean-forward="true" selection-start-line="282" selection-start-column="18" selection-end-line="282" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/libraries/fancytree/jquery.fancytree-all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="1594" selection-start-line="1594" selection-end-line="1594" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="288" column="7" selection-start-line="288" selection-start-column="7" selection-end-line="288" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="167" lean-forward="true" selection-start-line="167" selection-end-line="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/autodialog/autodialog.api.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/autodialog/autodialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1910">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/autodialog/autodialog.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="134" selection-start-line="133" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom_tree_place.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
         </state>
       </provider>
     </entry>

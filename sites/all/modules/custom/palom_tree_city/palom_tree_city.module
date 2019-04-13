@@ -106,7 +106,6 @@ function _palom_tree_city_element_validate($element, &$form_state){
   }
 
   form_set_value($element, $ret_values, $form_state);
-
 }
 
 /**
@@ -121,4 +120,18 @@ function palom_tree_city_theme($existing, $type, $theme, $path) {
       'template' => 'palom-tree-city-widget',
     ],
   ];
+}
+
+/**
+ * Implements hook_asaf_form_ajax_commands_alter().
+ */
+function palom_tree_city_asaf_form_ajax_commands_alter(&$commands, $form, $form_state, $form_id) {
+  if ($form_id == 'city_node_form'){
+    $cmd = $commands;
+    $commands[] = [
+      'command' => 'updateCityWidget',
+      'country_id' => $form_state["values"]["field_geo"]["und"][0]["country_id"],
+      'field_name' => $form['#autodialog_options']['field'],
+    ];
+  }
 }

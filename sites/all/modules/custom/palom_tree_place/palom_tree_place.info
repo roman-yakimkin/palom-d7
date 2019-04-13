@@ -5,6 +5,7 @@ core = 7.x
 
 dependencies[] = palom_utils
 dependencies[] = palom_libs
+dependencies[] = asaf
 
 version = "7.x-1.0"
 core = "7.x"

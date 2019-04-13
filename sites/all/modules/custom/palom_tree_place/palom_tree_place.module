@@ -120,3 +120,17 @@ function palom_tree_place_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
+/**
+ * Implements hook_asaf_form_ajax_commands_alter().
+ */
+function palom_tree_place_asaf_form_ajax_commands_alter(&$commands, $form, $form_state, $form_id) {
+  if ($form_id == 'place_node_form'){
+    $cmd = $commands;
+    $commands[] = [
+      'command' => 'updatePlaceWidget',
+      'country_id' => $form_state["values"]["field_city"]["und"][0]["country_id"],
+      'field_name' => $form['#autodialog_options']['field'],
+    ];
+  }
+}

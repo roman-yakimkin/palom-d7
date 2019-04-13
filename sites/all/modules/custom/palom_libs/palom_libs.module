@@ -50,26 +50,26 @@ function palom_libs_libraries_info() {
     'version' => '2.3.0',
     'files' => [
       'js' => [
-        'jquery.fancytree.js',
+        'jquery.fancytree-all.js',
       ],
       'css' => [
 //        'skin-lion/ui.fancytree.css',
         'ui.fancytree.css',
       ],
     ],
-    'variants' => [
-      'minified' => [
-        'files' => [
-          'js' => [
-            'jquery.fancytree.min.js',
-          ],
-          'css' => [
-//            'skin-lion/ui.fancytree.min.css',
-            'ui.fancytree.min.css',
-          ],
-        ],
-      ]
-    ]
+//    'variants' => [
+//      'minified' => [
+//        'files' => [
+//          'js' => [
+//            'jquery.fancytree-custom.min.js',
+//          ],
+//          'css' => [
+////            'skin-lion/ui.fancytree.min.css',
+//            'ui.fancytree.min.css',
+//          ],
+//        ],
+//      ]
+//    ]
   ];
 
   $libraries['sprintf'] = [

@@ -5,6 +5,8 @@ core = 7.x
 
 files[] = palom_utils.func.inc
 
+scripts[] = palom_utils.js
+
 ; Information added by Drupal.org packaging script on 2016-08-16
 version = "7.x-1.0"
 core = "7.x"

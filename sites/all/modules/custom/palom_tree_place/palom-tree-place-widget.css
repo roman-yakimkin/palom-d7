@@ -24,9 +24,9 @@
 }
 
 .palom-tree-place-tree {
-  max-height: 400px !important;
+  max-height: 380px !important;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .palom-tree-place-listbox .form-select {
@@ -39,6 +39,30 @@ ul.fancytree-container {
   border: 0px hidden !important;
 }
 
+ul.fancytree-container:focus {
+  outline: none;
+}
+
 .fancytree-folder {
   user-select: none;
+}
+
+.ui-dialog .field-name-body {
+  display: none;
+}
+
+.ui-dialog .field-name-field-site-url {
+  display: none;
+}
+
+.ui-dialog .tabs-left {
+  display: none;
+}
+
+.ui-dialog .form-actions button:first-child {
+  display: none;
+}
+
+.ui-dialog .form-actions button:last-child {
+  display: none;
 }

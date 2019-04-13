@@ -27,6 +27,13 @@ function palom_utils_menu() {
     'type' => MENU_CALLBACK,
   ];
 
+  $items['palom-get-info/get-last-nid'] = [
+    'page callback' => '_palom_utils_get_last_nid',
+    'file' => 'palom_utils.func.inc',
+    'access arguments' => ['access content'],
+    'type' => MENU_CALLBACK,
+  ];
+
   return $items;
 }
 
@@ -51,3 +58,8 @@ function _palom_utils_get_region_city_by_geo($geo_id){
 function _palom_utils_get_region_city_place_by_geo($geo_id){
   drupal_json_output(palom_utils_get_region_city_place_by_geo($geo_id));
 }
+
+function _palom_utils_get_last_nid($node_type){
+  drupal_json_output(palom_utils_get_last_nid($node_type));
+}
+

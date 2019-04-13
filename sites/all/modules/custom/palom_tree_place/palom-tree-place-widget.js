@@ -1,23 +1,13 @@
 (function ($) {
 
+
   Drupal.behaviors.palom_tree_place_widget = {
+
     attach: function(context, settings) {
 
       var timePrev=0, timePrev2 = 0;
       var placesWidgetId = '';
       var fieldName = settings.palom_tree_place_widget.field_name;
-
-      console.log(settings);
-
-      // Update a tree according to id country
-      function UpdateTreePlace(country_id){
-
-        $.get('/palom-get-info/get-region-city-place-by-geo/'+country_id, function(treeData){
-          var tree = $('#palom-tree-place-'+fieldName).fancytree('getTree');
-          tree.reload(treeData);
-
-        })
-      }
 
       // Get the active node
       function getActiveNode(){
@@ -40,8 +30,6 @@
 
           // Если это святое место отсутствует в списке
           if (geo_in_list.length == 0){
-            console.log("<option value='"+node.data.elem_id+"'>"+node.title+" "+node.data.geo_str+"</option>");
-
             $select.append($("<option value='"+node.data.elem_id+"'>"+node.title+" "+node.data.geo_str+"</option>"));
 
           }
@@ -82,15 +70,16 @@
         $hiddenField.val(aGeoTmp);
       }
 
-
       $('body').once('initiale-tree-place-widget').each(function(){
 
         $('#palom-tree-place-'+fieldName).fancytree({
           source:[],
           dblclick: function(evt, data){
             var node = data.node;
-            var $wrapper = $('#palom-tree-place-widget-'+fieldName);
-            addPlaceToListBox($wrapper, context);
+            if (node.data.type == 'place'){
+              var $wrapper = $('#palom-tree-place-widget-'+fieldName);
+              addPlaceToListBox($wrapper, context);
+            }
           },
         });
 
@@ -105,7 +94,7 @@
 
         // Russia by default
         $('select[name="sel_countries_place"] option[value="2"]', context).attr('selected', 'selected');
-        UpdateTreePlace(2);
+        UpdateTreePlace(2, fieldName);
 
         $('select[name="sel_countries_place"]', context).on('change', function(evt){
           UpdateTreePlace($(this).val());
@@ -136,7 +125,7 @@
       // Add a city via press a button
       $(".add-place", context).on("click", function(){
         var node = getActiveNode();
-        if (node.type == 'place'){
+        if (node.data.type == 'place'){
           var $wrapper = $('#palom-tree-place-widget-'+fieldName);
           addPlaceToListBox($wrapper, context);
         }
@@ -151,5 +140,28 @@
       });
     }
   };
+
+  // Update a tree according to id country
+  function UpdateTreePlace(country_id, field_name, after_dialog_closed = false){
+    $.get('/palom-get-info/get-region-city-place-by-geo/'+country_id, function(treeData){
+      var tree = $('#palom-tree-place-'+field_name).fancytree('getTree');
+      tree
+          .reload(treeData)
+          .done(function(){
+            if (after_dialog_closed){
+              $.get('/palom-get-info/get-last-nid/place', function(response){
+                var node = tree.getNodeByKey("node_" + response);
+                node.setActive();
+              })
+            }
+          });
+    })
+  }
+
+  Drupal.ajax.prototype.commands.updatePlaceWidget = function(ajax, response, status){
+    $('select[name="sel_countries_place"]').val(response.country_id);
+    UpdateTreePlace(response.country_id, response.field_name, true);
+  }
+
 
 }(jQuery));

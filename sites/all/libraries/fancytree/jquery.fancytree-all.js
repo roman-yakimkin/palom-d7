@@ -1592,9 +1592,9 @@ FancytreeNode.prototype = /** @lends FancytreeNode# */{
 	 * @returns {boolean}
 	 */
 	visit: function(fn, includeSelf) {
-		var i, l,
-			res = true,
-			children = this.children;
+		var i, l, res = true;
+		var	children = this.children;
+
 
 		if( includeSelf === true ) {
 			res = fn(this);
@@ -1982,7 +1982,7 @@ Fancytree.prototype = /** @lends Fancytree# */{
 		searchRoot = searchRoot || this.rootNode;
 		match = null;
 		searchRoot.visit(function(node){
-//            window.console.log("getNodeByKey(" + key + "): ", node.key);
+//            console.log("getNodeByKey(" + key + "): ", node.key);
 			if(node.key === key) {
 				match = node;
 				return false;

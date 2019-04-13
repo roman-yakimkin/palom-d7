@@ -257,35 +257,35 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
       else {
         $clist = palom_utils_get_cities($country_id, $region_id);
 
-        if ($clist != []){
-          $cities['add_new'] = t('-add new-');
-          foreach ($clist as $elem){
-            $cities[$elem->nid] = $elem->title;
-          };
+//        if ($clist != []){
+        $cities['add_new'] = t('-add new-');
+        foreach ($clist as $elem){
+          $cities[$elem->nid] = $elem->title;
+        };
 
-          $element['city_id'] = [
-              '#type' => 'select',
-              '#title' => t('Select city'),
-              '#description' => '',
-              '#default_value' => $city_id,
-              '#empty_option' => t('-select-'),
-              '#empty_value' => 0,
-              '#options' => $cities,
-              '#ajax' => [
-                'callback' => 'palom_field_cr_city_update_field',
-                'wrapper' => $wrapper_name,
-                'progress' => [
-                  'type' => 'none',
-                ]
-              ],
-            ] + $base;
-        }
-        else {
-          $element['city_id'] = [
-              '#type' => 'hidden',
-              '#value' => 0,
-            ] + $base;
-        }
+        $element['city_id'] = [
+            '#type' => 'select',
+            '#title' => t('Select city'),
+            '#description' => '',
+            '#default_value' => $city_id,
+            '#empty_option' => t('-select-'),
+            '#empty_value' => 0,
+            '#options' => $cities,
+            '#ajax' => [
+              'callback' => 'palom_field_cr_city_update_field',
+              'wrapper' => $wrapper_name,
+              'progress' => [
+                'type' => 'none',
+              ]
+            ],
+          ] + $base;
+//        }
+//        else {
+//          $element['city_id'] = [
+//              '#type' => 'hidden',
+//              '#value' => 0,
+//            ] + $base;
+//        }
       }
 
       break;
