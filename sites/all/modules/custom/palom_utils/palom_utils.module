@@ -38,9 +38,10 @@ function palom_utils_menu() {
 }
 
 function palom_utils_test_callback(){
-  $cities = palom_utils_get_cities(100);
 
-  kpr($cities);
+  _palom_currency_update_rates();
+//  _palom_currency_update_amount('node', 74, 'field_avg_cost');
+  _palom_currency_update_amount_bundle('node', 'accommodation', ['field_avg_cost']);
 
   return '';
 }

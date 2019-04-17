@@ -1,0 +1,16 @@
+name = Palom Currency
+description = A library to work with currencies and rates
+package = Palom
+core = 7.x
+
+dependencies[] = palom_utils
+dependencies[] = palom_libs
+dependencies[] = double_field
+dependencies[] = entity
+dependencies[] = views
+
+; files[] = tests/forum_access.test
+
+; Information added by Drupal.org packaging script on 2016-08-16
+version = "7.x-1.0"
+core = "7.x"

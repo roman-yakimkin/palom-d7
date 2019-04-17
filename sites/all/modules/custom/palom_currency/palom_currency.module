@@ -1,0 +1,201 @@
+<?php
+
+define('RATE_URL', 'https://www.cbr-xml-daily.ru/daily_json.js');
+
+/*
+ * Get the list of currency fields
+ */
+function _palom_currency_get_currency_fields(){
+  return ['field_cost', 'field_avg_cost'];
+}
+
+/**
+ * Implements hook_cron().
+ */
+function palom_currency_cron() {
+  _palom_currency_update_rates();
+}
+
+/*
+ * Update currency rates by cron
+ */
+function _palom_currency_update_rates(){
+  $content = file_get_contents(RATE_URL);
+  $json = json_decode($content);
+
+  $date = DateTime::createFromFormat('Y-m-d', substr($json->Date, 0, 10));
+
+  foreach($json->Valute as $key => $currency){
+    if (in_array($key, ['UAH', 'BYN', 'KZT', 'USD', 'EUR', 'GBP'])){
+      db_merge('palom_currency_rate')
+        -> key(['char_code' => $key])
+        ->fields([
+          'char_code' => $key,
+          'nominal' => $currency->Nominal,
+          'rate_date' => $date->format('Y-m-d'),
+          'rate_value' => $currency->Value,
+        ])
+        ->execute();
+    }
+
+    // Add roubles
+    db_merge('palom_currency_rate')
+      -> key(['char_code' => 'RUB'])
+      ->fields([
+        'char_code' => 'RUB',
+        'nominal' => 1,
+        'rate_date' => $date->format('Y-m-d'),
+        'rate_value' => 1,
+      ])
+      ->execute();
+  };
+}
+
+/*
+ * Get last rates array
+ */
+function _palom_currency_get_rates(){
+  $query = db_select('palom_currency_rate', 'rate');
+  $query->fields('rate', ['char_code', 'nominal', 'rate_date', 'rate_value']);
+  $rates = $query->execute()->fetchAllAssoc('char_code');
+  return $rates;
+}
+
+/*
+ * Update one currency amount
+ */
+function _palom_currency_update_one_amount($entity_type, $entity_id, $field_name, $char_code, $delta, $value){
+  db_merge('palom_currency_amount')
+    ->key([
+      'entity_type' => $entity_type,
+      'entity_id' => $entity_id,
+      'field_name' => $field_name,
+      'char_code' => $char_code,
+      'delta' => $delta,
+    ])
+    ->fields([
+      'entity_type' => $entity_type,
+      'entity_id' => $entity_id,
+      'field_name' => $field_name,
+      'char_code' => $char_code,
+      'delta' => $delta,
+      'rate_value' => $value,
+    ])
+    ->execute();
+}
+
+/*
+ * Update a currency amount of a single entity
+ */
+function _palom_currency_update_amount_by_entity_id($entity_type, $entity_id, $field_name){
+  $rates = _palom_currency_get_rates();
+  $entity = entity_load_single($entity_type, $entity_id);
+  $items = $entity->{$field_name}[LANGUAGE_NONE];
+  foreach($items as $delta => $item){
+    $value = $item['first'];
+    $currency_code = $item['second'];
+    foreach($rates as $rate){
+      $currency_value = $value * $rate->nominal / $rate->rate_value;
+      _palom_currency_update_one_amount($entity_type, $entity_id, $field_name, $rate->char_code, $delta, $currency_value);
+    }
+  }
+}
+
+/*
+ * Update a currency amount of a single entity by entity structure
+ */
+function _palom_currency_update_amount_by_entity($entity, $entity_type, $field_name){
+  $rates = _palom_currency_get_rates();
+  $entity_id = $entity->nid;
+  $items = $entity->{$field_name}[LANGUAGE_NONE];
+  foreach($items as $delta => $item){
+    $value = $item['first'];
+    $currency_code = $item['second'];
+    foreach($rates as $rate){
+      $currency_value = $value * $rate->nominal / $rate->rate_value;
+      _palom_currency_update_one_amount($entity_type, $entity_id, $field_name, $rate->char_code, $delta, $currency_value);
+    }
+  }
+
+}
+
+/*
+ * Delete a currency amount of a single entity
+ */
+function _palom_currency_delete_amount_by_id($entity_type, $entity_id, $field_name = ""){
+  $query = db_delete('palom_currency_amount')
+    ->condition('entity_type', $entity_type)
+    ->condition('entity_id', $entity_id);
+
+  if ($field_name != "")
+    $query->condition('field_name', $field_name);
+
+  $query->execute();
+}
+
+/*
+ * Update a currency amount of a bundle (many entities)
+ */
+function _palom_currency_update_amount_bundle($entity_type, $entity_bundle, $field_names){
+  $rates = _palom_currency_get_rates();
+  $entities = entity_load($entity_type, false, [
+    'type' => $entity_bundle,
+  ]);
+  foreach ($entities as $entity){
+
+    $entity_id = $entity->nid;
+    foreach ($field_names as $field_name){
+
+      $items = $entity->{$field_name}[LANGUAGE_NONE];
+      foreach($items as $delta => $item){
+        $value = $item['first'];
+        $currency_code = $item['second'];
+        foreach($rates as $rate){
+          $currency_value = $value * $rate->nominal / $rate->rate_value;
+          _palom_currency_update_one_amount($entity_type, $entity_id, $field_name, $rate->char_code, $delta, $currency_value);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function palom_currency_entity_insert($entity, $type) {
+  $entity_id = $entity->nid;
+  $currency_fields = _palom_currency_get_currency_fields();
+
+  foreach ($currency_fields as $currency_field){
+    $items = field_get_items($type, $entity, $currency_field);
+    if ($items){
+      _palom_currency_update_amount_by_entity($entity, $type, $currency_field);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function palom_currency_entity_update($entity, $type) {
+  $entity_id = $entity->nid;
+
+  _palom_currency_delete_amount_by_id($type, $entity_id);
+  $currency_fields = _palom_currency_get_currency_fields();
+
+  foreach ($currency_fields as $currency_field){
+    $items = field_get_items($type, $entity, $currency_field);
+    if ($items){
+      _palom_currency_update_amount_by_entity($entity, $type, $currency_field);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function palom_currency_entity_delete($entity, $type) {
+  $entity_id = $entity->nid;
+
+  _palom_currency_delete_amount_by_id($type, $entity_id);
+}

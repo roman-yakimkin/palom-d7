@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInitComposerManager
 {
     public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
     );
@@ -15,7 +16,8 @@ class ComposerStaticInitComposerManager
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Contracts\\' => 18,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Debug\\' => 24,
@@ -42,7 +44,7 @@ class ComposerStaticInitComposerManager
         ),
         'C' => 
         array (
-            'Carbon\\' => 7,
+            'Commercie\\Currency\\' => 19,
         ),
     );
 
@@ -51,9 +53,13 @@ class ComposerStaticInitComposerManager
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Contracts\\' => 
+        'Symfony\\Polyfill\\Ctype\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/contracts',
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Component\\Yaml\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
         'Symfony\\Component\\Translation\\' => 
         array (
@@ -111,9 +117,23 @@ class ComposerStaticInitComposerManager
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
-        'Carbon\\' => 
+        'Commercie\\Currency\\' => 
         array (
-            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+            0 => __DIR__ . '/..' . '/commercie/currency/src',
+        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
+    );
+
+    public static $prefixesPsr0 = array (
+        'B' => 
+        array (
+            'BartFeenstra' => 
+            array (
+                0 => __DIR__ . '/..' . '/bartfeenstra/cldr/src',
+            ),
         ),
     );
 
@@ -122,6 +142,8 @@ class ComposerStaticInitComposerManager
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitComposerManager::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitComposerManager::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitComposerManager::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitComposerManager::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

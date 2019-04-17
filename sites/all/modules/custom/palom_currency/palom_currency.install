@@ -1,0 +1,93 @@
+<?php
+
+function palom_currency_schema(){
+  $schema['palom_currency_rate'] = [
+    'fields' => [
+      'char_code' => [
+        'type' => 'varchar',
+        'not null' => true,
+        'length' => 10,
+        'description' => t('Currency char code'),
+      ],
+      'nominal' => [
+        'type' => 'int',
+        'not null' => true,
+        'default' => 1,
+        'description' => t('Currency nominal value'),
+      ],
+      'rate_date' => [
+        'type' => 'datetime',
+        'mysql_type' => 'datetime',
+        'not null' => false,
+        'description' => t('Currency date datetime'),
+      ],
+      'rate_value' => [
+        'type' => 'numeric',
+        'precision' => 15,
+        'scale' => 5,
+        'not null' => true,
+        'description' => t('Currency rate value'),
+      ]
+    ],
+    'indexes' => [
+      'char_code' => ['char_code'],
+    ]
+  ];
+
+  $schema['palom_currency_amount'] = [
+    'description' => t('Amount in different currencies'),
+    'fields' => [
+      'entity_type' => [
+        'type' => 'varchar',
+        'not null' => true,
+        'length' => 128,
+        'description' => t('Entity type'),
+      ],
+      'entity_id' => [
+        'type' => 'int',
+        'not null' => true,
+        'default' => 0,
+        'description' => t('Entity ID'),
+      ],
+      'field_name' => [
+        'type' => 'varchar',
+        'not null' => true,
+        'length' => 128,
+        'description' => t('Field name'),
+      ],
+      'char_code' => [
+        'type' => 'varchar',
+        'not null' => true,
+        'length' => 10,
+        'description' => t('Currency char code'),
+      ],
+      'delta' => [
+        'type' => 'int',
+        'not null' => true,
+        'default' => 0,
+        'description' => t('Delta'),
+      ],
+      'rate_value' => [
+        'type' => 'numeric',
+        'precision' => 15,
+        'scale' => 5,
+        'not null' => true,
+        'description' => t('Value of amount in a currency'),
+      ],
+
+    ],
+    'indexes' => [
+      'entity_id' => [
+        'entity_id'
+      ],
+      'char_code' => [
+        'char_code',
+      ],
+      'rate_value' => [
+        'rate_value',
+      ]
+    ],
+  ];
+
+  return $schema;
+}
