@@ -106,7 +106,7 @@ function _palom_currency_update_amount_by_entity_id($entity_type, $entity_id, $f
  */
 function _palom_currency_update_amount_by_entity($entity, $entity_type, $field_name){
   $rates = _palom_currency_get_rates();
-  $entity_id = $entity->nid;
+  $entity_id = palom_utils_get_entity_id($entity, $entity_type);
   $items = $entity->{$field_name}[LANGUAGE_NONE];
   foreach($items as $delta => $item){
     $value = $item['first'];
@@ -163,7 +163,6 @@ function _palom_currency_update_amount_bundle($entity_type, $entity_bundle, $fie
  * Implements hook_entity_insert().
  */
 function palom_currency_entity_insert($entity, $type) {
-  $entity_id = $entity->nid;
   $currency_fields = _palom_currency_get_currency_fields();
 
   foreach ($currency_fields as $currency_field){
@@ -178,7 +177,7 @@ function palom_currency_entity_insert($entity, $type) {
  * Implements hook_entity_update().
  */
 function palom_currency_entity_update($entity, $type) {
-  $entity_id = $entity->nid;
+  $entity_id = palom_utils_get_entity_id($entity, $type);
 
   _palom_currency_delete_amount_by_id($type, $entity_id);
   $currency_fields = _palom_currency_get_currency_fields();
@@ -195,7 +194,7 @@ function palom_currency_entity_update($entity, $type) {
  * Implements hook_entity_delete().
  */
 function palom_currency_entity_delete($entity, $type) {
-  $entity_id = $entity->nid;
+  $entity_id = palom_utils_get_entity_id($entity, $type);
 
   _palom_currency_delete_amount_by_id($type, $entity_id);
 }

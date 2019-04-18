@@ -1,2 +1,98 @@
 <?php
 
+function _palom_geo_synch_get_geo_fields(){
+  return ['field_geo', 'field_city'];
+}
+
+/**
+ * Implements hook_taxonomy_term_delete().
+ */
+function palom_geo_synch_taxonomy_term_delete($term) {
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function palom_geo_synch_form_taxonomy_overview_terms_alter(&$form, &$form_state, $form_id) {
+  array_unshift($form['#submit'], 'palom_geo_synch_geo_was_changed');
+}
+
+/*
+ * Callback if a region vas moved
+ */
+function palom_geo_synch_geo_was_changed(&$form, &$form_state){
+  if ($form['#vocabulary']->machine_name == 'countries'){
+    foreach($form_state['values'] as $key => $value){
+      if (substr($key,0, 4) == 'tid:'){
+        $tid = $value['tid'];
+        $new_parent = $value['parent'];
+        $current_parents = taxonomy_get_parents($tid);
+        $current_parent = array_shift($current_parents);
+
+        if (isset($current_parent) and ($current_parent->tid != $new_parent)){
+          // This region changed its country
+          _palom_geo_synch_change_region('node', 'city', 'field_geo', $tid, $current_parent->tid, $new_parent);
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Change region value of some entities
+ */
+function _palom_geo_synch_change_region($entity_type, $entity_bundle, $field_name, $region_value, $old_country_value, $new_country_value){
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', $entity_type)
+    ->entityCondition('bundle', $entity_bundle)
+    ->fieldCondition($field_name, 'country_id', $old_country_value)
+    ->fieldCondition($field_name, 'region_id', $region_value);
+  $result = $query->execute();
+  $entities = [];
+  if ($result != []){
+    $entities = entity_load($entity_type, array_keys($result[$entity_type]));
+    foreach($entities as $entity){
+      $items = $entity->{$field_name}[LANGUAGE_NONE];
+      foreach($items as $delta => $item){
+        if ($item['country_id'] == $old_country_value)
+          $entity->{$field_name}[LANGUAGE_NONE][$delta]['country_id'] = $new_country_value;
+      }
+      entity_save($entity_type, $entity);
+    }
+  };
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function palom_geo_synch_node_update($node) {
+  if ($node->type == 'city'){
+
+    $new_country_id = $node->field_geo[LANGUAGE_NONE][0]['country_id'];
+    $new_region_id = $node->field_geo[LANGUAGE_NONE][0]['region_id'];
+    $old_country_id = $node->original->field_geo[LANGUAGE_NONE][0]['country_id'];
+    $old_region_id = $node->original->field_geo[LANGUAGE_NONE][0]['region_id'];
+
+    if (($new_country_id != $old_country_id) || ($new_region_id != $old_region_id)){
+
+      // Update the geo data of all the entities what belongs to this city
+      $query = new EntityFieldQuery();
+      $query->entityCondition('entity_type', 'node')
+        ->fieldCondition('field_city', 'country_id', $old_country_id)
+        ->fieldCondition('field_city', 'region_id', $old_region_id);
+      $result = $query->execute();
+      $entities = [];
+      if ($result != []){
+        $entities = entity_load('node', array_keys($result['node']));
+        foreach($entities as $entity){
+          $entity->field_city[LANGUAGE_NONE][0]['country_id'] = $new_country_id;
+          $entity->field_city[LANGUAGE_NONE][0]['region_id'] = $new_region_id;
+          entity_save('node', $entity);
+        }
+      }
+
+    }
+
+  }
+}

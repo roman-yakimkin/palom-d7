@@ -283,3 +283,16 @@ function palom_utils_get_last_nid($node_type){
   return $max_nid;
 }
 
+function palom_utils_get_entity_id($entity, $type){
+  switch ($type) {
+    case 'node':
+      return $entity->nid;
+    case 'user':
+      return $entity->uid;
+    case 'taxonomy_term':
+      return $entity->tid;
+    case 'taxonomy_vocabulary':
+      return $entity->vid;
+  }
+}
+
