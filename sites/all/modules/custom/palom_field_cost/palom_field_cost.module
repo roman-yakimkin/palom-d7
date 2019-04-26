@@ -1,2 +1,53 @@
 <?php
 
+/**
+ * Implements hook_field_formatter_info().
+ */
+function palom_field_cost_field_formatter_info() {
+  return [
+    'field_cost_nice_formatter' => [
+      'label' => t('A nice formatter for palom cost field'),
+      'field types' => ['double_field'],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function palom_field_cost_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = [];
+  $settings = $display['settings'];
+  switch ($display['type']){
+    case 'field_cost_nice_formatter':
+      foreach($items as $delta => $item){
+        $value = round($item['first']);
+        $currency = $item['second'];
+        switch ($currency){
+          case 'RUB':
+            $element[$delta]['#markup'] = "<span class=\"value\">$value</span> <span class=\"currency\">руб.</span>";
+            break;
+          case 'UAH':
+            $element[$delta]['#markup'] = "<span class=\"value\">$value</span> <span class=\"currency\">грн.</span>";
+            break;
+          case 'BYN':
+            $element[$delta]['#markup'] = "<span class=\"value\">$value</span> <span class=\"currency\">бел.руб.</span>";
+            break;
+          case 'KZT':
+            $element[$delta]['#markup'] = "<span class=\"value\">$value</span> <span class=\"currency\">тенге</span>";
+            break;
+          case 'USD':
+            $element[$delta]['#markup'] = "<span class=\"currency\">\$</span><span class=\"value\">$value</span>";
+            break;
+          case 'EUR':
+            $element[$delta]['#markup'] = "<span class=\"currency\">&euro;</span><span class=\"value\">$value</span>";
+            break;
+          case 'GBP':
+            $element[$delta]['#markup'] = "<span class=\"currency\">&pound;</span><span class=\"value\">$value</span>";
+            break;
+        }
+      }
+  }
+  return $element;
+
+}
