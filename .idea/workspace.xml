@@ -4,698 +4,6 @@
     <list default="true" id="98a662d9-a857-4902-8c09-cd99b209d6b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.docksal/docksal.env" beforeDir="false" afterPath="$PROJECT_DIR$/../.docksal/docksal.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.docksal/docksal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.docksal/docksal.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/bootstrap.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/bootstrap.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/common.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/common.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/file.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/file.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/registry.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/registry.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/aggregator/aggregator.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aggregator/aggregator.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/aggregator/tests/aggregator_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aggregator/tests/aggregator_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/block/block.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/block/block.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/block/tests/block_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/block/tests/block_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/block/tests/themes/block_test_theme/block_test_theme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/block/tests/themes/block_test_theme/block_test_theme.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/blog/blog.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/blog/blog.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/book/book.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/book/book.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/color/color.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/color/color.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/comment/comment.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comment/comment.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/contact/contact.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/contact/contact.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/contextual/contextual.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/contextual/contextual.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dashboard/dashboard.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dashboard/dashboard.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/dblog/dblog.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/dblog/dblog.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/field.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/field.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/modules/field_sql_storage/field_sql_storage.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/field_sql_storage/field_sql_storage.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/modules/list/list.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/list/list.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/modules/list/tests/list_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/list/tests/list_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/modules/number/number.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/number/number.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/modules/number/number.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/number/number.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/modules/options/options.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/options/options.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/modules/text/text.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/modules/text/text.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field/tests/field_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field/tests/field_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/field_ui/field_ui.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/field_ui/field_ui.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/file/file.field.inc" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file/file.field.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/file/file.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file/file.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/file/tests/file.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file/tests/file.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/file/tests/file_module_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/file/tests/file_module_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/filter/filter.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/filter/filter.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/forum/forum.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/forum/forum.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/help/help.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/help/help.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/image/image.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/image/image.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/image/tests/image_module_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/image/tests/image_module_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/locale/locale.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/locale/locale.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/locale/tests/locale_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/locale/tests/locale_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/menu/menu.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/menu/menu.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/node/node.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/node/node.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/node/tests/node_access_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/node/tests/node_access_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/node/tests/node_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/node/tests/node_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/node/tests/node_test_exception.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/node/tests/node_test_exception.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/openid/openid.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/openid/openid.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/openid/tests/openid_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/openid/tests/openid_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/overlay/overlay.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/overlay/overlay.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/path/path.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/path/path.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/php/php.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/php/php.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/poll/poll.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/poll/poll.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/profile/profile.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/profile/profile.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/rdf/rdf.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/rdf/rdf.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/rdf/tests/rdf_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/rdf/tests/rdf_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/search/search.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/search/search.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/search/tests/search_embedded_form.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/search/tests/search_embedded_form.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/search/tests/search_extra_type.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/search/tests/search_extra_type.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/search/tests/search_node_tags.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/search/tests/search_node_tags.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/shortcut/shortcut.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/shortcut/shortcut.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/drupal_web_test_case.php" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/drupal_web_test_case.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/simpletest.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/simpletest.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/actions_loop_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/actions_loop_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/ajax_forms_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/ajax_forms_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/ajax_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/ajax_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/batch_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/batch_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/boot_test_1.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/boot_test_1.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/boot_test_2.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/boot_test_2.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/bootstrap.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/bootstrap.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/common_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/common_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/common_test_cron_helper.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/common_test_cron_helper.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/database_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/database_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/drupal_autoload_test/drupal_autoload_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/entity_cache_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/entity_cache_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/entity_cache_test_dependency.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/entity_cache_test_dependency.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/entity_crud_hook_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/entity_crud_hook_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/entity_query_access_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/entity_query_access_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/error_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/error_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/file.test" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/file.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/file_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/file_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/filter_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/filter_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/form_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/form_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/image_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/image_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/menu_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/menu_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/module_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/module_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/path_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/path_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/psr_0_test/psr_0_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/psr_0_test/psr_0_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/psr_4_test/psr_4_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/psr_4_test/psr_4_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/requirements1_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/requirements1_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/requirements2_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/requirements2_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/session_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/session_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_dependencies_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_dependencies_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_core_version_dependencies_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_core_version_dependencies_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_core_version_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_core_version_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_module_version_dependencies_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_module_version_dependencies_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_module_version_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_incompatible_module_version_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_project_namespace_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_project_namespace_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/system_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/system_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/taxonomy_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/taxonomy_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/theme_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/theme_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_basetheme/test_basetheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_basetheme/test_basetheme.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_subtheme/test_subtheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_subtheme/test_subtheme.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme/test_theme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme/test_theme.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme_nyan_cat/test_theme_nyan_cat.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/themes/test_theme_nyan_cat/test_theme_nyan_cat.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/update_script_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/update_script_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/update_test_1.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/update_test_1.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/update_test_2.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/update_test_2.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/update_test_3.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/update_test_3.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/url_alter_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/url_alter_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/simpletest/tests/xmlrpc_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/simpletest/tests/xmlrpc_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/statistics/statistics.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/statistics/statistics.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/syslog/syslog.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/syslog/syslog.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/system/system.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/system/system.install" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.install" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/system/system.module" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/system.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/system/tests/cron_queue_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/tests/cron_queue_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/system/tests/system_cron_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/tests/system_cron_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/taxonomy/taxonomy.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/taxonomy/taxonomy.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/toolbar/toolbar.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/toolbar/toolbar.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/tracker/tracker.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/tracker/tracker.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/translation/tests/translation_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/translation/tests/translation_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/translation/translation.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/translation/translation.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/trigger/tests/trigger_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/trigger/tests/trigger_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/trigger/trigger.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/trigger/trigger.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/update/tests/aaa_update_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/aaa_update_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/update/tests/bbb_update_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/bbb_update_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/update/tests/ccc_update_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/ccc_update_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/update/tests/themes/update_test_admintheme/update_test_admintheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/themes/update_test_admintheme/update_test_admintheme.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/update/tests/themes/update_test_basetheme/update_test_basetheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/themes/update_test_basetheme/update_test_basetheme.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/update/tests/themes/update_test_subtheme/update_test_subtheme.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/themes/update_test_subtheme/update_test_subtheme.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/update/tests/update_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/tests/update_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/update/update.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/update/update.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/user/tests/user_form_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/tests/user_form_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/user/user.info" beforeDir="false" afterPath="$PROJECT_DIR$/modules/user/user.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/minimal/minimal.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/minimal/minimal.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/standard/standard.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/standard/standard.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/testing/testing.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/testing.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/D7UPGRADE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/ie/views-admin.ie7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin-rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.advanced_help.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.bartik-rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.bartik.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.contextual.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.ctools-rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.ctools.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.garland-rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.garland.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.seven-rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.seven.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.theme-rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-admin.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views-rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/css/views.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/documentation-standards.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/drush/views.drush.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_area.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_area_messages.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_area_result.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_area_text.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_area_text_custom.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_area_view.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_argument.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_argument_date.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_argument_formula.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_argument_group_by_numeric.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_argument_many_to_one.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_argument_null.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_argument_numeric.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_argument_string.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_boolean.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_contextual_links.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_counter.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_ctools_dropdown.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_custom.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_date.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_entity.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_links.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_machine_name.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_markup.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_math.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_numeric.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_prerender_list.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_serialized.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_time_interval.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_field_url.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_boolean_operator.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_boolean_operator_string.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_combine.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_date.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_entity_bundle.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_equality.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_fields_compare.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_group_by_numeric.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_in_operator.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_many_to_one.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_numeric.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_filter_string.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_relationship.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_relationship_groupwise_max.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_sort.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_sort_date.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_sort_group_by_numeric.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_sort_menu_hierarchy.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/handlers/views_handler_sort_random.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/advanced-settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/advanced-style-settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/aggregation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/alter-exposed-filter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/analyze-theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/api-default-views.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/api-example.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/api-forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/api-handler-area.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/api-tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/api-upgrading.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/api.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/argument.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/basic-settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/demo-video.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/display-attachment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/display-block.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/display-default.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/display-feed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/display-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/display.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/drush.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/embed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/empty-text.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/example-author-block.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/example-filter-by-current-user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/example-recent-stories.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/example-slideshow-thumb-pager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/example-user-feed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/example-users-by-role.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/exposed-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/field.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/filter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/get-total-rows.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/getting-started.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/group-by.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/node-term_node-term_data-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/node-term_node-term_data.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/overview-ui-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/overview-ui-small.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/style-breakdown-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/style-breakdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views1-admin-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views1-admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views1-changeviewtype-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views1-changeviewtype.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-addaview-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-addaview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-adddisplay-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-adddisplay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-addfields-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-addfields.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-addfieldsajax-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-addfieldsajax.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-admin-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-changedisplaystyle-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-changedisplaystyle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-fieldspreview-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-fieldspreview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-newview-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-newview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-rearrangefields-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-rearrangefields.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-tablestyle-large.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views2-tablestyle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views3-group-aggregation-types.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views3-group-aggregation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views3-jump-style-menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views3-semanticviews.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/images/views3-views-all.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/menu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/misc-notes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/new.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/other-help.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/overrides.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/path.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/performance-views-vs-displays.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/performance.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/relationship-representative.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/relationship.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/reports.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/select-multple-nids-contextual-filters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/semantic-views.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/sort.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-comment-rss.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-fields.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-grid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-grouping.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-jump.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-node-rss.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-node.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-row.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-rss.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-summary-unformatted.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-table.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style-unformatted.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/style.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/taxonomy-page-override.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/theme-css.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/top-pager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/ui-crashes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/updating-view3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/updating.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/upgrading.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/using-theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/view-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/view-settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/view-type.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/help/views.help.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/images/arrow-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/images/expanded-options.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/images/loading-small.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/images/overridden.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/images/sprites.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/images/status-active.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/includes/admin.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/includes/ajax.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/includes/analyze.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/includes/base.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/includes/cache.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/includes/handlers.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/includes/plugins.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/includes/view.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/js/ajax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/js/ajax_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/js/base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/js/jquery.ui.dialog.patch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/js/views-admin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/js/views-contextual.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/js/views-list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator/views_handler_argument_aggregator_category_cid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator/views_handler_argument_aggregator_fid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator/views_handler_argument_aggregator_iid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator/views_handler_field_aggregator_category.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator/views_handler_field_aggregator_title_link.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator/views_handler_field_aggregator_xss.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator/views_handler_filter_aggregator_category_cid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/aggregator/views_plugin_row_aggregator_rss.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/book.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/book/views_plugin_argument_default_book_root.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment.views_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_argument_comment_user_uid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment_depth.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment_link.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment_link_approve.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment_link_delete.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment_link_edit.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment_link_reply.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment_node_link.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_comment_username.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_last_comment_timestamp.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_ncs_last_comment_name.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_ncs_last_updated.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_node_comment.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_field_node_new_comments.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_filter_comment_user_uid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_filter_ncs_last_updated.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_filter_node_comment.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_sort_comment_thread.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_sort_ncs_last_comment_name.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_handler_sort_ncs_last_updated.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_plugin_row_comment_rss.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/comment/views_plugin_row_comment_view.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/contact.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/contact/views_handler_field_contact_link.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/field.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/field/views_handler_argument_field_list.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/field/views_handler_argument_field_list_string.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/field/views_handler_field_field.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/field/views_handler_filter_field_list.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/field/views_handler_filter_field_list_boolean.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/field/views_handler_relationship_entity_reverse.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/file.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/filter.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/filter/views_handler_field_filter_format_name.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/image.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_argument_locale_group.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_argument_locale_language.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_field_locale_group.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_field_locale_language.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_field_locale_link_edit.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_field_node_language.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_filter_locale_group.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_filter_locale_language.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_filter_locale_version.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_filter_node_language.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/locale/views_handler_sort_node_language.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node.views_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node.views_template.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_argument_dates_various.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_argument_node_language.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_argument_node_nid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_argument_node_type.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_argument_node_uid_revision.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_argument_node_vid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_history_user_timestamp.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_link.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_link_delete.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_link_edit.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_path.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_revision.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_revision_link.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_revision_link_delete.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_revision_link_revert.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_type.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_field_node_version_count.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_filter_history_user_timestamp.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_filter_node_access.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_filter_node_status.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_filter_node_type.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_filter_node_uid_revision.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_filter_node_version_count.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_handler_sort_node_version_count.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_plugin_argument_default_node.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_plugin_argument_validate_node.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_plugin_row_node_rss.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/node/views_plugin_row_node_view.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/poll.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/profile.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/profile/views_handler_field_profile_date.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/profile/views_handler_field_profile_list.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/profile/views_handler_filter_profile_selection.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/search.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/search.views_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/search/views_handler_argument_search.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/search/views_handler_field_search_score.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/search/views_handler_filter_search.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/search/views_handler_sort_search_score.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/search/views_plugin_row_search_view.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/statistics.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/statistics.views_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/statistics/views_handler_field_accesslog_path.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/statistics/views_handler_field_node_counter_timestamp.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/statistics/views_handler_field_statistics_numeric.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system/views_handler_argument_file_fid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system/views_handler_field_file.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system/views_handler_field_file_extension.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system/views_handler_field_file_filemime.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system/views_handler_field_file_status.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system/views_handler_field_file_uri.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system/views_handler_filter_file_status.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/system/views_handler_filter_system_type.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy.views_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_argument_taxonomy.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_argument_term_node_tid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_argument_term_node_tid_depth.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_argument_term_node_tid_depth_join.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_argument_term_node_tid_depth_modifier.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_argument_vocabulary_machine_name.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_argument_vocabulary_vid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_field_taxonomy.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_field_term_link_edit.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_field_term_node_tid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_filter_term_node_tid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_filter_term_node_tid_depth.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_filter_term_node_tid_depth_join.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_filter_vocabulary_machine_name.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_filter_vocabulary_vid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_handler_relationship_node_term_data.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_plugin_argument_default_taxonomy_tid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/taxonomy/views_plugin_argument_validate_taxonomy_term.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/tracker.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/tracker/views_handler_argument_tracker_comment_user_uid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/tracker/views_handler_filter_tracker_boolean_operator.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/tracker/views_handler_filter_tracker_comment_user_uid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/translation.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/translation/views_handler_argument_node_tnid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/translation/views_handler_field_node_link_translate.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/translation/views_handler_field_node_translation_link.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/translation/views_handler_filter_node_tnid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/translation/views_handler_filter_node_tnid_child.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/translation/views_handler_relationship_translation.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_argument_user_uid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_argument_users_roles_rid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_language.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_link.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_link_cancel.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_link_edit.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_mail.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_name.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_permissions.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_picture.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_field_user_roles.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_filter_user_current.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_filter_user_name.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_filter_user_permissions.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_handler_filter_user_roles.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_plugin_argument_default_current_user.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_plugin_argument_default_user.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_plugin_argument_validate_user.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/user/views_plugin_row_user_view.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/modules/views.views.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/export_ui/views_ui.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/export_ui/views_ui.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_access.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_access_none.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_access_perm.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_access_role.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_argument_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_argument_default_fixed.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_argument_default_php.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_argument_default_raw.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_argument_validate.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_argument_validate_numeric.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_argument_validate_php.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_cache.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_cache_none.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_cache_time.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_display.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_display_attachment.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_display_block.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_display_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_display_embed.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_display_extender.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_display_feed.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_display_page.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_exposed_form.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_exposed_form_basic.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_exposed_form_input_required.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_localization.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_localization_core.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_localization_none.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_pager.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_pager_full.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_pager_mini.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_pager_none.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_pager_some.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_query.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_query_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_row.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_row_fields.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_row_rss_fields.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_grid.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_jump_menu.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_list.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_mapping.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_rss.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_summary.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_summary_jump_menu.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_summary_unformatted.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_plugin_style_table.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/comment.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/file_managed.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/node.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/node_revision.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/taxonomy_term.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/users.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_base_views_wizard.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_comment_views_wizard.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_file_managed_views_wizard.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_node_revision_views_wizard.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_node_views_wizard.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_taxonomy_term_views_wizard.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/plugins/views_wizard/views_ui_users_views_wizard.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/test_templates/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/test_templates/views-view--frontpage.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/comment/views_handler_argument_comment_user_uid.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/comment/views_handler_filter_comment_user_uid.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/field/views_fieldapi.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_area_text.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_argument_null.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_argument_string.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_boolean.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_counter.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_custom.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_date.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_file_extension.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_file_size.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_math.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_url.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_field_xss.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_filter_combine.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_filter_date.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_filter_equality.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_filter_in_operator.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_filter_numeric.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_filter_string.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_sort.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_sort_date.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handler_sort_random.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/handlers/views_handlers.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/node/views_node_revision_relations.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/plugins/views_plugin_display.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/styles/views_plugin_style.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/styles/views_plugin_style_base.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/styles/views_plugin_style_jump_menu.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/styles/views_plugin_style_mapping.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/styles/views_plugin_style_unformatted.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/taxonomy/views_handler_relationship_node_term_data.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/test_handlers/views_test_area_access.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/test_plugins/views_test_plugin_access_test_dynamic.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/test_plugins/views_test_plugin_access_test_static.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/test_plugins/views_test_plugin_style_test_mapping.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/user/views_handler_field_user_name.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/user/views_user.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/user/views_user_argument_default.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/user/views_user_argument_validate.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_access.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_ajax.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_analyze.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_argument_default.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_argument_validator.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_basic.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_cache.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_cache.test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_cache.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_exposed_form.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_glossary.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_groupby.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_handler_filter.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_handlers.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_module.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_pager.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_plugin_localization_test.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_query.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_test.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_test.install" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_test.module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_test.views_default.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_translatable.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_ui.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_upgrade.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/tests/views_view.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/theme.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-exposed-form.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-more.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-ui-display-tab-bucket.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-ui-display-tab-setting.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-ui-edit-view.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-field.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-fields.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-grid.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-grouping.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-list.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-row-comment.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-row-rss.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-rss.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-summary-unformatted.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-summary.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-table.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-unformatted.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view.tpl.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/views.api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/views.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/views.install" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/views.module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/views.tokens.inc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/views_export/views_export.module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/views_ui.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/views/views_ui.module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bartik/bartik.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bartik/bartik.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/garland/garland.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/garland/garland.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/seven/seven.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/seven/seven.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/stark/stark.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/stark/stark.info" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -709,51 +17,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/search/search.extender.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/search_api/search_api.api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3930">
-              <caret line="265" column="9" selection-start-line="265" selection-start-column="9" selection-end-line="265" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/search_api/includes/processor_ignore_case.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/search_api/includes/processor.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2055">
-              <caret line="140" column="15" selection-start-line="140" selection-start-column="15" selection-end-line="140" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/search_api/includes/processor_html_filter.inc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1650">
@@ -762,11 +25,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_search_api/palom_search_api.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="645">
+              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="108" column="28" lean-forward="true" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_currency/palom_currency.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1635">
+              <caret line="109" column="49" selection-start-line="109" selection-start-column="49" selection-end-line="109" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cost/palom_field_cost.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cost/palom_field_cost.module">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_currency/palom_currency.info">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="19" lean-forward="true" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -826,8 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.info" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/field-geo-cr-city-default-formatter.tmp.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/field-geo-cr-city-default-formatter.tpl.php" />
@@ -877,6 +183,8 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_multi_date_widget.js" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_search_api/palom_search_api.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cost/palom_field_cost.info" />
+        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cost/palom_field_cost.module" />
       </list>
     </option>
   </component>
@@ -940,6 +248,32 @@
               <item name="sites" type="462c0819:PsiDirectoryNode" />
               <item name="all" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docroot" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docroot" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="palom_currency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docroot" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="custom" type="462c0819:PsiDirectoryNode" />
+              <item name="palom_field_cost" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
@@ -1054,17 +388,18 @@
       <workItem from="1555827958769" duration="2158000" />
       <workItem from="1556083769705" duration="6000" />
       <workItem from="1556202465217" duration="599000" />
+      <workItem from="1556263598503" duration="1045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347662000" />
+    <option name="totallyTimeSpent" value="348707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1002" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943925" />
@@ -1121,16 +456,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/bootstrap.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="2617" selection-start-line="2617" selection-end-line="2617" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/field/field.install">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45" />
@@ -1221,19 +546,9 @@
     <entry file="file://$PROJECT_DIR$/modules/taxonomy/taxonomy.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.module">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/taxonomy/taxonomy.admin.inc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-135" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_currency/palom_currency.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_components.scss">
@@ -1247,13 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_currency/palom_currency.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="109" column="49" selection-start-line="109" selection-start-column="49" selection-end-line="109" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1405,8 +713,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_search_api/palom_search_api.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="645">
+          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/palom_field_cr.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="108" column="28" lean-forward="true" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_currency/palom_currency.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" column="49" selection-start-line="109" selection-start-column="49" selection-end-line="109" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_currency/palom_currency.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="19" lean-forward="true" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cost/palom_field_cost.info">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_field_cost/palom_field_cost.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
