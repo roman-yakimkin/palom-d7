@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Implements hook_entity_property_info_alter().
+ */
+function palom_search_api_entity_property_info_alter(&$info) {
+  $properties = &$info['node']['bundles']['tour']['properties'];
+  $properties['autocomplete'] = [
+    'type' => 'list<text>',
+    'label' => t('Autocomplete tour geo '),
+    'description' => t('Autocomplete tour geo'),
+    'getter callback' => '_palom_search_api_tour_geo',
+  ];
+
+}
+
+/*
+ * A palom geo place callback
+ */
+function _palom_search_api_tour_geo($item){
+  $result = [];
+  $result[] = $item->title;
+  $nids = [];
+  $tids = [];
+
+  // Get geo_id lists
+  foreach ($item->field_places[LANGUAGE_NONE] as $delta => $place){
+    if (isset($place->field_city[LANGUAGE_NONE][0])){
+      $place_geo = $place->field_city[LANGUAGE_NONE][0];
+
+      // Add country data to the index
+      if ($place_geo->country_id){
+        $tids[] = $place_geo->country_id;
+      }
+
+      // Add region data to the index
+      if ($region = $place_geo->region_id){
+        $tids[] = $place_geo->region_id;
+      }
+
+      // Add city data to the index
+      if ($place_geo->city_id){
+        $nids[] = $place_geo->city_id;
+      }
+    }
+  }
+
+  if ($tids!=[]){
+    $geo = taxonomy_term_load_multiple($tids);
+    $result[] = $geo->name;
+  }
+
+  if ($nids!=[]){
+    $cities = node_load_multiple($nids);
+    $result[] = $cities->title;
+  }
+
+  return $result;
+}

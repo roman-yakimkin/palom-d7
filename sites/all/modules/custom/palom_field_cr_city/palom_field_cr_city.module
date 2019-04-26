@@ -336,6 +336,10 @@ function palom_field_cr_city_field_formatter_view($entity_type, $entity, $field,
           $el['country_name'] = $country->name;
           $el['country_url'] = url('taxonomy/term/'.$country->tid);
         }
+
+        $el['region_name'] = '';
+        $el['region_url'] = '';
+
         if ($item['region_id'] != 0){
           $region = taxonomy_term_load($item['region_id']);
           $el['region_name'] = $region->name;

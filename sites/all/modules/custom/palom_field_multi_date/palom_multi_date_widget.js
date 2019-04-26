@@ -108,36 +108,36 @@
 
       // Set select dates
       function setSelectDates(aDates){
-         var str = aDates[0];
-         var $select = $("#palom-multi-date-widget-"+field_name+" select[name=date_type]");
-         var $dates_area = $("#palom-multi-date-widget-"+field_name+" .select-dates");
+         if (aDates.length > 0){
+           var str = aDates[0];
+           var $select = $("#palom-multi-date-widget-"+field_name+" select[name=date_type]");
+           var $dates_area = $("#palom-multi-date-widget-"+field_name+" .select-dates");
 
-         // By demand
-         if (str.search('2500-01-01') != -1){
-            $select.val('by_demand');
-            $dates_area.hide();
-         }
+           // By demand
+           if (str.search('2500-01-01') != -1){
+             $select.val('by_demand');
+             $dates_area.hide();
+           }
 
-         // By picking
-         else if (str.search('2600-01-01') != -1){
-           $select.val('by_picking');
-           $dates_area.hide();
-         }
+           // By picking
+           else if (str.search('2600-01-01') != -1){
+             $select.val('by_picking');
+             $dates_area.hide();
+           }
 
-         // Some real dates
-         else {
-           $select.val('select_dates');
-           $dates_area.show();
+           // Some real dates
+           else {
+             $select.val('select_dates');
+             $dates_area.show();
+           }
          }
       }
-
-      setSelectDates(aData[field_name]['dates']);
 
       $('body').once('init-data').each(function(){
 
         var timePrev=0, timePrev2 = 0;
 
-        $('.palom-multi-date-calendar').datepicker({
+        $('.palom-multi-date-calendar', context).datepicker({
           changeMonth: true,
           changeYear: true,
           dateFormat: 'dd.mm.yy',
@@ -167,6 +167,8 @@
           setHiddenField($wrapper);
           $("#palom-multi-date-widget-"+aFieldName+" .palom-multi-date-listbox select").attr("data-cardinality", aData[aFieldName]['cardinality']);
         }
+
+        setSelectDates(aData[field_name]['dates']);
 
         $('select[name=date_type]', context).on('change', function(evt){
           var $wrapper = $('#palom-multi-date-widget-'+field_name);
