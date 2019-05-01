@@ -4,7 +4,11 @@ package = Palom
 core = 7.x
 
 dependencies[] = palom_utils
-dependencies[] = palom_search_api
+dependencies[] = search_api_views
+
+files[] = palom_search_api_autocomplete.module
+files[] = views/palom_search_api_autocomlete.views.inc
+files[] = views/handlers/handler_filter_text_autocomplete.inc
 
 ; files[] = tests/forum_access.test
 

@@ -1,3 +1,70 @@
 <?php
 
+/**
+ * Implements hook_menu().
+ */
+function palom_search_api_autocomplete_menu() {
+  $items = array();
+  $items['palom_search_api_autocomplete_filter/%'] = array(
+    'title' => 'Autocomplete Filters',
+    'page callback' => '_palom_search_api_autocomplete_filter',
+    'page arguments' => array(1, 2, 3, 4),
+    'access callback' => '_palom_search_api_autocomplete_filters_access_callback',
+    'access arguments' => array(2, 3),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function _palom_search_api_autocomplete_filters_access_callback($view_name, $display_name) {
+  $view = views_get_view($view_name);
+
+  if (empty($view) || !$view->set_display($display_name)) {
+    // No such view or something is wrong with display
+    // (no such display, broken handler, etc.)
+    return FALSE;
+  }
+
+  return $view->access(array($display_name));
+}
+
+
+/**
+ * Implements hook_views_api().
+ */
+function palom_search_api_autocomplete_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'palom_search_api_autocomplete') . '/views',
+  );
+}
+
+/**
+ * Menu callback. Retrieves a pipe delimited string of autocomplete suggestions.
+ */
+function _palom_search_api_autocomplete_filter($string = '') {
+  if (trim($string) == '') {
+    // Ignore empty strings.
+    return drupal_json_output([]);
+  }
+
+  $items = db_select('search_api_db_tour_geo_ac', 'ac')
+    ->fields('ac', ['value'])
+    ->distinct()
+    ->condition('ac.value', '%'.db_like(trim($string)).'%', 'LIKE')
+    ->execute()
+    ->fetchCol();
+
+  $matches = [];
+  foreach($items as $item){
+    $index = decode_entities($item);
+    $matches[$index] = '<div class="reference-autocomplete">' . $item . '</div>';;
+  }
+
+  if (empty($matches)) {
+    $matches[''] = '<div class="reference-autocomplete">' . t('The %string return no results. Please try something else.', ['%string' => $string]) . '</div>';
+  }
+
+  return drupal_json_output($matches);
+}
 

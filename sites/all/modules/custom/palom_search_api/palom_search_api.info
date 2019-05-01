@@ -5,6 +5,7 @@ core = 7.x
 
 dependencies[] = palom_utils
 dependencies[] = search_api
+dependencies[] = palom_search_api_autocomplete
 
 ; files[] = tests/forum_access.test
 

@@ -24,6 +24,4 @@ function views_autocomplete_filters_views_data_alter(&$data) {
       }
     }
   }
-
-  $data['search_api_index_tour']['geo_ac']['filter']['handler'] = 'SearchApiViewsHandlerFilterText';
 }
