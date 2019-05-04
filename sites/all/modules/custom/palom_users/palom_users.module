@@ -1,2 +1,81 @@
 <?php
 
+/**
+ * Implements hook_field_access().
+ */
+function palom_users_field_access($op, $field, $entity_type, $entity, $account) {
+  if ($field['field_name'] == 'field_owners'){
+    if ($account){
+      $roles = array_values($account->roles);
+      if (in_array('administrator', $roles))
+        return true;
+    }
+    return false;
+  }
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function palom_users_node_access($node, $op, $account) {
+  if (isset($node->field_owners[LANGUAGE_NONE]) && ($op == 'update')){
+    foreach($node->field_owners[LANGUAGE_NONE] as $key => $value){
+      if ($value['target_id'] == $account->uid)
+        return NODE_ACCESS_ALLOW;
+    }
+  }
+
+  // User can add new tours if he has inputed a piligrimage service before and if he has a role "owner"
+  if (($node == 'tour') && ($op == 'create')){
+    if ($account){
+      $roles = array_values($account->roles);
+      if (in_array('owner', $roles)){
+
+        $query = new EntityFieldQuery();
+        $query->entityCondition('entity_type', 'node')
+          ->entityCondition('bundle', 'pilgrim_service')
+          ->propertyCondition('status', NODE_PUBLISHED)
+          ->fieldCondition('field_owners', 'target_id', $account->uid);
+        $result = $query->execute();
+        if (sizeof($result) > 0)
+          return NODE_ACCESS_ALLOW;
+        else
+          return NODE_ACCESS_DENY;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function palom_users_form_tour_node_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+
+  if ($user->uid > 1){
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'pilgrim_service')
+      ->propertyCondition('status', NODE_PUBLISHED)
+      ->fieldCondition('field_owners', 'target_id', $user->uid);
+    $result = $query->execute();
+
+    $nodes = array_keys($result['node']);
+
+    foreach ($form['field_services'][LANGUAGE_NONE]['#options'] as $key => $value){
+      if (!in_array($key, $nodes)){
+        unset($form['field_services'][LANGUAGE_NONE]['#options'][$key]);
+      }
+    };
+  }
+}
+
+/**
+ * Implements hook_node_presave().
+ */
+function palom_users_node_presave($node) {
+  if (!$node->nid && isset($node->field_owners) && $node->uid != 1){
+    $node->field_owners[LANGUAGE_NONE][] = ['target_id' => $node->uid];
+  }
+}
+
