@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/../.docksal/docksal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.docksal/docksal.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/bootstrap.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/bootstrap.inc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/common.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/common.inc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/file.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/file.inc" afterDir="false" />
@@ -165,8 +166,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_users/palom_users.module">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="66" column="72" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
+            <state relative-caret-position="475">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -300,7 +301,7 @@
   <component name="NamedScopeManager">
     <scope name="palom" pattern="file[palom-d7]:sites/all/themes/palom/css/*" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" notify_if_session_was_finished_without_being_paused="false" />
+  <component name="PhpDebugGeneral" notify_if_session_was_finished_without_being_paused="false" />
   <component name="PhpServers">
     <servers>
       <server host="palom.docksal" id="48bcbe5d-af4b-4e0e-a38f-34c1bf6f6566" name="palom.docksal" use_path_mappings="true">
@@ -535,12 +536,12 @@
       <workItem from="1556684099406" duration="2334000" />
       <workItem from="1556787191524" duration="2489000" />
       <workItem from="1556863714688" duration="6400000" />
-      <workItem from="1556951130647" duration="6037000" />
+      <workItem from="1556951130647" duration="6185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="396857000" />
+    <option name="totallyTimeSpent" value="397005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1002" extended-state="6" />
@@ -551,7 +552,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943925" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32943925" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40070093" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40070093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -598,11 +599,6 @@
           <url>file://$PROJECT_DIR$/sites/all/modules/contrib/date/date.field.inc</url>
           <line>165</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/sites/all/modules/custom/palom_users/palom_users.module</url>
-          <line>64</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -922,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_users/palom_users.module">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="66" column="72" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
+        <state relative-caret-position="475">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
         </state>
       </provider>
     </entry>
