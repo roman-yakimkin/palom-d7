@@ -97,7 +97,7 @@
         UpdateTreePlace(2, fieldName);
 
         $('select[name="sel_countries_place"]', context).on('change', function(evt){
-          UpdateTreePlace($(this).val());
+          UpdateTreePlace($(this).val(), fieldName);
         });
 
         // Initialization of the added city list
@@ -160,6 +160,7 @@
 
   Drupal.ajax.prototype.commands.updatePlaceWidget = function(ajax, response, status){
     $('select[name="sel_countries_place"]').val(response.country_id);
+    console.log(response);
     UpdateTreePlace(response.country_id, response.field_name, true);
   }
 

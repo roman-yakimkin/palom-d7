@@ -100,7 +100,7 @@ function palom_field_cr_field_widget_form(&$form, &$form_state, $field, $instanc
         $countries[$elem->tid] = $elem->name;
       };
 
-      $wrapper_name = 'field_geo_cr_combo_widget_'.$field['field_name'].'_'.$delta;
+      $wrapper_name = 'field_geo_cr_combo_widget_'.$element['#bundle'].'_'.$field['field_name'].'_'.$delta;
 
       $element['#prefix'] = '<div id="'.$wrapper_name.'">';
       $element['#suffix'] = '</div>';
@@ -123,7 +123,6 @@ function palom_field_cr_field_widget_form(&$form, &$form_state, $field, $instanc
       $rlist = palom_utils_get_regions($country_id);
 
       if ($rlist != []){
-//        $regions[0] = t('All the regions');
         foreach ($rlist as $elem){
           $regions[$elem->tid] = $elem->name;
         };
@@ -147,8 +146,6 @@ function palom_field_cr_field_widget_form(&$form, &$form_state, $field, $instanc
 
       break;
   };
-
-//  kpr($field);
 
   return $element;
 }

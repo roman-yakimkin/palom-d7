@@ -7,9 +7,11 @@
         </select>
     </div>
     <div class="row select-dates">
-        <div class="palom-multi-date-calendar col-xs-6">
+        <div class="palom-multi-date-listbox col-xs-3">
+            <select class="form-control form-select"  name="sel_tour_dates" size="13">
+            </select>
         </div>
-        <div class="palom-multi-date-buttons col-xs-3 ">
+        <div class="palom-multi-date-buttons col-xs-3">
             <div>
                 <button class="add-date btn btn-default form-control">
                     {{ t('Add') }}
@@ -19,9 +21,7 @@
                 </button>
             </div>
         </div>
-        <div class="palom-multi-date-listbox col-xs-3">
-            <select class="form-control form-select"  name="sel_tour_dates" size="10">
-            </select>
+        <div class="palom-multi-date-calendar col-xs-6">
         </div>
     </div>
 </div>

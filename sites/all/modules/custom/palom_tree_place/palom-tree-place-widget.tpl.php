@@ -10,6 +10,7 @@
                data-dialog-ajax-disable-redirect="true"
                data-dialog-width="750"
                data-dialog-title="{{ t('New sacred place') }}"
+               data-dialog-field="{{ $field_name }}"
                href="/node/add/place">{{ t('New sacred place') }}</a>
         </div>
     </div>

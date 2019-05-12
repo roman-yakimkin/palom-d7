@@ -6,8 +6,6 @@
       var thisWidgetId = '';
       var fieldName = settings.palom_tree_city_widget.field_name;
 
-      console.log(fieldName);
-
       // Get active node
       function getActiveNode(){
         var node = $('#palom-tree-city-'+fieldName).fancytree("getActiveNode");
