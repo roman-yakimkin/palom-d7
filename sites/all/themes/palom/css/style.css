@@ -16,4 +16,34 @@ select[name=sel_tour_dates] {
   overflow-y: visible;
   border-width: 1px; }
 
+.panel-body .panel-element-label {
+  font-weight: bold; }
+.panel-body .photogallery .img-responsive {
+  display: inline;
+  margin-bottom: 2px; }
+
+.field-name-field-gallery .field-item {
+  display: inline-block;
+  padding-right: 10px;
+  padding-bottom: 10px; }
+  .field-name-field-gallery .field-item .img-responsive {
+    display: inline-block; }
+
+.page-node .ui-dialog {
+  padding: 1px; }
+  .page-node .ui-dialog .ui-dialog-titlebar {
+    display: none; }
+  .page-node .ui-dialog .ui-dialog-content {
+    padding: 0px; }
+
+.view-photogallery-modal ul {
+  padding: 0px;
+  margin: 0px; }
+  .view-photogallery-modal ul li {
+    display: inline; }
+    .view-photogallery-modal ul li .img-responsive {
+      display: inline;
+      padding: 2px;
+      margin-right: -4px; }
+
 /*# sourceMappingURL=style.css.map */

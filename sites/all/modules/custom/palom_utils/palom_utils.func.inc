@@ -296,3 +296,10 @@ function palom_utils_get_entity_id($entity, $type){
   }
 }
 
+function palom_utils_get_month_name($month_number){
+  $months = [
+    'январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'
+  ];
+
+  return $months[$month_number-1];
+}

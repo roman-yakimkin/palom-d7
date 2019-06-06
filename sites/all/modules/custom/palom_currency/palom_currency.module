@@ -9,6 +9,32 @@ function _palom_currency_get_currency_fields(){
   return ['field_cost', 'field_avg_cost'];
 }
 
+function _palom_currency_get_currencies(){
+  return [
+    'RUB' => [
+      'full_sing' => 'Российский рубль',
+    ],
+    'UAH' => [
+      'full_sing' => 'Украинская гривна',
+    ],
+    'BYN' => [
+      'full_sing' => 'Белорусский рубль'
+    ],
+    'KZT' =>[
+      'full_sing' => 'Казахский тенге',
+    ] ,
+    'USD' => [
+      'full_sing' => 'Доллар США',
+    ],
+    'EUR' => [
+      'full_sing' => 'Евро',
+    ],
+    'GBP' => [
+      'full_sing' => 'Фунт стерлингов',
+    ]
+  ];
+}
+
 /**
  * Implements hook_cron().
  */
@@ -59,6 +85,18 @@ function _palom_currency_get_rates(){
   $query->fields('rate', ['char_code', 'nominal', 'rate_date', 'rate_value']);
   $rates = $query->execute()->fetchAllAssoc('char_code');
   return $rates;
+}
+
+/*
+ * Get amount values
+ */
+function _palom_currency_get_amounts($entity_id, $delta = 0){
+  $query = db_select('palom_currency_amount', 'amount');
+  $query->fields('amount', ['char_code', 'rate_value']);
+  $query->condition('entity_type', 'node');
+  $query->condition('entity_id', $entity_id);
+  $amounts = $query->execute()->fetchAllKeyed();
+  return $amounts;
 }
 
 /*

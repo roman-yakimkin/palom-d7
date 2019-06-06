@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_url_inbound_alter().
+ */
+function palom_content_menu_url_inbound_alter(&$path, $original_path, $path_language) {
+
+  // Tours from service
+  if (preg_match('|^service/([0-9]*)/tours?|', $path, $matches)) {
+    $path = 'node/'.$matches[1].'/toursby';
+  }
+}
+
+/**
+ * Implements hook_url_outbound_alter().
+ */
+function palom_content_menu_url_outbound_alter(&$path, &$options, $original_path) {
+
+  // Tours from service
+  if (preg_match('|^node/([0-9]*)/toursby?|', $path, $matches)) {
+    $path = 'service/'.$matches[1].'/tours';
+  }
+}

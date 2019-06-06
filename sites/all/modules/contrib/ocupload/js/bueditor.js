@@ -1,4 +1,8 @@
 BUE.postprocess.ocupload = function (E, $) {
+
+//  console.log(E);
+//  console.log(Drupal);
+
   // Upload button click handler
   E.showFileSelectionDialog = function () {
     if (!Drupal.ocupload.bueditorPlugin.flow.support) {
@@ -101,8 +105,18 @@ BUE.postprocess.ocupload = function (E, $) {
     response = $.parseJSON(response);
 
     if (response.status) {
+
+      var src_data = response.data;
+
+      var regexp_img = /<img src="(\S+)" alt="" \/>/gi;
+      var new_data = src_data.replace(regexp_img, "[img]$1[/img]");
+
+      var regexp_file = /<a href="(\S+)">(.+)<\/a>/gi;
+      var new_data = new_data.replace(regexp_file, "[url=$1]$2[/url]");
+
       var editorInstance = Drupal.ocupload.bueditorPlugin.getBueditorInstance(Drupal.ocupload.bueditorPlugin.activeTextareaId);
-      var insertedData = editorInstance.getSelection() ? response.data : response.data + "\n";
+//      var insertedData = editorInstance.getSelection() ? response.data : response.data + "\n";
+      var insertedData = editorInstance.getSelection() ? new_data : new_data + "\n";
       editorInstance.replaceSelection(insertedData, 'end');
     }
     else {

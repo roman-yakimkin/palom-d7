@@ -1,5 +1,6 @@
 <?php
 
+require_once "palom_search_api.inc";
 /**
  * Implements hook_entity_property_info_alter().
  */
@@ -12,7 +13,118 @@ function palom_search_api_entity_property_info_alter(&$info) {
     'computed' => true,
     'getter callback' => '_palom_search_api_tour_geo',
   ];
+  $properties['td'] = [
+    'type' => 'list<text>',
+    'label' => t('Palom tour dates'),
+    'description' => t('Palom tour dates filter'),
+    'computed' => true,
+    'getter callback' => '_palom_tour_dates',
+  ];
 
+  $properties['currency'] = [
+    'type' => 'list<text>',
+    'label' => t('Palom currencies'),
+    'description' => t('Palom currency values for diferent services'),
+    'computed' => true,
+    'getter callback' => '_palom_currency',
+  ];
+}
+
+/**
+ * Implements hook_facet_items_alter().
+ */
+function palom_search_api_facet_items_alter(&$build, &$settings) {
+  if ($settings->facet == 'td'){
+    foreach($build as $key => $item){
+      switch ($key){
+        case 'demand':
+          $build[$key]['#markup'] = t('By demand');
+          break;
+        case 'complect':
+          $build[$key]['#markup'] = t('By group complectation');
+          break;
+        default:
+          $year = substr($key, 0, 4);
+          $month = substr($key, 5, 2);
+          $build[$key]['#markup'] = palom_utils_get_month_name($month).' '.$year;
+      }
+    }
+  }
+
+
+  if ($settings->facet == 'currency'){
+    $diapasons = _palom_search_api_currency_diapasons();
+    foreach($build as $key => $item){
+      list($currency_name, $currency_diap_index) = explode('-', $key);
+      list($min_value, $max_value) = $diapasons[$currency_name][$currency_diap_index];
+      if ($min_value == 0)
+        $build[$key]['#markup'] = t('Less than @max_value', ['@min_value' => $min_value, '@max_value' => $max_value]);
+      elseif ($max_value == PALOM_SEARCH_API_MAX_AMOUNT)
+        $build[$key]['#markup'] = t('More than @min_value', ['@min_value' => $min_value]);
+      else
+        $build[$key]['#markup'] = t('from @min_value to @max_value', ['@min_value' => $min_value, '@max_value' => $max_value]);
+
+    }
+  }
+}
+
+/**
+ * Implements hook_facetapi_widgets().
+ */
+function palom_search_api_facetapi_widgets() {
+  return array(
+    'facetapi_currency_checkbox_links' => array(
+      'handler' => array(
+        'label' => t('Currency checkboxes'),
+        'class' => 'FacetapiWidgetCurrencyLinks',
+        'query types' => array('term', 'date'),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function palom_search_api_theme($existing, $type, $theme, $path) {
+  return [
+    'palom_search_api_currency_facet' => [
+      'variables' => [
+        'items' => [],
+        'attributes' => [],
+      ]
+    ]
+  ];
+}
+
+function theme_palom_search_api_currency_facet($variables){
+
+  $result = [
+    '#type' => 'container',
+  ];
+
+  $currencies = [];
+  foreach(_palom_currency_get_currencies() as $currency_name => $currency_info){
+    $currencies[strtolower($currency_name)] = $currency_info['full_sing'];
+  }
+
+  $result['currencies'] = [
+    '#type' => 'select',
+    '#options' => $currencies,
+    '#attributes' => [
+      'class' => [
+        'palom-select-currencies',
+      ]
+    ]
+  ];
+
+  $result['items'] = [
+    '#theme' => 'item_list',
+    '#items' => $variables['items'],
+    '#attributes' => $variables['attributes'],
+  ];
+
+  return drupal_render($result);
 }
 
 /*
@@ -58,6 +170,50 @@ function _palom_search_api_tour_geo($item){
     $cities = node_load_multiple($nids);
     foreach($cities as $elem){
       $result[] = $elem->title;
+    }
+  }
+
+  return $result;
+}
+
+/*
+ * A filter by tour dates
+ */
+function _palom_tour_dates($item){
+  $result = [];
+
+  foreach ($item->field_tour_dates[LANGUAGE_NONE] as $delta => $date){
+    $year = (int)substr($date['value'],0, 4);
+    $month = (int)substr($date['value'],5, 2);
+    if (($year == 2500) && ($month == 1)){
+      $index = 'demand';
+    }
+    elseif (($year == 2600) && ($month == 1)){
+      $index = 'complect';
+    }
+    else {
+      $index = substr($date['value'],0, 7);
+    }
+
+    $result[] = $index;
+  }
+
+  return $result;
+}
+
+function _palom_currency($item){
+  $result = [];
+  $amounts = _palom_currency_get_amounts($item->nid);
+  $diapasons = _palom_search_api_currency_diapasons();
+
+  foreach($amounts as $cur_name => $cur_value){
+
+    foreach($diapasons[$cur_name] as $currency_diap_index => $currency_diap_min_max){
+      list($min_value, $max_value) = $currency_diap_min_max;
+      if (($cur_value >= $min_value) && ($cur_value <= $max_value)){
+        $result[] = $cur_name."-".$currency_diap_index;
+        break;
+      }
     }
   }
 

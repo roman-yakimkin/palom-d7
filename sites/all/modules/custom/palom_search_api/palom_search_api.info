@@ -7,7 +7,8 @@ dependencies[] = palom_utils
 dependencies[] = search_api
 dependencies[] = palom_search_api_autocomplete
 
-; files[] = tests/forum_access.test
+files[] = palom_search_api.inc
+files[] = plugins/widget_links_currency.inc
 
 ; Information added by Drupal.org packaging script on 2016-08-16
 version = "7.x-1.0"

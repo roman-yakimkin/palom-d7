@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function palom_editor_form_comment_form_alter(&$form, &$form_state, $form_id) {
+  $form['comment_body']['#after_build'][] = '_palom_editor_configure_comment_form';
+}
+
+function _palom_editor_configure_comment_form(&$form){
+  global $user;
+
+//  kpr($user);
+  if (!in_array('administrator', $user->roles)){
+    $form[LANGUAGE_NONE][0]['format']['#access'] = false;
+  }
+  return $form;
+}

@@ -5,7 +5,7 @@
  */
 function palom_search_api_autocomplete_menu() {
   $items = array();
-  $items['palom_search_api_autocomplete_filter/%'] = array(
+  $items['palom_search_api_autocomplete_filter/%/%/%/%'] = array(
     'title' => 'Autocomplete Filters',
     'page callback' => '_palom_search_api_autocomplete_filter',
     'page arguments' => array(1, 2, 3, 4),
@@ -42,7 +42,7 @@ function palom_search_api_autocomplete_views_api() {
 /**
  * Menu callback. Retrieves a pipe delimited string of autocomplete suggestions.
  */
-function _palom_search_api_autocomplete_filter($string = '') {
+function _palom_search_api_autocomplete_filter($filter_name, $view_name, $display_name, $view_args, $string = '') {
   if (trim($string) == '') {
     // Ignore empty strings.
     return drupal_json_output([]);
@@ -51,7 +51,7 @@ function _palom_search_api_autocomplete_filter($string = '') {
   $items = db_select('search_api_db_tour_geo_ac', 'ac')
     ->fields('ac', ['value'])
     ->distinct()
-    ->condition('ac.value', '%'.db_like(trim($string)).'%', 'LIKE')
+    ->condition('ac.value', '%'.db_like(drupal_strtolower(trim($string))).'%', 'LIKE')
     ->execute()
     ->fetchCol();
 
