@@ -1,0 +1,36 @@
+.field-name-field-gallery .field-item {
+  display: inline-block;
+
+  .img-responsive {
+    display: inline-block;
+  }
+}
+
+.photos-container {
+  .img-responsive {
+    display: inline;
+    padding: 0;
+    margin: 0px 2px 2px 0px;
+  }
+}
+
+.view-photogallery-modal {
+  ul {
+    padding: 0px;
+    margin: 0px;
+    li {
+      display: inline;
+      .img-responsive {
+        display: inline;
+        padding: 2px;
+        margin-right: -4px;
+      }
+    }
+  }
+}
+
+@media (max-width:400px) {
+  .photos-container .img-responsive {
+    width: 22%;
+  }
+}

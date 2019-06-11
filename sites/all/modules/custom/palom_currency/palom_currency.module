@@ -13,24 +13,31 @@ function _palom_currency_get_currencies(){
   return [
     'RUB' => [
       'full_sing' => 'Российский рубль',
+      'short_sing' => 'руб.',
     ],
     'UAH' => [
       'full_sing' => 'Украинская гривна',
+      'short_sing' => 'грн.',
     ],
     'BYN' => [
-      'full_sing' => 'Белорусский рубль'
+      'full_sing' => 'Белорусский рубль',
+      'short_sing' => 'бел. руб.',
     ],
     'KZT' =>[
       'full_sing' => 'Казахский тенге',
+      'short_sing' => 'тенге',
     ] ,
     'USD' => [
       'full_sing' => 'Доллар США',
+      'short_sing' => 'долл. США'
     ],
     'EUR' => [
       'full_sing' => 'Евро',
-    ],
+      'short_sing' => 'евро'
+   ],
     'GBP' => [
       'full_sing' => 'Фунт стерлингов',
+      'short_sing' => 'фунт. стерлингов',
     ]
   ];
 }

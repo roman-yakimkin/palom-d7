@@ -1,17 +1,8 @@
 @import "_vars";
 @import "_mixins";
 @import "_components";
-@import "_panels";
-
-.field-name-field-gallery .field-item {
-  display: inline-block;
-  padding-right: 10px;
-  padding-bottom: 10px;
-
-  .img-responsive {
-    display: inline-block;
-  }
-}
+@import "_images";
+@import "_infoblocks";
 
 .page-node {
   .ui-dialog {
@@ -24,22 +15,6 @@
     }
   }
 }
-
-.view-photogallery-modal {
-  ul {
-    padding: 0px;
-    margin: 0px;
-    li {
-      display: inline;
-      .img-responsive {
-        display: inline;
-        padding: 2px;
-        margin-right: -4px;
-      }
-    }
-  }
-}
-
 
 
 

@@ -21,15 +21,17 @@
                     Основная информация
                 </div>
                 <div class="panel-body">
-                    @foreach([$content['field_geo'], $content['field_site_url']] as $field)
+                    @foreach(['field_geo', 'field_site_url'] as $index)
+                        @isset($content[$index])
                         <div class="row">
                             <div class="col-xs-4 col-md-12 panel-element-label">
-                                {!! $field['#title'] !!}
+                                {!! $content[$index]['#title'] !!}
                             </div>
                             <div class="col-xs-8 col-md-12">
-                                {!! render($field) !!}
+                                {!! render($content[$index]) !!}
                             </div>
                         </div>
+                        @endisset
                     @endforeach
                 </div>
             </div>
@@ -40,7 +42,11 @@
                     Описание
                 </div>
                 <div class="panel-body">
+                @if (!empty($content['body']))
                     {!! render($content['body']) !!}
+                @else
+                    Пока нет описания
+                @endif
                 </div>
             </div>
         </div>
