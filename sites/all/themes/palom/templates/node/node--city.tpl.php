@@ -15,40 +15,36 @@
         </header>
     @endif
     <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Основная информация
-                </div>
-                <div class="panel-body">
-                    @foreach(['field_geo', 'field_site_url'] as $index)
-                        @isset($content[$index])
-                        <div class="row">
-                            <div class="col-xs-4 col-md-12 panel-element-label">
-                                {!! $content[$index]['#title'] !!}
-                            </div>
-                            <div class="col-xs-8 col-md-12">
-                                {!! render($content[$index]) !!}
-                            </div>
-                        </div>
-                        @endisset
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Описание
-                </div>
-                <div class="panel-body">
+        <div class="col col-md-6">
+            <div class="infoblock">
                 @if (!empty($content['body']))
-                    {!! render($content['body']) !!}
+                {!! render($content['body']) !!}
                 @else
                     Пока нет описания
                 @endif
-                </div>
             </div>
+        </div>
+        <div class="col col-md-6">
+            <div class="infoblock">
+                @foreach(['field_geo'] as $index)
+                    @isset($content[$index])
+                        <div class="row">
+                            <div class="col-xs-4 col-md-12 col-lg-4 panel-element-label">
+                                {!! $content[$index]['#title'] !!}
+                            </div>
+                            <div class="col-xs-8 col-md-12 col-lg-8">
+                                {!! render($content[$index]) !!}
+                            </div>
+                        </div>
+                    @endisset
+                @endforeach
+            </div>
+            @if(true)
+                <div class="infoblock">
+                    <h5>Святые места</h5>
+                    {!! views_embed_view('places_by_city', 'block_places', $node->nid) !!}
+                </div>
+            @endif
         </div>
     </div>
 </article>

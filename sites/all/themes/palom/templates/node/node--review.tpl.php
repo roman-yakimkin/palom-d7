@@ -14,17 +14,6 @@
             @endif
         </header>
     @endif
-    <!--
-    @isset($content['field_gallery'])
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="infoblock photos-container">
-                {!! render($content['field_gallery']) !!}
-            </div>
-        </div>
-    </div>
-    @endisset
-        -->
     <div class="row">
         <div class="col col-md-6">
             <div class="infoblock">

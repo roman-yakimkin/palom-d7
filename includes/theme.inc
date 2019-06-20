@@ -1168,6 +1168,10 @@ function theme($hook, $variables = array()) {
 
     // The theme engine may use a different extension and a different renderer.
     global $theme_engine;
+    if ($hook == 'field_geo_cr_default_formatter'){
+      $k = 1;
+    }
+
     if (isset($theme_engine)) {
       if ($info['type'] != 'module') {
         if (function_exists($theme_engine . '_render_template')) {

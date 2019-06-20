@@ -1,0 +1,13 @@
+name = Palom Theming
+description = Theming functions for palom
+package = Palom
+core = 7.x
+
+dependencies[] = palom_utils
+
+; files[] = tests/forum_access.test
+
+; Information added by Drupal.org packaging script on 2016-08-16
+version = "7.x-1.0"
+core = "7.x"
+

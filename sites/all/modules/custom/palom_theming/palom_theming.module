@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function palom_theming_theme_registry_alter(&$theme_registry) {
+  foreach ($theme_registry as $key => $value) {
+    if (isset($value['template']) && (strpos($value['template'], 'custom/palom')) && $value['type'] == 'module'){
+      $theme_registry[$key]['type'] = 'theme';
+    }
+  }
+}

@@ -172,6 +172,7 @@ function palom_field_cr_theme($existing, $type, $theme, $path) {
     'field_geo_cr_default_formatter' => [
       'render element' => 'element',
       'template' => 'field-geo-cr-default-formatter',
+      'type' => 'theme',
     ]
   ];
 }

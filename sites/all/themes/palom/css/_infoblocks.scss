@@ -2,7 +2,26 @@
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 1px solid #ddd;
+
+  .field-name-field-tour-dates {
+    .field-item {
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+
+  .field-name-field-cities-from {
+    .field-item {
+      display: inline;
+      margin-right: 10px;
+    }
+  }
 }
+
+.border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+
 
 @media (max-width: $screen-sm-max) {
   .row {
