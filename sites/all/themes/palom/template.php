@@ -31,6 +31,10 @@ function palom_preprocess_node(&$vars){
     }
   }
 
+  if ($vars['type'] == 'city'){
+    $vars['title'] = palom_utils_get_city_title($vars['nid']);
+  }
+
   if (isset($vars['field_gallery'])){
 //    $cnt = count($vars['field_gallery']);
 //    drupal_add_js(['palom_gallery_count' => $cnt], 'setting');

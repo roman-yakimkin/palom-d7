@@ -15,40 +15,22 @@
         </header>
     @endif
     <div class="row">
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Основная информация
+        <div class="col col-xs-12">
+            @foreach(['field_geo'] as $index)
+                @isset($content[$index])
+                <div class="row">
+                    <div class="col-xs-4 col-md-3 col-lg-2 panel-element-label">
+                        {!! $content[$index]['#title'] !!}
+                    </div>
+                    <div class="col-xs-8 col-md-9 col-lg-10">
+                        {!! render($content[$index]) !!}
+                    </div>
                 </div>
-                <div class="panel-body">
-                    @foreach(['field_geo', 'field_site_url'] as $index)
-                        @isset($content[$index])
-                        <div class="row">
-                            <div class="col-xs-4 col-md-12 panel-element-label">
-                                {!! $content[$index]['#title'] !!}
-                            </div>
-                            <div class="col-xs-8 col-md-12">
-                                {!! render($content[$index]) !!}
-                            </div>
-                        </div>
-                        @endisset
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Описание
-                </div>
-                <div class="panel-body">
-                @if (!empty($content['body']))
-                    {!! render($content['body']) !!}
-                @else
-                    Пока нет описания
-                @endif
-                </div>
-            </div>
+                @endisset
+            @endforeach
+            @if (!empty($content['body']))
+            {!! render($content['body']) !!}
+            @endif
         </div>
     </div>
 </article>

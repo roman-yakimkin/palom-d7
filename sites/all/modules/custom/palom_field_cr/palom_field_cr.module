@@ -132,7 +132,7 @@ function palom_field_cr_field_widget_form(&$form, &$form_state, $field, $instanc
             '#title' => t('Select a region'),
             '#description' => '',
             '#default_value' => $region_id,
-            '#empty_option' => t('-select'),
+            '#empty_option' => t('-select-'),
             '#empty_value' => 0,
             '#options' => $regions,
           ] + $base;
@@ -213,5 +213,78 @@ function palom_field_cr_field_formatter_view($entity_type, $entity, $field, $ins
       break;
   }
   return $element;
+}
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function palom_field_cr_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  $view = $form_state['view'];
+  if (($view->name == 'geo') && ($view->current_display == 'page_cities')){
+//    kpr($form_id);
+//    kpr($form);
+//    kpr($form_state);
+
+    $country_id = $form_state['input']['country'];
+    $region_id = $form_state['input']['region'];
+
+    $clist = palom_utils_get_countries();
+    $countries = [];
+    foreach ($clist as $elem){
+      $countries[$elem->tid] = $elem->name;
+    };
+
+    $wrapper_name = $view->name.'_'.$view->current_display;
+
+    $form['#prefix'] = '<div id="'.$wrapper_name.'">';
+    $form['#suffix'] = '</div>';
+
+
+    $form['country'] = [
+      '#type' => 'select',
+      '#options' => $countries,
+      '#default_value' => $country_id,
+      '#empty_option' => t('-All countries-'),
+      '#empty_value' => '',
+    ];
+
+    $rlist = palom_utils_get_regions($country_id);
+
+    if ($rlist != []){
+      foreach ($rlist as $elem){
+        $regions[$elem->tid] = $elem->name;
+      };
+
+      $form['region'] = [
+          '#type' => 'select',
+          '#default_value' => $region_id,
+          '#empty_option' => t('-All regions-'),
+          '#empty_value' => '',
+          '#options' => $regions,
+        ];
+    }
+    else {
+      $form['#info']['filter-field_geo_region_id']['label'] = '';
+
+      $form['region'] = [
+          '#type' => 'hidden',
+          '#value' => '',
+        ];
+    }
+
+    array_unshift($form['#validate'], 'palom_field_cr_views_exposed_form_validate');
+    array_unshift($form['#submit'], 'palom_field_cr_views_exposed_form_submit');
+  }
+}
+
+function palom_field_cr_views_exposed_form_validate(&$form, &$form_state){
+
+}
+
+function palom_field_cr_views_exposed_form_submit(&$form, &$form_state){
+//  $form_state['rebuild'] = true;
+}
+
+function palom_field_cr_update_views_region_list($form, $form_state){
+  return $form['region'];
 }

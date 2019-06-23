@@ -125,25 +125,37 @@ function palom_field_multi_date_field_formatter_view($entity_type, $entity, $fie
   $settings = $display['settings'];
   switch ($display['type']){
     case 'palom_multi_date_formatter':
+      $dates_output_raw = [];
       foreach ($items as $delta => $item){
-        $date = DateTime::createFromFormat('Y-m-d h:i:s', $item['value']);
-        $date_str = $date->format('d.m.Y');
-        $el = '';
-        switch ($date_str){
-          case '01.01.2500':
-            $el = t('Travel by demand');
-            break;
-          case '01.01.2600':
-            $el = t('Travel by picking of the group');
-            break;
-          default:
-            $el = $date_str;
-            break;
+        $dates_output_raw[] = $item['value'];
+      }
+      sort($dates_output_raw);
+      $date_now = date('Y-m-d');
+      foreach($dates_output_raw as $key => $date_raw){
+        $date = DateTime::createFromFormat('Y-m-d h:i:s', $date_raw);
+        if ($date->format('Y-m-d') < $date_now){
+          unset($dates_output_raw[$key]);
         }
-        $element[$delta] = [
-          '#type' => 'markup',
-          '#markup' => '<span>'.$el.'</span>',
-        ];
+        else {
+          $date_str = $date->format('d.m.Y');
+          $el = '';
+          switch ($date_str){
+            case '01.01.2500':
+              $el = t('Travel by demand');
+              break;
+            case '01.01.2600':
+              $el = t('Travel by picking of the group');
+              break;
+            default:
+              $el = $date_str;
+              break;
+          }
+          $element[] = [
+            '#type' => 'markup',
+            '#markup' => '<span>'.$el.'</span>',
+          ];
+        }
+
       }
   }
   return $element;
@@ -165,4 +177,18 @@ function palom_field_multi_date_theme($existing, $type, $theme, $path) {
       'template' => 'palom-multi-date-formatter',
     ]
   ];
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function palom_field_multi_date_views_query_alter(&$view, &$query) {
+  if (($view->name == 'service_tours') && ($view->current_display == 'page_tours')){
+//    kpr($view);
+//    kpr($query);
+
+    unset($query->fields['field_data_field_tour_dates_field_tour_dates_value']);
+    unset($query->field_aliases['field_data_field_tour_dates']);
+    $query->orderby[0]['field'] = 'field_data_field_tour_dates.field_tour_dates_value';
+  }
 }

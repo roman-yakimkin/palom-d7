@@ -33,8 +33,9 @@ function palom_utils_get_cities($country_id, $region_id = ALL_REGIONS){
   $result = $query->execute();
 
   $cities = [];
-  if ($result != [])
+  if ($result != []){
     $cities = node_load_multiple(array_keys($result['node']));
+  }
 
   return $cities;
 }
@@ -302,4 +303,38 @@ function palom_utils_get_month_name($month_number){
   ];
 
   return $months[$month_number-1];
+}
+
+/*
+ * Get full titles of city (including city types)
+ */
+function palom_utils_get_city_title_multiple(array $city_ids){
+  $query = db_select('node');
+  $query->addField('node', 'nid');
+  $query->addField('node', 'title');
+  $query->leftJoin('field_data_field_city_type', 'city_type', 'node.nid = city_type.entity_id');
+  $query->leftJoin('taxonomy_term_data', 'ttd', 'city_type.field_city_type_target_id = ttd.tid');
+  $query->addField('ttd', 'name', 'c_type');
+  $query->condition('nid', $city_ids, 'IN');
+  $results = $query->execute()->fetchAll();
+
+  $output = [];
+  foreach ($results as $value){
+    if (is_null($value->c_type)){
+      $output[$value->nid] = $value->title;
+    }
+    else {
+      $output[$value->nid] = $value->c_type." ".$value->title;
+    }
+  }
+
+  return $output;
+}
+
+/*
+ * Get title of a city including city type
+ */
+function palom_utils_get_city_title($city_id){
+  $output = palom_utils_get_city_title_multiple([$city_id]);
+  return $output[$city_id];
 }

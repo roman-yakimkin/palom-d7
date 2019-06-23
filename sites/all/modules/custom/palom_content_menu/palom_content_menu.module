@@ -11,13 +11,7 @@ function palom_content_menu_menu() {
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -10,
   ];
-/*
-  $items['geo/companies'] = [
-    'title' => 'Организация паломничеств',
-    'type' => MENU_LOCAL_TASK,
-    'weight' => 5,
-  ];
-*/
+
   return $items;
 }
 
@@ -36,9 +30,14 @@ function palom_content_menu_url_inbound_alter(&$path, $original_path, $path_lang
     '|^city/([0-9]*)/transport?|' => 'node/{{m1}}/view/transportbycity',
 
     // by place
+    '|^place/([0-9]*)/reviews?|' => 'node/{{m1}}/view/reviewsbyplace',
+    '|^place/([0-9]*)/accommodation?|' => 'node/{{m1}}/view/accommodationbyplace',
+    '|^place/([0-9]*)/feeding?|' => 'node/{{m1}}/view/feedingbyplace',
+    '|^place/([0-9]*)/transport?|' => 'node/{{m1}}/view/transportbyplace',
 
     // by service
-    '|^service/([0-9]*)/tours?|' => 'node/{{m1}}/view/toursby',
+    '|^service/([0-9]*)/tours?|' => 'node/{{m1}}/view/toursbyservice',
+    '|^service/([0-9]*)/reviews?|' => 'node/{{m1}}/view/reviewsbyservice',
 
   ];
 
@@ -82,11 +81,15 @@ function palom_content_menu_url_outbound_alter(&$path, &$options, $original_path
 
 
     // by place
+    '|^node/([0-9]*)/view/reviewsbyplace?|' => 'place/{{m1}}/reviews',
+    '|^node/([0-9]*)/view/accommodationbyplace?|' => 'place/{{m1}}/accommodation',
+    '|^node/([0-9]*)/view/feedingbyplace?|' => 'place/{{m1}}/feeding',
+    '|^node/([0-9]*)/view/transportbyplace?|' => 'place/{{m1}}/transport',
 
 
     // by service
-    '|^node/([0-9]*)/view/toursby?|' => 'service/{{m1}}/tours',
-
+    '|^node/([0-9]*)/view/toursbyservice?|' => 'service/{{m1}}/tours',
+    '|^node/([0-9]*)/view/reviewsbyservice?|' => 'service/{{m1}}/reviews',
 
   ];
 

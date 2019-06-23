@@ -375,3 +375,88 @@ function palom_field_cr_city_field_formatter_view($entity_type, $entity, $field,
   return $element;
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function palom_field_cr_city_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  $view = $form_state['view'];
+  if ($view->name == 'geo' && in_array($view->current_display, ['page_places', 'page_services', 'page_accommodation', 'page_feeding', 'page_transport'])){
+
+//    kpr($form);
+//    kpr($form_state);
+
+    $country_id = $form_state['input']['country'];
+    $region_id = $form_state['input']['region'];
+    $city_id = $form_state['input']['city'];
+
+    $clist = palom_utils_get_countries();
+    $countries = [];
+    foreach ($clist as $elem){
+      $countries[$elem->tid] = $elem->name;
+    };
+
+    $form['country'] = [
+      '#type' => 'select',
+      '#options' => $countries,
+      '#default_value' => $country_id,
+      '#empty_option' => t('-All countries-'),
+      '#empty_value' => '',
+    ];
+
+    $rlist = palom_utils_get_regions($country_id);
+
+    if ($rlist != []){
+      foreach ($rlist as $elem){
+        $regions[$elem->tid] = $elem->name;
+      };
+
+      $form['region'] = [
+        '#type' => 'select',
+        '#default_value' => $region_id,
+        '#empty_option' => t('-All regions-'),
+        '#empty_value' => '',
+        '#options' => $regions,
+      ];
+    }
+    else {
+      $form['#info']['filter-field_city_region_id']['label'] = '';
+
+//      unset($form['region']);
+
+      $form['region'] = [
+        '#type' => 'hidden',
+        '#value' => '',
+      ];
+    }
+
+    if ($rlist == [])
+      $region_id = ALL_REGIONS;
+    $city_list = palom_utils_get_cities($country_id, $region_id);
+
+    if ($city_list != []) {
+      foreach ($city_list as $elem) {
+        $cities[$elem->nid] = $elem->title;
+      };
+
+      $form['city'] = [
+          '#type' => 'select',
+          '#description' => '',
+          '#default_value' => $city_id,
+          '#empty_option' => t('-select-'),
+          '#empty_value' => '',
+          '#options' => $cities,
+        ];
+    }
+    else{
+      $form['#info']['filter-field_city_city_id']['label'] = '';
+
+//      unset($form['city']);
+
+      $form['city'] = [
+        '#type' => 'hidden',
+        '#value' => '',
+      ];
+    }
+
+  }
+}
