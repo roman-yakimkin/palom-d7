@@ -9,34 +9,13 @@ function palom_form_custom_field_widget_mvf_widget_default_form_alter(&$element,
 }
 
 /**
- * Implements hook_form_BASE_FORM_ID_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
-function palom_form_custom_form_node_form_alter(&$form, &$form_state, $form_id) {
-  //kpr($form_id);
+function palom_form_custom_form_place_node_form_alter(&$form, &$form_state, $form_id) {
 //  kpr($form);
-//  $form['#fieldgroups']['group_main']['#theme'] = 'tour_group_main';
-  /*
-  switch($form_id){
-    case 'pilgrim_service_node_form':
-      $form['#theme'] = ['pilgrim_service_node_form'];
-      break;
-    case 'accommodation_node_form':
-      $form['#theme'] = ['accommodation_node_form'];
-      break;
-    case 'feeding_node_form':
-      $form['#theme'] = ['feeding_node_form'];
-      break;
-    case 'transport_node_form':
-      $form['#theme'] = ['transport_node_form'];
-      break;
-    case 'tour_node_form':
-      $form['#theme'] = ['tour_node_form'];
-      break;
-    case 'review_node_form':
-      $form['#theme'] = ['review_node_form'];
-      break;
+  foreach ($form['field_place_type']['und']['#options'] as &$value){
+    $value = trim($value, "-");
   }
-  */
 }
 
 /**

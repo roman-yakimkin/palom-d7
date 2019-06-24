@@ -260,6 +260,7 @@ function palom_field_cr_city_field_widget_form(&$form, &$form_state, $field, $in
 //        if ($clist != []){
         $cities['add_new'] = t('-add new-');
         foreach ($clist as $elem){
+          $city_titles = palom_utils_get_city_title_multiple(array_keys($clist));
           $cities[$elem->nid] = $elem->title;
         };
 
@@ -434,8 +435,9 @@ function palom_field_cr_city_form_views_exposed_form_alter(&$form, &$form_state,
     $city_list = palom_utils_get_cities($country_id, $region_id);
 
     if ($city_list != []) {
+      $city_titles = palom_utils_get_city_title_multiple(array_keys($city_list));
       foreach ($city_list as $elem) {
-        $cities[$elem->nid] = $elem->title;
+        $cities[$elem->nid] = $city_titles[$elem->nid];
       };
 
       $form['city'] = [
