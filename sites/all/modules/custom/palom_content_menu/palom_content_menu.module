@@ -39,6 +39,14 @@ function palom_content_menu_url_inbound_alter(&$path, $original_path, $path_lang
     '|^service/([0-9]*)/tours?|' => 'node/{{m1}}/view/toursbyservice',
     '|^service/([0-9]*)/reviews?|' => 'node/{{m1}}/view/reviewsbyservice',
 
+    // geo
+    '|^cities?|' => 'geo/cities',
+    '|^places?|' => 'geo/places',
+    '|^services?|' => 'geo/companies/services',
+    '|^accommodation?|' => 'geo/companies/accommodation',
+    '|^feeding?|' => 'geo/companies/feeding',
+    '|^transport?|' => 'geo/companies/transport',
+
   ];
 
   foreach ($routes as $src => $dst){
@@ -48,21 +56,9 @@ function palom_content_menu_url_inbound_alter(&$path, $original_path, $path_lang
         $src_array[] = "{{m$key}}";
       }
       $path = str_replace($src_array, $matches, $dst);
+      break;
     }
   }
-
-  /*
-  // Tours from service
-  if (preg_match('|^service/([0-9]*)/tours?|', $path, $matches)) {
-    $path = 'node/'.$matches[1].'/toursby';
-  }
-
-  // By city
-  if (preg_match('|^city/([0-9]*)/places?|', $path, $matches)) {
-    $path = 'node/'.$matches[1].'/view/placesbycity';
-  }
-  */
-
 }
 
 /**
@@ -91,6 +87,15 @@ function palom_content_menu_url_outbound_alter(&$path, &$options, $original_path
     '|^node/([0-9]*)/view/toursbyservice?|' => 'service/{{m1}}/tours',
     '|^node/([0-9]*)/view/reviewsbyservice?|' => 'service/{{m1}}/reviews',
 
+    // geo
+    '|^geo/cities?|' => 'cities',
+    '|^geo/companies/accommodation?|' => 'accommodation',
+    '|^geo/companies/feeding?|' => 'feeding',
+    '|^geo/companies/transport?|' => 'transport',
+    '|^geo/companies/?|' => 'services',
+    '|^geo/places?|' => 'places',
+
+
   ];
 
   foreach ($routes as $src => $dst){
@@ -100,17 +105,7 @@ function palom_content_menu_url_outbound_alter(&$path, &$options, $original_path
         $src_array[] = "{{m$key}}";
       }
       $path = str_replace($src_array, $matches, $dst);
+      break;
     }
   }
-/*
-  // Tours from service
-  if (preg_match('|^node/([0-9]*)/toursby?|', $path, $matches)) {
-    $path = 'service/'.$matches[1].'/tours';
-  }
-
-  // By city
-  if (preg_match('|^node/([0-9]*)/view/placesbycity?|', $path, $matches)) {
-    $path = 'city/'.$matches[1].'/places';
-  }
-*/
 }
