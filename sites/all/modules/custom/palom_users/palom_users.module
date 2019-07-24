@@ -1,23 +1,25 @@
 <?php
 
-/**
- * Implements hook_field_access().
- */
-function palom_users_field_access($op, $field, $entity_type, $entity, $account) {
-  if ($field['field_name'] == 'field_owners'){
-    if ($account){
-      $roles = array_values($account->roles);
-      if (in_array('administrator', $roles))
-        return true;
-    }
-    return false;
-  }
-}
+// Max roles for a non-premium user
+define('MAX_ROLES', 1);
+
+// Max companies for a non-premium user
+define('MAX_COMPANIIES', 1);
+
+// Max tours for a non-premium users
+define('MAX_TOURS',300);
+
+define('FREE_OWNER', 10);
+
+define('PREMIUM_OWNER', 100);
 
 /**
  * Implements hook_node_access().
  */
 function palom_users_node_access($node, $op, $account) {
+
+  $node_type = is_string($node) ? $node : $node->type;
+
   if (isset($node->field_owners[LANGUAGE_NONE]) && ($op == 'update')){
     foreach($node->field_owners[LANGUAGE_NONE] as $key => $value){
       if ($value['target_id'] == $account->uid)
@@ -25,22 +27,98 @@ function palom_users_node_access($node, $op, $account) {
     }
   }
 
+  if ($account){
+    $user = user_load($account->uid);
+    $roles = array_values($account->roles);
+    if ($user->field_state != []){
+      $user_state = $user->field_state[LANGUAGE_NONE][0]['first'];
+    }
+    else
+      $user_state = 10;
+  }
+
   // User can add new tours if he has inputed a piligrimage service before and if he has a role "owner"
-  if (($node == 'tour') && ($op == 'create')){
+  if (($node_type == 'tour') && ($op == 'create')){
     if ($account){
-      $roles = array_values($account->roles);
       if (in_array('owner', $roles)){
 
         $query = new EntityFieldQuery();
         $query->entityCondition('entity_type', 'node')
           ->entityCondition('bundle', 'pilgrim_service')
-          ->propertyCondition('status', NODE_PUBLISHED)
+//          ->propertyCondition('status', NODE_PUBLISHED)
           ->fieldCondition('field_owners', 'target_id', $account->uid);
         $result = $query->execute();
-        if (sizeof($result) > 0)
+        if (sizeof($result) > 0){
+          if ($user_state == PREMIUM_OWNER)
+            return NODE_ACCESS_ALLOW;
+
+          $service_nids = array_keys($result['node']);
+
+          $q_tours = new EntityFieldQuery();
+          $q_tours->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'tour')
+            ->propertyCondition('status', NODE_PUBLISHED)
+            ->fieldCondition('field_services', 'target_id', $service_nids, 'IN' )
+            ->count();
+
+          $count_tours = $q_tours->execute();
+
+          if (($user_state == FREE_OWNER) && ($count_tours < MAX_TOURS))
+            return NODE_ACCESS_ALLOW;
+        }
+
+        return NODE_ACCESS_DENY;
+      }
+    }
+  }
+
+  // User can update a tour if he is one of owners of
+  if (($node_type == 'tour') && ($op == 'update')){
+    if ($account){
+      if (in_array('owner', $roles)){
+
+        $q = db_select('field_data_field_services', 'field_services');
+        //        $q->innerJoin('node', 'services', 'field_services.target_id = services.nid');
+        $q->innerJoin('field_data_field_owners', 'field_owners', 'field_services.field_services_target_id = field_owners.entity_id');
+        $q->addField('field_owners', 'field_owners_target_id', 'user_id');
+        $q->condition('field_owners.field_owners_target_id', $account->uid);
+        $q->condition('field_services.entity_id', $node->nid);
+        $result = $q->countQuery()->execute()->fetchField();
+
+        if (sizeof($result) > 0){
           return NODE_ACCESS_ALLOW;
-        else
-          return NODE_ACCESS_DENY;
+        }
+
+        return NODE_ACCESS_DENY;
+      }
+    }
+  }
+
+  // User can edit tours if he is one of owners of this pilgrimage service
+
+
+  if (in_array($node_type, ['pilgrim_service', 'accommodation', 'feeding', 'transport']) && ($op == 'create')){
+    if ($account) {
+      if (in_array('owner', $roles)) {
+        if ($user_state == PREMIUM_OWNER)
+          return NODE_ACCESS_ALLOW;
+        else {
+          $query = new EntityFieldQuery();
+          $query->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', ['pilgrim_service', 'accommodation', 'feeding', 'transport'], 'IN')
+            ->fieldCondition('field_owners', 'target_id', $account->uid)
+            ->count();
+
+          $result = $query->execute();
+
+          if (($user_state == FREE_OWNER) && ($result < MAX_COMPANIIES)){
+            return NODE_ACCESS_ALLOW;
+          }
+          else {
+//            drupal_set_message('Для бесплатного пользования максимальное количество организаций равно '.MAX_COMPANIIES, 'error');
+          }
+        }
+        return NODE_ACCESS_DENY;
       }
     }
   }
@@ -77,5 +155,116 @@ function palom_users_node_presave($node) {
   if (!$node->nid && isset($node->field_owners) && $node->uid != 1){
     $node->field_owners[LANGUAGE_NONE][] = ['target_id' => $node->uid];
   }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function palom_users_form_alter(&$form, &$form_state, $form_id) {
+  /*
+  if ($form_id == 'user_register_form'){
+
+    $form['my_role'] = [
+      '#title' => 'Роль',
+      '#title_display' => 'before',
+      '#description' => 'Выберите свою роль на данном сайте. Если вы выберите роль, отличную от обычного пользователя, вы сможете размещать дополнительную информацию',
+      '#type' => 'radios',
+      '#options' => [
+        'simple_user' => 'Пользователь',
+        'owner' => 'Владелец / сотрудник',
+      ],
+      '#default_value' => 'simple_user',
+      '#weight' => -5,
+      '#theme' => 'bootstrap_btn_group',
+    ];
+
+    $form['actions']['#weight'] = 500;
+
+    $form['#attached']['css'][] = drupal_get_path('module', 'palom_users').'/radios-as-buttons.css';
+    $form['#attached']['js'][] = drupal_get_path('module', 'palom_users').'/radios-as-buttons.js';
+  }
+  */
+}
+
+/**
+ * Implements hook_user_insert().
+ */
+function palom_users_user_insert(&$edit, $account, $category) {
+//  $role_name = $edit['my_role'];
+
+  $role = user_role_load_by_name('owner');
+  $user = user_load($account->uid);
+  $user->roles = $user->roles + array($role->rid => $role->name);
+  user_save($user);
+
+//  if ($role_name != 'simple_user'){
+//    $role = user_role_load_by_name($role_name);
+//    $user = user_load($account->uid);
+//    $user->roles = $user->roles + array($role->rid => $role->name);
+//    user_save($user);
+//  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function palom_users_theme($existing, $type, $theme, $path) {
+  return [
+    'bootstrap_btn_group' => [
+      'render element' => 'element',
+    ]
+  ];
+}
+
+function theme_bootstrap_btn_group($vars){
+  $element = $vars['element'];
+  $attributes = [];
+  if (isset($element['#id'])) {
+    $attributes['id'] = $element['#id'];
+  }
+  $attributes['class'] = 'form-radios';
+  if (!empty($element['#attributes']['class'])) {
+    $attributes['class'] .= ' ' . implode(' ', $element['#attributes']['class']);
+  }
+  if (isset($element['#attributes']['title'])) {
+    $attributes['title'] = $element['#attributes']['title'];
+  }
+
+  $radios = "";
+  foreach ($element as $key => $child){
+    if (substr($key, 0, 1) != '#'){
+      $one_radio = strip_tags(drupal_render($child), '<label><input>');
+      $one_radio = str_replace('control-label', 'btn btn-default', $one_radio);
+
+      $radios.=$one_radio;
+    }
+  }
+  $result = $radios;
+  return $result;
+};
+
+function palom_users_get_user_state($uid = 0){
+  global $user;
+  if (!$uid){
+    $uid = $user->uid;
+  };
+  $account = user_load($uid);
+  if (isset($account->field_state[LANGUAGE_NONE])){
+    $current_status = $account->field_state[LANGUAGE_NONE][0]['first'];
+    $expire_date_str = $account->field_state[LANGUAGE_NONE][0]['second'];
+    $current_date = new DateTime();
+
+    if ($expire_date_str >= $current_date->format('Y-m-d')){
+      return [
+        'status' => PREMIUM_OWNER,
+        'expire' => $expire_date_str,
+      ];
+    }
+  }
+
+  return [
+    'status' => FREE_OWNER,
+    'expire' => '',
+  ];
 }
 

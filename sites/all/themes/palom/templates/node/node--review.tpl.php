@@ -15,46 +15,26 @@
         </header>
     @endif
     <div class="row">
-        <div class="col col-md-6">
-            <div class="infoblock">
-            {!! render($content['body']) !!}
-            </div>
+        <div class="col col-xs-12 col-info pub-date">
+            <div class="icon"></div>
+            <div class="field-values">{!! date('d.m.Y', $created) !!}</div>
         </div>
-        <div class="col col-md-6">
-            <div class="infoblock">
-                <div class="row">
-                    <div class="col-xs-4 col-md-12 col-lg-4 panel-element-label">
-                        Дата публикации
-                    </div>
-                    <div class="col-xs-8 col-md-12 col-lg-8">
-                       {!! date('d.m.Y', $created) !!}
+        @foreach(['field_author', 'field_services', 'field_site_url', 'body', 'field_gallery', 'field_places'] as $index)
+            @isset($content[$index])
+                @php
+                    $adv_style = "col-info";
+                    if (in_array($index, ['body', 'field_gallery']))
+                       $adv_style = "col-text";
+                @endphp
+                <div class="col col-xs-12 {{$adv_style}} {{str_replace('_', '-', $index)}}">
+                    @if ($adv_style == 'col-info')
+                        <div class="icon"></div>
+                    @endif
+                    <div class="field-values">
+                        {!! render($content[$index]) !!}
                     </div>
                 </div>
-                @foreach(['field_author', 'field_services', 'field_site_url'] as $index)
-                    @isset($content[$index])
-                    <div class="row">
-                        <div class="col-xs-4 col-md-12 col-lg-4 panel-element-label">
-                            {!! $content[$index]['#title'] !!}
-                        </div>
-                        <div class="col-xs-8 col-md-12 col-lg-8">
-                            {!! render($content[$index]) !!}
-                        </div>
-                    </div>
-                    @endisset
-                @endforeach
-            </div>
-            @isset($content['field_places'])
-            <div class="infoblock">
-                <h5>Посещенные святые места</h5>
-                {!! render($content['field_places']) !!}
-            </div>
             @endisset
-            @isset($content['field_gallery'])
-            <div class="infoblock photos-container">
-                <h5>Фотогалерея</h5>
-                {!! render($content['field_gallery']) !!}
-            </div>
-            @endisset
-        </div>
+        @endforeach
     </div>
 </article>

@@ -1,0 +1,88 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function palom_pa_menu() {
+  $items['pa'] = [
+    'title' => t('Personal account'),
+    'title callback' => 'palom_pa_pa_title_callback',
+    'page callback' => 'palom_pa_pa_page_callback',
+    'access callback' => 'palom_pa_pa_access_callback',
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'user-menu',
+    'weight' => 10,
+  ];
+
+  $items['pa-unread'] = [
+    'title' => t('Unread messages'),
+    'title callback' => 'palom_pa_unread_title_callback',
+    'page callback' => 'palom_pa_unread_page_callback',
+    'access callback' => 'palom_pa_unread_access_callback',
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'user-menu',
+    'weight' => 0,
+  ];
+
+  $items['premium'] = [
+    'title' => 'Premium',
+    'title callback' => FALSE,
+    'page callback' => 'palom_pa_premium_page_callback',
+    'access callback' => 'palom_pa_premium_access_callback',
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'user-menu',
+    'weight' => -10,
+
+  ];
+
+
+  return $items;
+}
+
+function palom_pa_pa_title_callback(){
+  global $user;
+
+  return $user->name;
+}
+
+function palom_pa_pa_page_callback(){
+  drupal_goto('user');
+}
+
+function palom_pa_pa_access_callback(){
+  global $user;
+  if (!$user->uid)
+    return FALSE;
+  else
+    return TRUE;
+}
+
+function palom_pa_unread_title_callback(){
+  $count = privatemsg_unread_count();
+
+  if ($count > 0) {
+    return format_plural($count, '1 new message', '@count new messages');
+  }
+  return '';
+}
+
+function palom_pa_unread_page_callback(){
+  drupal_goto('messages');
+}
+
+function palom_pa_unread_access_callback(){
+  global $user;
+  $count = privatemsg_unread_count();
+  if ($count > 0)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+function palom_pa_premium_page_callback(){
+  return "Здесь будет покупаться premium";
+}
+
+function palom_pa_premium_access_callback(){
+  return TRUE;
+}

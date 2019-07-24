@@ -1,0 +1,8 @@
+#edit-my-role {
+  display: block;
+}
+
+.form-item-my-role .help-block {
+  display: block;
+  min-height: 55px !important;
+}

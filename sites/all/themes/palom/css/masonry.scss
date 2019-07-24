@@ -1,0 +1,40 @@
+@import "_vars";
+
+@media screen and (max-width:$screen-xs-max) {
+  .masonry12[data-columns]::before {
+    content: '1 .col .col-xs-12 .col-lg-6';
+  }
+  .masonry123[data-columns]::before {
+    content: '1 .col .col-xs-12 .col-md-6 .col-lg-4';
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .masonry12[data-columns]::before {
+    content: '1 .col .col-xs-12 .col-lg-6';
+  }
+
+  .masonry123[data-columns]::before {
+    content: '2 .col .col-xs-12 .col-md-6 .col-lg-4';
+  }
+}
+
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .masonry12[data-columns]::before {
+    content: '2 .col .col-xs-12 .col-lg-6';
+  }
+
+  .masonry123[data-columns]::before {
+    content: '3 .col .col-xs-12 .col-md-6 .col-lg-4';
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .masonry12[data-columns]::before {
+    content: '2 .col .col-xs-12 .col-lg-6';
+  }
+
+  .masonry123[data-columns]::before {
+    content: '3 .col .col-xs-12 .col-md-6 .col-lg-4';
+  }
+}

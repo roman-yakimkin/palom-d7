@@ -3039,7 +3039,8 @@ function password_confirm_validate($element, &$element_state) {
     }
   }
   elseif ($element['#required'] && !empty($element_state['input'])) {
-    form_error($element, t('Password field is required.'));
+    form_error($element, t('
+    Password field is required.'));
   }
 
   // Password field must be converted from a two-element array into a single

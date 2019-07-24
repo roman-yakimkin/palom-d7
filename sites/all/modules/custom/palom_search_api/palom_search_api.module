@@ -185,6 +185,7 @@ function _palom_tour_dates($item){
   foreach ($item->field_tour_dates[LANGUAGE_NONE] as $delta => $date){
     $year = (int)substr($date['value'],0, 4);
     $month = (int)substr($date['value'],5, 2);
+    $index = null;
     if (($year == 2500) && ($month == 1)){
       $index = 'demand';
     }
@@ -192,11 +193,18 @@ function _palom_tour_dates($item){
       $index = 'complect';
     }
     else {
-      $index = substr($date['value'],0, 7);
+      if (substr($date['value'],0, 10) >= date('Y-m-d')){
+        $index = substr($date['value'],0, 7);
+      }
+
     }
 
-    $result[] = $index;
+    if ($index !== null )
+      $result[] = $index;
   }
+
+  if ($result == [])
+    $result[] = 'demand';
 
   return $result;
 }

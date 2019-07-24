@@ -1,0 +1,5 @@
+@mixin set_icon($icon){
+  background: url(../images/icons/#{$icon}) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px;
+}

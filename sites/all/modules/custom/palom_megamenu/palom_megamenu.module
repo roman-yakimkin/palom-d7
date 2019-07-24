@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function palom_megamenu_block_info() {
+  $blocks['user-items'] = [
+    'info' => t('User items'),
+  ];
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function palom_megamenu_block_view($delta = '') {
+  $block = [];
+
+  switch($delta){
+    case 'user-items':
+      $block['subject'] = t('User items');
+      $block['content'] = 'USER ITEMS !!!';
+      break;
+  }
+
+  return $block;
+}
+
+function palom_megamenu_user_form($form, &$form_state){
+  global $user;
+  $account = user_load($user->uid);
+
+  $form['user-role'] = [
+    '#type' => 'radios',
+    '#options' => [
+      'simple_user' => 'Пользователь',
+      'owner' => 'Владелец / сотрудник',
+    ],
+    '#default_value' => 'simple_user',
+    '#weight' => -5,
+    '#theme' => 'bootstrap_btn_group',
+  ];
+
+  $form['is_owner'] = [
+    '#type' => 'value',
+    '#value' => 0,
+  ];
+  if (in_array('owner', $account->roles)){
+    $form['is_owner']['#value'] = 1;
+  }
+
+  $form['my_account'] = [
+    '#type' => 'markup',
+    '#markup' => l(t('My account'), 'user', ['attributes' => ['class' => ['user-menu-item']]]),
+  ];
+
+  $form['my_messages'] = [
+    '#type' => 'markup',
+    '#markup' => l(t('Messages'), 'messages',  ['attributes' => ['class' => ['user-menu-item']]]),
+  ];
+
+  $form['logout'] = [
+    '#type' => 'markup',
+    '#markup' => l(t('Logout'), 'user/logout',  ['attributes' => ['class' => ['user-menu-item']]]),
+  ];
+
+
+  if (in_array('owner', $account->roles)){
+
+    $form['my_companies'] = [
+      '#type' => 'markup',
+      '#markup' => l(t('My companies'), 'user/'.$user->uid.'/companies',  ['attributes' => ['class' => ['user-menu-item']]]),
+    ];
+
+    $form['my_tours'] = [
+      '#type' => 'markup',
+      '#markup' => l(t('My tours'), 'user/'.$user->uid.'/tours',  ['attributes' => ['class' => ['user-menu-item']]]),
+    ];
+  }
+
+  $form['#theme'] = 'mm_user_form';
+
+  $form['#attached']['js'][] = drupal_get_path('module', 'palom_megamenu').'/palom_megamenu.js';
+
+  return $form;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function palom_megamenu_theme($existing, $type, $theme, $path) {
+  return [
+    'mm_user_form' => [
+      'render element' => 'form',
+      'template' => 'megamenu-user-form',
+      'path' => drupal_get_path('theme', 'palom').'/templates/form',
+    ]
+  ];
+}

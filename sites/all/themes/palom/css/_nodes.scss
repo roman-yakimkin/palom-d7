@@ -1,0 +1,166 @@
+div.col-info {
+  margin-bottom: 10px;
+
+  .icon {
+    min-width: 25px;
+    min-height: 25px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .field-values {
+    margin-left: 35px;
+  }
+}
+
+div.field-services{
+  div.icon {
+    @include set_icon('businessman.svg');
+  }
+}
+
+div.field-duration{
+  div.icon {
+    @include set_icon('time.svg');
+  }
+}
+
+
+div.field-cost-str{
+  div.icon {
+    @include set_icon('money.svg');
+  }
+  div.field-cost-str {
+    margin-left: 30px;
+  }
+}
+
+div.field-route{
+  div.icon {
+    @include set_icon('route.svg');
+  }
+}
+
+div.field-transport{
+  div.icon {
+    @include set_icon('airplane2.svg');
+  }
+}
+
+div.field-cities-from {
+  div.icon {
+    @include set_icon('city.svg');
+  }
+  a {
+    margin-right: 10px;
+  }
+}
+
+div.field-tour-dates{
+  div.icon {
+    @include set_icon('calendar.svg');
+  }
+  span {
+    margin-right: 10px;
+    display: inline;
+  }
+}
+
+div.field-cities-from {
+  a {
+    margin-right: 10px;
+  }
+}
+
+div.field-places {
+  div.icon {
+    @include set_icon('church.svg');
+  }
+  a {
+    margin-right: 10px;
+  }
+}
+
+div.field-city {
+  div.icon {
+    @include set_icon('city.svg');
+  }
+}
+
+div.field-address {
+  div.icon {
+    @include set_icon('location.svg');
+  }
+}
+
+div.field-phones {
+  div.icon {
+    @include set_icon('phone.svg');
+  }
+}
+
+div.field-site-url {
+  div.icon {
+    @include set_icon('urllink.svg');
+  }
+
+  a {
+    margin-right: 10px;
+  }
+}
+
+div.field-files {
+  div.icon {
+    @include set_icon('files.svg');
+  }
+  a {
+    margin-right: 10px;
+  }
+}
+
+div.field-gallery {
+
+  div.field-values {
+    margin-bottom: 10px;
+
+    img {
+      display: inline;
+      margin: 0px 0px 4px 0px;
+    }
+  }
+}
+
+div.pub-date {
+  div.icon {
+    @include set_icon('date.svg');
+  }
+}
+
+div.field-author {
+  div.icon {
+    @include set_icon('pencil.svg');
+  }
+}
+
+div.field-place-type {
+  div.icon {
+    @include set_icon('church2.svg');
+  }
+}
+
+div.field-geo {
+  div.icon {
+    @include set_icon('globe.svg');
+  }
+}
+
+div.field-tags {
+  div.icon {
+    @include set_icon('tag.svg');
+  }
+  a {
+    margin-right: 10px;
+  }
+}
+

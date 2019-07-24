@@ -82,6 +82,25 @@ function palom_libs_libraries_info() {
     ],
   ];
 
+  $libraries['salvattore'] = [
+    'name' => 'Salvattore',
+    'version' => '1.0.9',
+    'files' => [
+      'js' => [
+        'salvattore.js',
+      ],
+    ],
+    'variants' => [
+      'minified' => [
+        'files' => [
+          'js' => [
+            'salvattore.min.js',
+          ],
+        ],
+      ]
+    ]
+  ];
+
   return $libraries;
 }
 

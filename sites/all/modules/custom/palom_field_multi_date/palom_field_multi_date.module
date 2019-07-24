@@ -157,6 +157,13 @@ function palom_field_multi_date_field_formatter_view($entity_type, $entity, $fie
         }
 
       }
+      if ($element == []){
+        $element[] = [
+          '#type' => 'markup',
+          '#markup' => '<span>'.t('Travel by demand').'</span>',
+        ];
+
+      }
   }
   return $element;
 }

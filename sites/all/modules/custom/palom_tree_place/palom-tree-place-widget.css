@@ -59,10 +59,10 @@ ul.fancytree-container:focus {
   display: none;
 }
 
-.ui-dialog .form-actions button:first-child {
+.ui-dialog .node-place-form .form-actions .btn {
   display: none;
 }
 
-.ui-dialog .form-actions button:last-child {
-  display: none;
+.ui-dialog .node-place-form .form-actions .btn-success {
+  display: block;
 }

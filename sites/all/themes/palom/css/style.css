@@ -1,3 +1,35 @@
+/*@import "_reset";*/
+.menu li.mega-menu {
+  float: right;
+  position: absolute;
+  z-index: 10;
+  background: #F8F8F8;
+  border: 1px solid #e7e7e7;
+  border-top-color: #F8F8F8;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 10px; }
+
+.below-custom .user-megamenu {
+  width: 400px; }
+  .below-custom .user-megamenu .form-radios .btn {
+    width: 180px; }
+  .below-custom .user-megamenu a.user-menu-item {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333333;
+    white-space: nowrap; }
+
+/*
+ul.menu li:hover .below-custom {
+  display: block;
+}
+*/
 .double-field-elements .form-item {
   display: inline-block;
   margin-right: 20px; }
@@ -15,6 +47,9 @@ select[name=sel_tour_dates] {
   max-height: 380px;
   overflow-y: visible;
   border-width: 1px; }
+
+.field-name-field-city-type .form-select {
+  width: unset !important; }
 
 .field-name-field-place-type .form-select {
   width: unset !important; }
@@ -46,27 +81,162 @@ select[name=sel_tour_dates] {
 @media (max-width: 400px) {
   .photos-container .img-responsive {
     width: 22%; } }
-.infoblock {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid #ddd; }
-  .infoblock .field-name-field-tour-dates .field-item {
+div.col-info {
+  margin-bottom: 10px; }
+  div.col-info .icon {
+    min-width: 25px;
+    min-height: 25px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px; }
+  div.col-info .field-values {
+    margin-left: 35px; }
+
+div.field-services div.icon {
+  background: url(../images/icons/businessman.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-duration div.icon {
+  background: url(../images/icons/time.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-cost-str div.icon {
+  background: url(../images/icons/money.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+div.field-cost-str div.field-cost-str {
+  margin-left: 30px; }
+
+div.field-route div.icon {
+  background: url(../images/icons/route.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-transport div.icon {
+  background: url(../images/icons/airplane2.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-cities-from div.icon {
+  background: url(../images/icons/city.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+div.field-cities-from a {
+  margin-right: 10px; }
+
+div.field-tour-dates div.icon {
+  background: url(../images/icons/calendar.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+div.field-tour-dates span {
+  margin-right: 10px;
+  display: inline; }
+
+div.field-cities-from a {
+  margin-right: 10px; }
+
+div.field-places div.icon {
+  background: url(../images/icons/church.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+div.field-places a {
+  margin-right: 10px; }
+
+div.field-city div.icon {
+  background: url(../images/icons/city.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-address div.icon {
+  background: url(../images/icons/location.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-phones div.icon {
+  background: url(../images/icons/phone.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-site-url div.icon {
+  background: url(../images/icons/urllink.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+div.field-site-url a {
+  margin-right: 10px; }
+
+div.field-files div.icon {
+  background: url(../images/icons/files.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+div.field-files a {
+  margin-right: 10px; }
+
+div.field-gallery div.field-values {
+  margin-bottom: 10px; }
+  div.field-gallery div.field-values img {
+    display: inline;
+    margin: 0px 0px 4px 0px; }
+
+div.pub-date div.icon {
+  background: url(../images/icons/date.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-author div.icon {
+  background: url(../images/icons/pencil.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-place-type div.icon {
+  background: url(../images/icons/church2.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-geo div.icon {
+  background: url(../images/icons/globe.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+
+div.field-tags div.icon {
+  background: url(../images/icons/tag.svg) no-repeat;
+  background-origin: content-box;
+  background-size: 25px 25px; }
+div.field-tags a {
+  margin-right: 10px; }
+
+.block-facetapi ul {
+  padding-left: 0px; }
+  .block-facetapi ul li.leaf {
     display: inline;
     margin-right: 10px; }
-  .infoblock .field-name-field-cities-from .field-item {
-    display: inline;
-    margin-right: 10px; }
+    .block-facetapi ul li.leaf a {
+      margin-left: 10px; }
 
-.border-bottom {
-  border-bottom: 1px solid #ddd; }
+@media screen and (max-width: 767px) {
+  .masonry12[data-columns]::before {
+    content: '1 .col .col-xs-12 .col-lg-6'; }
 
-@media (max-width: 991px) {
-  .row .col:nth-child(1) .infoblock:nth-child(1) {
-    border-top: 0px; } }
-@media (min-width: 992px) {
-  .infoblock:nth-child(1) {
-    border-top: 0px; } }
-.panel-element-label {
-  font-weight: bold; }
+  .masonry123[data-columns]::before {
+    content: '1 .col .col-xs-12 .col-md-6 .col-lg-4'; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .masonry12[data-columns]::before {
+    content: '1 .col .col-xs-12 .col-lg-6'; }
+
+  .masonry123[data-columns]::before {
+    content: '2 .col .col-xs-12 .col-md-6 .col-lg-4'; } }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .masonry12[data-columns]::before {
+    content: '2 .col .col-xs-12 .col-lg-6'; }
+
+  .masonry123[data-columns]::before {
+    content: '3 .col .col-xs-12 .col-md-6 .col-lg-4'; } }
+@media screen and (min-width: 1200px) {
+  .masonry12[data-columns]::before {
+    content: '2 .col .col-xs-12 .col-lg-6'; }
+
+  .masonry123[data-columns]::before {
+    content: '3 .col .col-xs-12 .col-md-6 .col-lg-4'; } }
 
 /*# sourceMappingURL=style.css.map */

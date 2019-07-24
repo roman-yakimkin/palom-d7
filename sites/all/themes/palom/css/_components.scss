@@ -23,6 +23,12 @@ select[name=sel_tour_dates] {
   border-width: 1px;
 }
 
+.field-name-field-city-type {
+  .form-select{
+    width: unset !important;
+  }
+}
+
 .field-name-field-place-type {
   .form-select{
     width: unset !important;

@@ -7,7 +7,7 @@ function palom_content_menu_menu() {
   $items = [];
 
   $items['node/%node/view/descr'] = [
-    'title' => 'Description',
+    'title' => t('Description'),
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -10,
   ];

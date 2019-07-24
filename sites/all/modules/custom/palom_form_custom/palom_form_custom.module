@@ -19,45 +19,22 @@ function palom_form_custom_form_place_node_form_alter(&$form, &$form_state, $for
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function palom_form_custom_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+//  $form['#theme'] = 'palom_user_register';
+}
+
+/**
  * Implements hook_theme().
  */
 function palom_form_custom_theme($existing, $type, $theme, $path) {
   return [
-    'tour_group_main' => [
-      'render element' => 'element',
-      'template' => 'tour-group-main',
+    'palom_user_register' => [
+      'render element' => 'form',
+      'template' => 'user-register-form',
       'path' => drupal_get_path('theme', 'palom').'/templates/form',
-    ]
-//    'pilgrim_service_node_form' => [
-//      'render element' => 'form',
-//      'template' => 'pilgrim-service-node-form',
-//      'path' => drupal_get_path('theme', 'palom').'/templates/form',
-//    ],
-//    'accommodation_node_form' => [
-//      'render element' => 'form',
-//      'template' => 'accommodation-node-form',
-//      'path' => drupal_get_path('theme', 'palom').'/templates/form',
-//    ],
-//    'feeding_node_form' => [
-//      'render element' => 'form',
-//      'template' => 'feeding-node-form',
-//      'path' => drupal_get_path('theme', 'palom').'/templates/form',
-//    ],
-//    'transport_node_form' => [
-//      'render element' => 'form',
-//      'template' => 'transport-node-form',
-//      'path' => drupal_get_path('theme', 'palom').'/templates/form',
-//    ],
-//    'tour_node_form' => [
-//      'render element' => 'form',
-//      'template' => 'tour-node-form',
-//      'path' => drupal_get_path('theme', 'palom').'/templates/form',
-//    ],
-//    'review_node_form' => [
-//      'render element' => 'form',
-//      'template' => 'review-node-form',
-//      'path' => drupal_get_path('theme', 'palom').'/templates/form',
-//    ],
+    ],
   ];
 }
 

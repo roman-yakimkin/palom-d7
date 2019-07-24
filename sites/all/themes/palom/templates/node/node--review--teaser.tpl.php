@@ -14,41 +14,17 @@
             @endif
         </header>
     @endif
-    @isset($content['field_author_display'])
-    <div class="row">
-        <div class="hidden-xs col-sm-4 col-md-2 panel-element-label">
-            Опубликован
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-10">
-            <span class="date_review">{!! date('d.m.Y', $created) !!}</span>, автор - <span class="author-review">{!! render($content['field_author_display']) !!}</span>
-        </div>
-    </div>
-    @endisset
-    @isset($content['field_services'])
-        <div class="row">
-            <div class="hidden-xs col-sm-4 col-md-2 panel-element-label">
-                Организатор
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-10">
-                {!! render($content['field_services']) !!}
-            </div>
-        </div>
-    @endisset
-    @isset($content['body'])
+
     <div class="row">
         <div class="col col-xs-12">
-            {!! render($content['body']) !!}
+            {!! date('d.m.Y', $created) !!}
         </div>
+        @foreach(['field_author_display', 'field_services', 'body', 'field_places'] as $index)
+            @isset($content[$index])
+                <div class="col col-xs-12">
+                    {!! render($content[$index]) !!}
+                </div>
+            @endisset
+        @endforeach
     </div>
-    @endisset
-    @isset($content['field_places'])
-    <div class="row">
-        <div class="hidden-xs col-sm-4 col-md-2 panel-element-label">
-            Святые места
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-10">
-            {!! render($content['field_places']) !!}
-        </div>
-    </div>
-    @endisset
 </article>

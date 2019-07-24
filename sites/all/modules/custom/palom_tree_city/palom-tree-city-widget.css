@@ -42,3 +42,12 @@ ul.fancytree-container {
 .fancytree-folder {
   user-select: none;
 }
+
+.ui-dialog .node-city-form .form-actions .btn {
+  display: none;
+}
+
+.ui-dialog .node-city-form .form-actions .btn-success {
+  display: block;
+}
+

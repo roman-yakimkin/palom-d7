@@ -15,22 +15,22 @@
         </header>
     @endif
     <div class="row">
-        <div class="col col-xs-12">
-            @foreach(['field_geo'] as $index)
-                @isset($content[$index])
-                <div class="row">
-                    <div class="col-xs-4 col-md-3 col-lg-2 panel-element-label">
-                        {!! $content[$index]['#title'] !!}
-                    </div>
-                    <div class="col-xs-8 col-md-9 col-lg-10">
+        @foreach(['field_geo', 'body'] as $index)
+            @isset($content[$index])
+                @php
+                    $adv_style = "col-info";
+                    if (in_array($index, ['body', 'field_cost_comment', 'field_gallery']))
+                       $adv_style = "col-text";
+                @endphp
+                <div class="col col-xs-12 {{$adv_style}} {{str_replace('_', '-', $index)}}">
+                    @if ($adv_style == 'col-info')
+                        <div class="icon"></div>
+                    @endif
+                    <div class="field-values">
                         {!! render($content[$index]) !!}
                     </div>
                 </div>
-                @endisset
-            @endforeach
-            @if (!empty($content['body']))
-            {!! render($content['body']) !!}
-            @endif
-        </div>
+            @endisset
+        @endforeach
     </div>
 </article>

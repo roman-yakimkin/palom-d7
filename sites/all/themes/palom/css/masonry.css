@@ -1,0 +1,14 @@
+@media screen and (max-width: 767px) {
+  .masonry[data-columns]::before {
+    content: '1 .col .col-xs-12 .col-lg-6'; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .masonry[data-columns]::before {
+    content: '1 .col .col-xs-12 .col-lg-6'; } }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .masonry[data-columns]::before {
+    content: '2 .col .col-xs-12 .col-lg-6'; } }
+@media screen and (min-width: 1200px) {
+  .masonry[data-columns]::before {
+    content: '2 .col .col-xs-12 .col-lg-6'; } }
+
+/*# sourceMappingURL=masonry.css.map */

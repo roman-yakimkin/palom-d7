@@ -15,36 +15,22 @@
         </header>
     @endif
     <div class="row">
-        <div class="col col-md-6">
-            <div class="infoblock">
-                @if (!empty($content['body']))
-                {!! render($content['body']) !!}
-                @else
-                    Пока нет описания
-                @endif
-            </div>
-        </div>
-        <div class="col col-md-6">
-            <div class="infoblock">
-                @foreach(['field_geo'] as $index)
-                    @isset($content[$index])
-                        <div class="row">
-                            <div class="col-xs-4 col-md-12 col-lg-4 panel-element-label">
-                                {!! $content[$index]['#title'] !!}
-                            </div>
-                            <div class="col-xs-8 col-md-12 col-lg-8">
-                                {!! render($content[$index]) !!}
-                            </div>
-                        </div>
-                    @endisset
-                @endforeach
-            </div>
-            @if(true)
-                <div class="infoblock">
-                    <h5>Святые места</h5>
-                    {!! views_embed_view('places_by_city', 'block_places', $node->nid) !!}
+        @foreach(['field_geo', 'field_site_url', 'body', 'field_places'] as $index)
+            @isset($content[$index])
+                @php
+                    $adv_style = "col-info";
+                    if (in_array($index, ['body', 'field_cost_comment', 'field_gallery']))
+                       $adv_style = "col-text";
+                @endphp
+                <div class="col col-xs-12 {{$adv_style}} {{str_replace('_', '-', $index)}}">
+                    @if ($adv_style == 'col-info')
+                        <div class="icon"></div>
+                    @endif
+                    <div class="field-values">
+                        {!! render($content[$index]) !!}
+                    </div>
                 </div>
-            @endif
-        </div>
+            @endisset
+        @endforeach
     </div>
 </article>
