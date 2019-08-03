@@ -32,9 +32,7 @@ function palom_pa_menu() {
     'type' => MENU_NORMAL_ITEM,
     'menu_name' => 'user-menu',
     'weight' => -10,
-
   ];
-
 
   return $items;
 }

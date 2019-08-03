@@ -85,7 +85,7 @@ function palom_preprocess_views_view(&$vars){
       $vars['views_content_attr'] = 'data-columns';
     }
   }
-  kpr($current_view_name);
+//  kpr($current_view_name);
 }
 
 function palom_menu_link(array $variables) {

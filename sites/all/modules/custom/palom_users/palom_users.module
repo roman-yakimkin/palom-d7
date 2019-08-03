@@ -4,10 +4,12 @@
 define('MAX_ROLES', 1);
 
 // Max companies for a non-premium user
-define('MAX_COMPANIIES', 1);
+define('MAX_COMPANIES', 1);
+define('MAX_COMPANIES_PREMIUM', 100);
 
 // Max tours for a non-premium users
 define('MAX_TOURS',300);
+define('MAX_TOURS_PREMIUM',1000);
 
 define('FREE_OWNER', 10);
 
@@ -63,7 +65,7 @@ function palom_users_node_access($node, $op, $account) {
 
           $count_tours = $q_tours->execute();
 
-          if (($user_state == FREE_OWNER) && ($count_tours < MAX_TOURS))
+          if (($user_state == FREE_OWNER) /* && ($count_tours < MAX_TOURS)*/)
             return NODE_ACCESS_ALLOW;
         }
 
@@ -95,8 +97,6 @@ function palom_users_node_access($node, $op, $account) {
   }
 
   // User can edit tours if he is one of owners of this pilgrimage service
-
-
   if (in_array($node_type, ['pilgrim_service', 'accommodation', 'feeding', 'transport']) && ($op == 'create')){
     if ($account) {
       if (in_array('owner', $roles)) {
@@ -111,7 +111,7 @@ function palom_users_node_access($node, $op, $account) {
 
           $result = $query->execute();
 
-          if (($user_state == FREE_OWNER) && ($result < MAX_COMPANIIES)){
+          if (($user_state == FREE_OWNER)/* && ($result < MAX_COMPANIES)*/){
             return NODE_ACCESS_ALLOW;
           }
           else {
@@ -131,10 +131,11 @@ function palom_users_form_tour_node_form_alter(&$form, &$form_state, $form_id) {
   global $user;
 
   if ($user->uid > 1){
+    /*
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'node')
+      ->addTag('DANGEROUS_ACCESS_CHECK_OPT_OUT')
       ->entityCondition('bundle', 'pilgrim_service')
-      ->propertyCondition('status', NODE_PUBLISHED)
       ->fieldCondition('field_owners', 'target_id', $user->uid);
     $result = $query->execute();
 
@@ -145,6 +146,20 @@ function palom_users_form_tour_node_form_alter(&$form, &$form_state, $form_id) {
         unset($form['field_services'][LANGUAGE_NONE]['#options'][$key]);
       }
     };
+    */
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function palom_users_views_query_alter(&$view, &$query) {
+  global $user;
+
+  if (($view->name == 'user_data') && ($view->current_display == 'er_services_of_current_user')){
+    if ($user->uid == 1){
+      unset($query->where[1]['conditions'][1]);
+    }
   }
 }
 
@@ -266,5 +281,54 @@ function palom_users_get_user_state($uid = 0){
     'status' => FREE_OWNER,
     'expire' => '',
   ];
+}
+
+/*
+ * Get max companies or tours depends on user state
+ */
+function palom_users_get_max_values($uid = 0){
+  global $user;
+  if (!$uid){
+    $uid = $user->uid;
+  };
+  $account = user_load($uid);
+  if (!in_array('owner', $account->roles))
+    return [
+      'max_companies' => 0,
+      'max_tours' => 0,
+    ];
+  else {
+    $state = palom_users_get_user_state($uid);
+    if ($state['status'] == FREE_OWNER)
+      return [
+        'max_companies' => MAX_COMPANIES,
+        'max_tours' => MAX_TOURS,
+      ];
+    else
+      return [
+        'max_companies' => MAX_COMPANIES_PREMIUM,
+        'max_tours' => MAX_TOURS_PREMIUM,
+      ];
+  }
+}
+
+function palom_users_get_published_count($uid, $type){
+  $q = db_select('node', 'n');
+  $q->fields('n', ['nid']);
+  switch($type){
+    case 'companies':
+      $q->condition('type', ['pilgrim_service', 'accommodation', 'feeding', 'transport'], 'IN');
+      $q->innerJoin('field_data_field_owners', 'field_owners', 'n.nid = field_owners.entity_id');
+      break;
+    case 'tours':
+      $q->condition('type', 'tour');
+      $q->innerJoin('field_data_field_services', 'field_services', 'n.nid = field_services.entity_id');
+      $q->innerJoin('field_data_field_owners', 'field_owners', 'field_services.field_services_target_id = field_owners.entity_id');
+      break;
+  }
+  $q->condition('field_owners.field_owners_target_id', $uid);
+  $q->condition('n.status', 1);
+  $result = $q->countQuery()->execute()->fetchField();
+  return $result;
 }
 

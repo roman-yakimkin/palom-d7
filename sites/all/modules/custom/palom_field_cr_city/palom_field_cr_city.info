@@ -4,8 +4,9 @@ package = Palom
 core = 7.x
 
 dependencies[] = palom_utils
+dependencies[] = ctools
 
-; files[] = tests/forum_access.test
+files[] = views/palom_field_cr_city_handler.inc
 
 ; Information added by Drupal.org packaging script on 2016-08-16
 version = "7.x-1.0"

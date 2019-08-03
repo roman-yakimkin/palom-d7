@@ -4,6 +4,8 @@
     <list default="true" id="98a662d9-a857-4902-8c09-cd99b209d6b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.docksal/docksal.env" beforeDir="false" afterPath="$PROJECT_DIR$/../.docksal/docksal.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.docksal/docksal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.docksal/docksal.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4054aefd-d44d-4cf3-9c92-c62c8f65f2e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4054aefd-d44d-4cf3-9c92-c62c8f65f2e6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/bootstrap.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/bootstrap.inc" afterDir="false" />
@@ -153,63 +155,18 @@
       <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/testing/testing.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/testing.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/advanced_forum.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/advanced_forum.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/advanced_forum.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/advanced_forum.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/includes/advanced_forum_preprocess_forum_list.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/includes/advanced_forum_preprocess_forum_list.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/includes/template_preprocess_advanced_forum_topic_list_view.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/includes/template_preprocess_advanced_forum_topic_list_view.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/includes/views/advanced_forum_topic_list.view" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/includes/views/advanced_forum_topic_list.view" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/blue_lagoon/advanced-forum.blue_lagoon.style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/blue_lagoon/advanced-forum.blue_lagoon.style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/blue_lagoon/blue_lagoon.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/blue_lagoon/blue_lagoon.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/blue_lagoon_stacked/blue_lagoon_stacked.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/blue_lagoon_stacked/blue_lagoon_stacked.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/cloudless_day/cloudless_day.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/cloudless_day/cloudless_day.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/cloudless_day_stacked/cloudless_day_stacked.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/cloudless_day_stacked/cloudless_day_stacked.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/naked/naked.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/naked/naked.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/naked_stacked/naked_stacked.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/naked_stacked/naked_stacked.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/silver_bells/silver_bells.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/silver_bells/silver_bells.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/silver_bells_stacked/silver_bells_stacked.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum/styles/silver_bells_stacked/silver_bells_stacked.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_content_menu/palom_content_menu.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_content_menu/palom_content_menu.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_field_multi_date.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_multi_date/palom_field_multi_date.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_form_custom/palom_form_custom.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_form_custom/palom_form_custom.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_pa/palom_pa.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_pa/palom_pa.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_search_api/palom_search_api.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_search_api/palom_search_api.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_users/palom_users.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_users/palom_users.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/bootstrap/bootstrap.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/bootstrap.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/bootstrap/includes/cdn/JsDelivr.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/includes/cdn/JsDelivr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/bootstrap/includes/cdn/ProviderBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/bootstrap/includes/cdn/ProviderBase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_components.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_components.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_infoblocks.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_infoblocks.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_mixins.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_mixins.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_vars.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_vars.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/style.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/style.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/_components.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/_infoblocks.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/_vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_nodes.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_nodes.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/_nodes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/_nodes.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/palom.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/palom.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation--teaser.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city--teaser.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding--teaser.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service--teaser.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place--teaser.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place.tpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review--teaser.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour--teaser.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport--teaser.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/translations/taxonomy_manager-7.x-1.0.ru.po" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/translations/taxonomy_manager-7.x-1.0.ru.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/vendor/philo/laravel-blade" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/vendor/philo/laravel-blade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bartik/bartik.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bartik/bartik.info" afterDir="false" />
@@ -261,201 +218,9 @@
   <component name="DrupalConfiguration" enabled="true" version="7">
     <drupalPath>$PROJECT_DIR$</drupalPath>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_nodes.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="159" column="26" selection-start-line="159" selection-start-column="26" selection-end-line="159" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city--teaser.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="16" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" lean-forward="true" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--article.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node.tpl.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" selection-start-line="17" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding--teaser.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" selection-start-line="18" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>advanced_forum_page</find>
-      <find>flip.min.js</find>
-      <find>date_select</find>
-      <find>asaf_form_ajax_commands_alter</find>
-      <find>visit: fu</find>
-      <find>getNodeByKey</find>
-      <find>children</find>
-      <find>visit:</find>
-      <find>hook_node_grants</find>
-      <find>node_form_validate</find>
-      <find>theme</find>
-      <find>#theme</find>
-      <find>UpdateTree</find>
-      <find>advanced-forum.naked.submitted</find>
-      <find>col-md-4</find>
-      <find>col-md-</find>
-      <find>facetapi_widgets</find>
-      <find>theme_item_list</find>
-      <find>type' =&gt; 'struct'</find>
-      <find>showFileSelection</find>
-      <find>tagDialo</find>
-      <find>tagDialog</find>
-      <find>blade</find>
-      <find>hook_theme</find>
-      <find>views_exposed_form_s</find>
-      <find>Password field is required.</find>
-      <find>password_confirm_validate</find>
-      <find>function drupal_write_record</find>
-      <find>theme_radios</find>
-      <find>dropdown-menu</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/sites/all/modules/contrib/advanced_forum</dir>
-      <dir>$PROJECT_DIR$/sites/all/themes/bootstrap</dir>
-      <dir>$PROJECT_DIR$/sites/all/modules/contrib/facetapi</dir>
-      <dir>$PROJECT_DIR$/sites/all/modules</dir>
-      <dir>$PROJECT_DIR$/sites/all/modules/contrib/bueditor</dir>
-      <dir>$PROJECT_DIR$/sites/all/modules/custom</dir>
-      <dir>$PROJECT_DIR$/sites/all/modules/contrib</dir>
-      <dir>$PROJECT_DIR$</dir>
-      <dir>$PROJECT_DIR$/sites/all/themes</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_roles/radios-as-buttons.js" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_roles/palom_roles.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_users/radios-as-buttons.js" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/system/page.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_vars.scss" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom-tree-city-widget.css" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_tree_place/palom-tree-place-widget.css" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_components.scss" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_content_menu/palom_content_menu.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_views/palom_views.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_views/palom_views.info" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/form/megamenu-user-form.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_menus.scss" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_megamenu/palom_megamenu.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_megamenu/palom_megamenu.js" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_megamenu/palom_megamenu.info" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/palom.info" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_users/palom_users.module" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_pa/palom_pa.module" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_infoblocks.scss" />
-        <option value="$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/views/views-view.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/libraries/salvattore/salvattore.js" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_masonry.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/masonry.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review--teaser.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/system/html.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_mixins.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour--teaser.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_views.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/reset.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_reset.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/style.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service--teaser.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation--teaser.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding--teaser.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport--teaser.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place--teaser.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city--teaser.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--article.tpl.php" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/css/_nodes.scss" />
-        <option value="$PROJECT_DIR$/sites/all/themes/palom/template.php" />
-      </list>
-    </option>
   </component>
   <component name="NamedScopeManager">
     <scope name="palom" pattern="file[palom-d7]:sites/all/themes/palom/css/*" />
@@ -480,158 +245,9 @@
       </server>
     </servers>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
-    <option name="width" value="1920" />
-    <option name="height" value="1002" />
-  </component>
+  <component name="ProjectId" id="1OVvqRMldrY6wLj3RhmJ20veG29" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="style.scss" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="node" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="all" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="palom" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="palom-d7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docroot" type="462c0819:PsiDirectoryNode" />
-              <item name="sites" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -651,19 +267,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sites/all/themes/palom/js" />
-      <recent name="$PROJECT_DIR$/sites/all/modules/custom/palom_users" />
-      <recent name="$PROJECT_DIR$/sites/all/modules/custom/palom_roles" />
-      <recent name="$PROJECT_DIR$/sites/all/themes/palom/templates/system" />
-      <recent name="$PROJECT_DIR$/sites/all/themes/palom/css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sites/all/themes/palom/templates/node" />
       <recent name="$PROJECT_DIR$/sites/all/themes/palom/templates/system" />
       <recent name="$PROJECT_DIR$/sites/all/themes/palom/templates/views" />
       <recent name="$PROJECT_DIR$/sites/all/themes/palom/images" />
       <recent name="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/views" />
+      <recent name="$PROJECT_DIR$/sites/all/themes/palom/js" />
+      <recent name="$PROJECT_DIR$/sites/all/modules/custom/palom_users" />
+      <recent name="$PROJECT_DIR$/sites/all/modules/custom/palom_roles" />
+      <recent name="$PROJECT_DIR$/sites/all/themes/palom/templates/system" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -852,63 +468,40 @@
       <workItem from="1563814803496" duration="1177000" />
       <workItem from="1563855868413" duration="599000" />
       <workItem from="1563867843482" duration="1436000" />
-      <workItem from="1563944309814" duration="7048000" />
+      <workItem from="1563944309814" duration="7982000" />
+      <workItem from="1564027323530" duration="9357000" />
+      <workItem from="1564075784848" duration="749000" />
+      <workItem from="1564113009010" duration="12144000" />
+      <workItem from="1564203178753" duration="9998000" />
+      <workItem from="1564290913878" duration="598000" />
+      <workItem from="1564374676864" duration="1593000" />
+      <workItem from="1564418491974" duration="609000" />
+      <workItem from="1564421697087" duration="9000" />
+      <workItem from="1564506057257" duration="2520000" />
+      <workItem from="1564545791290" duration="12527000" />
+      <workItem from="1564586761921" duration="2086000" />
+      <workItem from="1564634459337" duration="485000" />
+      <workItem from="1564634987949" duration="11065000" />
+      <workItem from="1564753980377" duration="599000" />
+      <workItem from="1564808428399" duration="592000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="905628000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="999" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24920128" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286052" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286052" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995272" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32978722" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.31560284" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32960597" />
-      <window_info anchor="right" id="Structure" order="4" visible="true" weight="0.13791268" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28381255" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286052" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286052" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995272" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32978722" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.31560284" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32960597" />
-      <window_info anchor="right" id="Structure" order="4" visible="true" weight="0.16027689" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -920,308 +513,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/palom.info">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_infoblocks.scss" />
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/views/theme/views-view-fields.tpl.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/masonry/masonry.info">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/masonry/masonry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/masonry/masonry.api.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/contrib/masonry/masonry.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/includes/common.inc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/template.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_tree_city/palom_tree_city.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/views/views-view--service-tours.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/libraries/salvattore/salvattore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="581" selection-start-line="581" selection-end-line="581" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/html.vars.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/templates/system/html.tpl.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/system/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="98" column="6" lean-forward="true" selection-start-line="98" selection-start-column="6" selection-end-line="98" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/views/views-view.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="60" column="6" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/masonry.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/common.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72945">
-          <caret line="4869" selection-start-line="4869" selection-end-line="4869" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/palom_libs/palom_libs.module">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="101" column="2" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/masonry.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-953" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/system/html.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="76" column="71" selection-start-line="76" selection-start-column="71" selection-end-line="76" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review--teaser.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour--teaser.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="102" selection-start-line="17" selection-start-column="102" selection-end-line="17" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" selection-start-line="16" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bootstrap/starterkits/THEMENAME/css/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_reset.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_views.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_vars.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_components.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_menus.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_images.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service--teaser.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="17" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation--teaser.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="17" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport--teaser.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place--teaser.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="17" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" selection-start-line="18" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding--teaser.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="17" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city--teaser.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="16" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" lean-forward="true" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node.tpl.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--article.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/css/_nodes.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="159" column="26" selection-start-line="159" selection-start-column="26" selection-end-line="159" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/palom/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

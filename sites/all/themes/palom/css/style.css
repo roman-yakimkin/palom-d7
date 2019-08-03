@@ -142,7 +142,8 @@ div.field-places div.icon {
   background-origin: content-box;
   background-size: 25px 25px; }
 div.field-places a {
-  margin-right: 10px; }
+  margin-right: 10px;
+  white-space: nowrap; }
 
 div.field-city div.icon {
   background: url(../images/icons/city.svg) no-repeat;

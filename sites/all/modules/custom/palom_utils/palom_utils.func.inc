@@ -338,3 +338,28 @@ function palom_utils_get_city_title($city_id){
   $output = palom_utils_get_city_title_multiple([$city_id]);
   return $output[$city_id];
 }
+
+/*
+ * Get the list of companies where the user is one of owners
+ */
+function palom_utils_get_companies($uid, $type = ''){
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->addTag('DANGEROUS_ACCESS_CHECK_OPT_OUT');
+
+  if ($type != '')
+    $query->entityCondition('bundle', $type);
+  else
+    $query->entityCondition('bundle', ['pilgrim_service', 'accommodation', 'feeding', 'transport']);
+
+  $query->fieldCondition('field_owners', 'target_id', $uid);
+
+  $result = $query->execute();
+  $services = [];
+
+  if ($result != []){
+    $services = node_load_multiple(array_keys($result['node']));
+  }
+
+  return $services;
+}

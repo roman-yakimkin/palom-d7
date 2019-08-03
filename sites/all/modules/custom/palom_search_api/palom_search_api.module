@@ -28,6 +28,14 @@ function palom_search_api_entity_property_info_alter(&$info) {
     'computed' => true,
     'getter callback' => '_palom_currency',
   ];
+
+  $properties['is_published'] = [
+    'type' => 'boolean',
+    'label' => t('Is tour published'),
+    'description' => t('Is this tour published'),
+    'computed' => true,
+    'getter callback' => '_palom_tour_is_published',
+  ];
 }
 
 /**
@@ -51,7 +59,6 @@ function palom_search_api_facet_items_alter(&$build, &$settings) {
     }
   }
 
-
   if ($settings->facet == 'currency'){
     $diapasons = _palom_search_api_currency_diapasons();
     foreach($build as $key => $item){
@@ -63,7 +70,6 @@ function palom_search_api_facet_items_alter(&$build, &$settings) {
         $build[$key]['#markup'] = t('More than @min_value', ['@min_value' => $min_value]);
       else
         $build[$key]['#markup'] = t('from @min_value to @max_value', ['@min_value' => $min_value, '@max_value' => $max_value]);
-
     }
   }
 }
@@ -226,4 +232,17 @@ function _palom_currency($item){
   }
 
   return $result;
+}
+
+/*
+ * Index - is this tour published
+ */
+function _palom_tour_is_published($item){
+  $tour_publisted = ($item->status!=0);
+  $service_published = false;
+  if (isset($item->field_service[LANGUAGE_NONE][0]['target_id']) && ($item->field_service[LANGUAGE_NONE][0]['target_id'] > 0)){
+    $service = node_load($item->field_service[LANGUAGE_NONE][0]['target_id']);
+    $service_published = ($service->status != 0);
+  }
+  return ($tour_publisted && $service_published);
 }
