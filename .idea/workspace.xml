@@ -4,8 +4,6 @@
     <list default="true" id="98a662d9-a857-4902-8c09-cd99b209d6b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.docksal/docksal.env" beforeDir="false" afterPath="$PROJECT_DIR$/../.docksal/docksal.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.docksal/docksal.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.docksal/docksal.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4054aefd-d44d-4cf3-9c92-c62c8f65f2e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4054aefd-d44d-4cf3-9c92-c62c8f65f2e6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/bootstrap.inc" beforeDir="false" afterPath="$PROJECT_DIR$/includes/bootstrap.inc" afterDir="false" />
@@ -155,18 +153,6 @@
       <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/testing/testing.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/testing.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/palom_field_cr_city.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_pa/palom_pa.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_pa/palom_pa.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_search_api/palom_search_api.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_search_api/palom_search_api.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_users/palom_users.module" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_users/palom_users.module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_utils/palom_utils.func.inc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_nodes.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/.sass-cache/ffff2db01d575c22d18a2663fa16bfbb7324bafe/_nodes.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/_nodes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/_nodes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review--teaser.tpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/vendor/philo/laravel-blade" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/vendor/philo/laravel-blade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bartik/bartik.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bartik/bartik.info" afterDir="false" />
@@ -484,6 +470,7 @@
       <workItem from="1564634987949" duration="11065000" />
       <workItem from="1564753980377" duration="599000" />
       <workItem from="1564808428399" duration="592000" />
+      <workItem from="1564896931187" duration="840000" />
     </task>
     <servers />
   </component>

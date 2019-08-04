@@ -1,0 +1,9 @@
+<?php
+
+function palom_cases_schema(){
+  $schema['palom_cases'] = [
+
+  ];
+
+  return $schema;
+}
