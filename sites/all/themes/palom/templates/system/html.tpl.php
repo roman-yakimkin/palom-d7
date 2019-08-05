@@ -54,26 +54,27 @@
  * @ingroup templates
  */
 ?><!DOCTYPE html>
-<html{!! $html_attributes !!} {!! $rdf_namespaces !!}>
+<html<?php print $html_attributes;?><?php print $rdf_namespaces;?>>
 <head>
-  <link rel="profile" href="{!! $grddl_profile !!}" />
+  <link rel="profile" href="<?php print $grddl_profile; ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {!! $head !!}
-  {!! $styles !!}
-  <title>{!! $head_title !!}</title>
-  <!-- HTML5 element support for IE6-8 -->
+  <?php print $head; ?>
+  <title><?php print $head_title; ?></title>
+  <?php print $styles; ?>
+<!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
   <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  {!! $scripts !!}
+  <?php print $scripts; ?>
 </head>
-<body{!! $body_attributes !!}>
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable">{!! t('Skip to main content') !!}</a>
-  </div>
-  {!! $page_top !!}
-  {!! $page !!}
-  {!! $page_bottom !!}
-  <script src="/{!! libraries_get_path('salvattore')!!}/salvattore.min.js"></script>
+<body<?php print $body_attributes; ?>>
+<div id="skip-link">
+  <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+</div>
+<?php print $page_top; ?>
+<?php print $page; ?>
+<?php print $page_bottom; ?>
+<script src="/<?php print libraries_get_path('salvattore');?>/salvattore.min.js"></script>
 </body>
 </html>
+

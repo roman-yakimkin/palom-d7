@@ -153,6 +153,39 @@
       <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_compatible_test/drupal_system_listing_compatible_test.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/modules/drupal_system_listing_incompatible_test/drupal_system_listing_incompatible_test.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/testing/testing.info" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/testing/testing.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/field-geo-cr-default-formatter.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr/field-geo-cr-default-formatter.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/field-geo-cr-city-default-formatter.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/custom/palom_field_cr_city/field-geo-cr-city-default-formatter.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/accommodation-node-form.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/feeding-node-form.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/megamenu-user-form.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/pilgrim-service-node-form.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/review-node-form.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/tour-group-main.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/tour-node-form.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/transport-node-form.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/form/user-register-form.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation--teaser.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--accommodation.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--article.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--article.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city--teaser.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--city.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding--teaser.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--feeding.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service--teaser.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--pilgrim_service.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place--teaser.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--place.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review--teaser.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--review.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour--teaser.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--tour.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport--teaser.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport--teaser.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node--transport.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/node/node.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/system/html.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/system/html.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/system/page.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/system/page.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/views/views-view--service-tours.tpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/palom/templates/views/views-view.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/palom/templates/views/views-view.tpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/vendor/philo/laravel-blade" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/vendor/philo/laravel-blade" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/default/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/default/settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bartik/bartik.info" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bartik/bartik.info" afterDir="false" />
@@ -470,7 +503,10 @@
       <workItem from="1564634987949" duration="11065000" />
       <workItem from="1564753980377" duration="599000" />
       <workItem from="1564808428399" duration="592000" />
-      <workItem from="1564896931187" duration="840000" />
+      <workItem from="1564896931187" duration="3230000" />
+      <workItem from="1564929190521" duration="4320000" />
+      <workItem from="1564940071484" duration="4149000" />
+      <workItem from="1564979867628" duration="598000" />
     </task>
     <servers />
   </component>

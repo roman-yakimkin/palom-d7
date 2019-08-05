@@ -6,5 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir)).'/default/files/composer';
 
 return array(
-    'BartFeenstra' => array($vendorDir . '/bartfeenstra/cldr/src'),
 );

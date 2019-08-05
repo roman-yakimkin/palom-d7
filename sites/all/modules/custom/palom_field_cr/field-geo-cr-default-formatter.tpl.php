@@ -1,1 +1,1 @@
-{{ $element['country_name'] }}@if (!empty($element['region_name'])), {{ $element['region_name'] }}@endif
+<?php print $element['country_name']; ?> <?php if (!empty($element['region_name'])):?> <?php print $element['region_name']; ?><?php endif; ?>

@@ -1,1 +1,0 @@
-<h1>The main panel !!!</h1>
