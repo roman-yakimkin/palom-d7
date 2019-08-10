@@ -36,6 +36,15 @@ function palom_search_api_entity_property_info_alter(&$info) {
     'computed' => true,
     'getter callback' => '_palom_tour_is_published',
   ];
+
+  $properties['sort_index'] = [
+    'type' => 'integer',
+    'label' => t('Sort index'),
+    'description' => t('Sorting index'),
+    'computed' => true,
+    'getter callback' => '_palom_sort_index',
+  ];
+
 }
 
 /**
@@ -240,9 +249,71 @@ function _palom_currency($item){
 function _palom_tour_is_published($item){
   $tour_publisted = ($item->status!=0);
   $service_published = false;
-  if (isset($item->field_service[LANGUAGE_NONE][0]['target_id']) && ($item->field_service[LANGUAGE_NONE][0]['target_id'] > 0)){
-    $service = node_load($item->field_service[LANGUAGE_NONE][0]['target_id']);
+  if (isset($item->field_services[LANGUAGE_NONE][0]['target_id']) && ($item->field_services[LANGUAGE_NONE][0]['target_id'] > 0)){
+    $service = node_load($item->field_services[LANGUAGE_NONE][0]['target_id']);
     $service_published = ($service->status != 0);
   }
   return ($tour_publisted && $service_published);
+}
+
+function _palom_sort_index($item){
+  $query = db_select('field_data_field_state', 'state');
+  $query->addField('state', 'field_state_first', 'state_value');
+  $query->innerJoin('field_data_field_owners', 'owners', 'state.entity_id = owners.field_owners_target_id');
+  $query->innerJoin('field_data_field_services', 'services', 'owners.entity_id = services.field_services_target_id');
+  $query->condition('services.entity_id', $item->nid);
+  $query->condition('services.bundle', 'tour');
+  $query->condition('state.field_state_second', date('Y-m-d'), '>=');
+
+  $values = $query->execute()->fetchCol();
+
+  if ($values == [])
+    $result = 10;
+  else
+    $result = max($values);
+
+  return $result;
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function palom_search_api_entity_update($entity, $type) {
+
+  list($id) = entity_extract_ids($type, $entity);
+
+  // if pilgrimage_service is updated then reindex all its tours
+  if ($type == 'node' && $entity->type == 'pilgrim_service'){
+    if ($entity->status != $entity->original->status) {
+      $tids = palom_utils_get_tours_by_service($id);
+      search_api_track_item_change('node', $tids);
+    }
+  }
+
+  // if the user is updated then reindex all its tours
+  if ($type == 'user') {
+    $tids = palom_utils_get_tours_by_owner($id);
+    search_api_track_item_change('node', $tids);
+  }
+}
+
+/*
+ * Add some tours into search APi index
+ */
+function palom_search_api_add_tours($tour_nids = []){
+
+}
+
+/*
+ * Update some tours in search API index
+ */
+function palom_search_api_update_tours($tour_nids = []){
+
+}
+
+/*
+ * Delete some tours from Search APi index
+ */
+function palom_search_api_delete_tours($tour_nids = []){
+
 }

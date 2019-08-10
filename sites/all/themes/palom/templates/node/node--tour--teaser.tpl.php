@@ -99,7 +99,7 @@
   <div class="row">
     <?php foreach (['field_cost_str', 'field_services', 'field_tour_dates', 'field_direction', 'field_route', 'field_transport', 'field_duration', 'field_cities_from'] as $index):?>
     <?php if (isset($content[$index])):?>
-    <div class="col col-xs-12 <?php print str_replace('_', '-', $index); ?>">
+    <div class="col col-xs-12 col-info <?php print str_replace('_', '-', $index); ?>">
       <div class="icon"></div>
       <div class="field-values">
         <?php print render($content[$index]); ?>

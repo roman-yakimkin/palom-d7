@@ -1,9 +1,9 @@
-<div class="palom-multi-date-widget" id="palom-multi-date-widget-{{ $field_name }}">
+<div class="palom-multi-date-widget" id="palom-multi-date-widget-<?php print $field_name; ?>">
     <div class="row">
         <select class="form-control form-select" name="date_type">
-            <option value="select_dates">{{ t('Select dates') }}</option>
-            <option value="by_demand">{{ t('By demand') }}</option>
-            <option value="by_picking">{{ t('By group picking') }}</option>
+            <option value="select_dates"><?php print t('Select dates'); ?></option>
+            <option value="by_demand"><?php print t('By demand'); ?></option>
+            <option value="by_picking"><?php print t('By group picking'); ?></option>
         </select>
     </div>
     <div class="row select-dates">
@@ -14,10 +14,10 @@
         <div class="palom-multi-date-buttons col-xs-3">
             <div>
                 <button class="add-date btn btn-default form-control">
-                    {{ t('Add') }}
+                    <?php print t('Add'); ?>
                 </button>
                 <button class="remove-date btn btn-default form-control">
-                    {{ t('Remove') }}
+                    <?php print t('Remove'); ?>
                 </button>
             </div>
         </div>

@@ -363,3 +363,40 @@ function palom_utils_get_companies($uid, $type = ''){
 
   return $services;
 }
+
+/*
+ * Get tours ids by pilgrimage service
+ */
+function palom_utils_get_tours_by_service($service_id){
+  $query = new EntityFieldQuery();
+
+  $query->entityCondition('entity_type', 'node')
+    ->addTag('DANGEROUS_ACCESS_CHECK_OPT_OUT');
+
+  $query->entityCondition('bundle', 'tour');
+  $query->fieldCondition('field_services', 'target_id', $service_id);
+
+  $result = $query->execute();
+  $tours = [];
+  if ($result != []){
+//    $tours = node_load_multiple(array_keys($result['node']));
+    $tours = array_keys($result['node']);
+  }
+
+  return $tours;
+}
+
+/*
+ * Get all the routes nids by one user
+ */
+function palom_utils_get_tours_by_owner($uid){
+  $query = db_select('field_data_field_services', 'tours');
+  $query->addField('tours', 'entity_id');
+  $query->condition('tours.bundle', 'tour');
+  $query->innerJoin('field_data_field_owners', 'owners', 'tours.field_services_target_id = owners.entity_id');
+  $query->condition('owners.field_owners_target_id', $uid);
+
+  $nids = $query->execute()->fetchCol();
+
+  return $nids;
+}

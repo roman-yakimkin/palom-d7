@@ -39,11 +39,30 @@ function palom_utils_menu() {
 
 function palom_utils_test_callback(){
 
-  _palom_currency_update_rates();
+//  _palom_currency_update_rates();
 //  _palom_currency_update_amount('node', 74, 'field_avg_cost');
-  _palom_currency_update_amount_bundle('node', 'accommodation', ['field_avg_cost']);
+//  _palom_currency_update_amount_bundle('node', 'accommodation', ['field_avg_cost']);
 
-  return '';
+
+
+  $query = db_select('field_data_field_state', 'state');
+  $query->addField('state', 'field_state_first', 'state_value');
+  $query->innerJoin('field_data_field_owners', 'owners', 'state.entity_id = owners.field_owners_target_id');
+  $query->innerJoin('field_data_field_services', 'services', 'owners.entity_id = services.field_services_target_id');
+  $query->condition('services.entity_id', 79);
+  $query->condition('services.bundle', 'tour');
+  $query->condition('state.field_state_second', date('Y-m-d'), '>=');
+
+//  kpr($query->__toString());
+
+  $values = $query->execute()->fetchCol();
+
+  if ($values == [])
+    $result = 10;
+  else
+    $result = max($values);
+
+  return 'Test page';
 }
 
 /*

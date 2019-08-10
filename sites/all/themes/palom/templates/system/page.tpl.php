@@ -88,7 +88,7 @@
       <?php endif; ?>
 
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+      <button type="button" class="navbar-toggle btn-main-menu" data-toggle="collapse" data-target="#navbar-collapse">
         <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

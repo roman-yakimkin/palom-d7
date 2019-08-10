@@ -38,3 +38,18 @@ function palom_form_custom_theme($existing, $type, $theme, $path) {
   ];
 }
 
+/**
+ * Implements hook_entityreference_view_widget_rows_alter().
+ */
+function palom_form_custom_entityreference_view_widget_rows_alter(&$rows, $entities, $settings) {
+//  kpr($rows);
+//  kpr($entities);
+//  kpr($settings);
+
+  foreach($rows as $key=> &$row){
+    $uid = $row['target_id']['#value'];
+    if ($user = user_load($uid))
+      $row['target_id']['#title'] = "$user->name ($user->mail, uid = $user->uid)";
+  }
+}
+
